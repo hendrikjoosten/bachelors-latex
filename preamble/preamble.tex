@@ -16,65 +16,10 @@
 \usepackage{xcolor}
 \usepackage{float}
 \usepackage[labelfont=bf]{caption}
-\usepackage{bm}                                              % Bold maths symbols
+\usepackage{bm}                                             
 \usepackage{enumitem}
 \usepackage{booktabs}
 \usepackage{array}
-\usepackage{longtable}
 \usepackage{multirow}
 \usepackage[bottom, perpage]{footmisc}
 
-\bibliographystyle{IEEEtran/bibtex/IEEEtran.tex}
-
-% Title Spacing
-\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{-5pt plus 2pt minus 2pt}
-\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{-5pt plus 2pt minus 2pt}
-\titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{-5pt plus 2pt minus 2pt}
-
-% Lists
-\setlist{itemsep=1pt, topsep=1pt}
-\renewcommand{\labelitemii}{$\circ$}
-\renewcommand{\labelitemiii}{\textendash}
-\renewcommand{\labelitemiv}{$\sqbullet$}
-
-\newlist{RM}{enumerate}{5}
-\setlist[RM,1]{label=RM-\arabic*:, ref=RM-\arabic*}
-\setlist[RM,2]{label=RM-\arabic{RMi}.\arabic*:, ref=RM-\arabic{RMi}.\arabic*}
-
-\newlist{RE}{enumerate}{5}
-\setlist[RE,1]{label=RE-\arabic*:, ref=RE-\arabic*}
-\setlist[RE,2]{label=RE-\arabic{REi}.\arabic*:, ref=RE-\arabic{REi}.\arabic*}
-
-\newlist{RS}{enumerate}{5}
-\setlist[RS,1]{label=RS-\arabic*:, ref=RS-\arabic*}
-\setlist[RS,2]{label=RS-\arabic{RSi}.\arabic*:, ref=RS\arabic{RSi}.\arabic*}
-
-\newlist{TEST}{enumerate}{5}
-\setlist[TEST,1]{label=TEST-\arabic*:, ref=TEST-\arabic*}
-% Commands
-\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}       % Scientific Notation!
-\providecommand{\eoc}{\ensuremath{_{\slash \slash \slash}}} % End of Calculation Symbol!
-\providecommand{\subheading}[1]{\textit{#1}}
-
-% Tables
-\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-
-\parskip = 6mm
-\parindent = 0mm
-\renewcommand{\headrulewidth}{0pt}
-\rhead[]{\thesection}
-\lhead[\thechapter]{}
-
-% hyperref
-\usepackage[bookmarks         = true     ,%
-            bookmarksnumbered = true     ,%
-            setpagesize       = false    ,%
-            colorlinks        = true     ,%
-            linkcolor         = black    ,%
-            urlcolor          = black    ,%
-            citecolor         = black    ,%
-            pdfpagelayout     = OneColumn,%
-            pdfstartview      = FitH		 ,%
-            driverfallback    = dvipdfm]{hyperref}
