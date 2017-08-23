@@ -1,2 +1,2 @@
 # thesis-latex
-Final year thesis writeup
+Final year research project writeup
