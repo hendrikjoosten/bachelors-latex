@@ -2,7 +2,6 @@
 
 \begin{document}
 
-\newpage
 \input{frontmatter/coverpage.tex}
 
 \newpage
@@ -27,13 +26,13 @@
 \listoftables
 
 \newpage
-\listoftables
-
-\newpage
 \input{body/introduction.tex}
 
 \newpage
 \input{body/lit_review.tex}
+
+\newpage
+\input{body/methodology.tex}
 
 \bibliographystyle{ieeetran}
 \bibliography{references}

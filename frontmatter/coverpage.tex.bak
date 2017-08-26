@@ -1,0 +1,54 @@
+% Coverpage
+\thispagestyle{empty}
+{\Huge \begin{center}
+
+% Title
+Lower-Limb Motion Estimation 
+\vskip 5mm
+\hrule 
+
+% Subtitle
+\vskip 5mm
+{\Large Modelling the Kinematics of the Human Lower-Limbs using Cameras and an IMU}
+\end{center}}
+
+\vskip 5mm
+\begin{center}
+\includegraphics[scale = 0.5]{figures/uctLogo.png}
+\end{center}
+
+\vskip 5mm
+\begin{center}
+{\large
+\textbf{Prepared by:}
+\vskip 0.01mm
+\textbf{\LARGE Johann Hendrik Joosten}
+\vskip 1mm
+Department of Electrical and Electronics Engineering\\University of Cape Town
+}
+\end{center}
+
+\vskip 10mm
+\begin{center}
+{\large
+\textbf{Prepared for:}
+\vskip 0.01mm
+\textbf{\LARGE Dr. Amir Patel}
+\vskip 1mm
+Department of Electrical and Electronics Engineering\\University of Cape Town
+}
+\end{center}
+
+
+\vskip 10mm
+\begin{center}
+Submitted to the Department of Electrical Engineering at the University of Cape Town in partial
+fulfilment of the academic requirements for a Bachelor of Science degree in Mechatronics.
+
+\end{center}
+
+
+\vskip 5mm
+\begin{center}{\bf \today}
+\end{center}
+
