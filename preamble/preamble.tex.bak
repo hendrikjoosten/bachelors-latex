@@ -1,15 +1,13 @@
-%the type of document used, with some basic parameters
+
 \documentclass[a4paper,12pt]{report}
 
-%meta data authur
 \author{Hendrik Joosten}
 
-%package to scale fonts to any size, eliminates any font sizing problems
-\usepackage{anyfontsize}
-
 \usepackage[top = 1in, bottom = 1in, left = 1in, right = 1in]{geometry}
+\usepackage{titlesec}
 \usepackage{graphicx}
-\usepackage{amsmath, amsthm, wasysym}
+\usepackage{fancyhdr}
+\usepackage{amsmath, amsthm, amssymb}
 \usepackage{lastpage}
 \usepackage[subrefformat=parens,labelformat=parens]{subfig}
 \usepackage{lscape}
