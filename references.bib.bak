@@ -56,5 +56,53 @@
   publisher={Elsevier}
 }
 
+%006 full body model of the human skeletal system some interesting things
+@article{rajagopal2016full,
+  title={Full-body musculoskeletal model for muscle-driven simulation of human gait},
+  author={Rajagopal, Apoorva and Dembia, Christopher L and DeMers, Matthew S and Delp, Denny D and Hicks, Jennifer L and Delp, Scott L},
+  journal={IEEE Transactions on Biomedical Engineering},
+  volume={63},
+  number={10},
+  pages={2068--2079},
+  year={2016},
+  publisher={IEEE}
+}
+
+%007 guy put on thisweird suit and then lots of external cameras modeled him
+@article{sandau2014markerless,
+  title={Markerless motion capture can provide reliable 3D gait kinematics in the sagittal and frontal plane},
+  author={Sandau, Martin and Koblauch, Henrik and Moeslund, Thomas B and Aan{\ae}s, Henrik and Alkj{\ae}r, Tine and Simonsen, Erik B},
+  journal={Medical engineering \& physics},
+  volume={36},
+  number={9},
+  pages={1168--1175},
+  year={2014},
+  publisher={Elsevier}
+}
+%008 review of how people have tried to do what im doing but like theyhavent actually done what i did... its crazy 
+@article{muro2014gait,
+  title={Gait analysis methods: An overview of wearable and non-wearable systems, highlighting clinical applications},
+  author={Muro-De-La-Herran, Alvaro and Garcia-Zapirain, Begonya and Mendez-Zorrilla, Amaia},
+  journal={Sensors},
+  volume={14},
+  number={2},
+  pages={3362--3394},
+  year={2014},
+  publisher={Multidisciplinary Digital Publishing Institute}
+}
+
+% 009    25 year review of loewr limb kinea=matics using sensors..
+@article{picerno201725,
+  title={25 years of lower limb joint kinematics by using inertial and magnetic sensors: A review of methodological approaches},
+  author={Picerno, Pietro},
+  journal={Gait \& posture},
+  volume={51},
+  pages={239--246},
+  year={2017},
+  publisher={Elsevier}
+}
+
+
+
 
 

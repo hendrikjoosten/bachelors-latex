@@ -1,7 +1,7 @@
 \chapter{lit review}
 
 \section{Introduction}
-This research prject brings together various disciplines of research with the intention of showing that these modern techniques could be
+This research project brings together various disciplines of research with the intention of showing that these modern techniques could be
 
 \section{Subject Bourne Data Capture}
 In large this researched project was inspired by work done by the Mechatronics lab at the University of Cape Town. In \cite{patel2017trackingieee} the viability of on board data collection was shown.
@@ -24,4 +24,15 @@ The work done by \cite{chen2013survey} shows how good we are at understanding hu
 \section{Motion Sensors}
 
 \section{Mathematical Modelling}
+
+\section{all citations}
+\cite{patel2017trackingieee}
+\cite{kane2014falcons}
+\cite{pearson2017testing}
+\cite{stocks}
+\cite{chen2013survey}
+\cite{rajagopal2016full}
+
+found a pretty lit way to go through some literature
+
 
