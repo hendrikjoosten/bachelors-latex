@@ -1,19 +1,17 @@
 \chapter{lit review}
 
 \section{Introduction}
-This research project brings together various disciplines of research with the intention of showing that these modern techniques could be
+This research project brings together various disciplines of research to show
 
-\section{Subject Bourne Data Capture}
-In large this researched project was inspired by work done by the Mechatronics lab at the University of Cape Town. In \cite{patel2017trackingieee} the viability of on board data collection was shown.
+\section{New Perspectives from Animal Borne Cameras}
+In large this researched project was inspired by work done in the Mechatronics Lab at the University of Cape Town. In 2017, Patel et al.  \cite{patel2017trackingieee} showed that using animal borne cameras and motion sensors the tail kinematics of the cheetah (Acinonyx Jubatus) could be tracked. This work was partly inspired by Kane et al.;\cite{kane2014falcons} where falcon borne cameras were used to better understand airborne pursuit.  
 
-RAM group
 
-eagle cam stuff \cite{kane2014falcons}
+
+\section{Bio-Inspired Robotics}
 
 \section{Using 3rd person vision}
 The work done by \cite{chen2013survey} shows how good we are at understanding human motion 
-
-\section{Bio-Inspired Robotics}
 
 \section{Human Gait}
 
