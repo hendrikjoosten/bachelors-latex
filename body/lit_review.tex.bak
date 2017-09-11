@@ -1,36 +1,32 @@
 \chapter{lit review}
 
 \section{Introduction}
-This research project brings together various disciplines of research to show
+This research project brings together various disciplines of research. 
 
 \section{New Perspectives from Animal Borne Cameras}
-In large this researched project was inspired by work done in the Mechatronics Lab at the University of Cape Town. In 2017, Patel et al.  \cite{patel2017trackingieee} showed that using animal borne cameras and motion sensors the tail kinematics of the cheetah (Acinonyx Jubatus) could be tracked. This work was partly inspired by Kane et al.;\cite{kane2014falcons} where falcon borne cameras were used to better understand airborne pursuit.  
+In large this researched project was inspired by work done in the Mechatronics Lab at the University of Cape Town. In 2017, Patel et al.  \cite{patel2017trackingieee} showed that using animal borne cameras and motion sensors the tail kinematics of the cheetah (Acinonyx Jubatus) could be tracked. Patel's work was partly inspired by Kane et al.;\cite{kane2014falcons} where falcon (Falco Peregrinus) borne cameras were used to better understand airborne pursuit of prey.
+ 
 
+\section{Observing Natural Solutions for Robotic Shortcomings}
+Naturally the question arises:  why would we want to better understand the dynamics of animals? A persistent problem in the field of modern robotics is that of mobility; robots struggle to navigate real world surfaces and obstacles. Work by Patel et al. \cite{patel2013rapid} shows how we can look towards nature for inspiration to solve this mobility problem.
 
+This follows the central philosophy of bio-inspired robotics as defined by 
 
-\section{Bio-Inspired Robotics}
+As demonstrated by various prototype robots built by Boston Dynamics bipedal robots are severely limited in manoeuvrability when compared to   
 
-\section{Using 3rd person vision}
-The work done by \cite{chen2013survey} shows how good we are at understanding human motion 
+\section{Human Motion Analysis Using Computer Vision}
+
 
 \section{Human Gait}
 
-\section{Humanoid robotics}
 
-\section{Computer Vision}
 
 \section{Motion Sensors}
 
 \section{Mathematical Modelling}
 
-\section{all citations}
-\cite{patel2017trackingieee}
-\cite{kane2014falcons}
-\cite{pearson2017testing}
-\cite{stocks}
-\cite{chen2013survey}
-\cite{rajagopal2016full}
 
-found a pretty lit way to go through some literature
+
+
 
 

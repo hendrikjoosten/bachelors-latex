@@ -102,6 +102,16 @@
   publisher={Elsevier}
 }
 
+%patel phd thesis cheetah tail
+@inproceedings{patel2013rapid,
+  title={Rapid turning at high-speed: Inspirations from the cheetah's tail},
+  author={Patel, Amir and Braae, M},
+  booktitle={Intelligent Robots and Systems (IROS), 2013 IEEE/RSJ International Conference on},
+  pages={5506--5511},
+  year={2013},
+  organization={IEEE}
+}
+
 
 
 
