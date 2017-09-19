@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.8)  7 SEP 2017 13:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.8)  14 SEP 2017 12:20
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -573,18 +573,30 @@ LaTeX Info: Redefining \nameref on input line 3.
 \openout3 = `thesis.out'.
 
  (frontmatter/coverpage.tex
-<figures/uctLogo.png, id=93, 418.56375pt x 425.59pt>
+<figures/uctLogo.png, id=129, 418.56375pt x 425.59pt>
 File: figures/uctLogo.png Graphic file (type png)
- <use figures/uctLogo.png>
+
+<use figures/uctLogo.png>
 Package pdftex.def Info: figures/uctLogo.png used on input line 17.
 (pdftex.def)             Requested size: 209.28136pt x 212.79446pt.
+) [1
 
-[1
-
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./figures/uctLogo.png>]) 
-[2] (frontmatter/termsofreference.tex
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./figures/uctLogo.png>] (
+frontmatter/termsofreference.tex
 Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
+ []
+
+
+Overfull \hbox (8.99814pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/n/12 cam-eras with min-i-mal vol-ume and ac-cu-rate sen-sors, data c
+ap-ture sys-tems can be trans-ferred
+ []
+
+
+Overfull \hbox (15.52585pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/n/12 mo-tion cap-ture and can greatly im-prove our un-der-stand-ing 
+of move-ment in the un-con-strained
  []
 
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 19.
@@ -593,9 +605,9 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
-) [3] [4]
-(frontmatter/declaration.tex) [5] (frontmatter/acknowledgements.tex) [6]
-(frontmatter/abstract.tex) [7] (thesis.toc
+) [2]
+(frontmatter/declaration.tex) [3] (frontmatter/acknowledgements.tex) [4]
+(frontmatter/abstract.tex) [5] (thesis.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 1.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
@@ -605,101 +617,63 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 1.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [8
+) [6
 
 ])
 \tf@toc=\write4
 \openout4 = `thesis.toc'.
 
- [9] (thesis.lof)
+ [7] (thesis.lof)
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
- [10
+ [8
 
 ] (thesis.lot)
 \tf@lot=\write6
 \openout6 = `thesis.lot'.
 
- [11
+ [9
 
 ] (body/introduction.tex
 Chapter 1.
-[12
+[10
 
-]
-
-LaTeX Warning: Reference `chap:lit-review' on page 13 undefined on input line 4
-5.
-
-
-LaTeX Warning: Reference `sec:probDef-devObjectives' on page 13 undefined on in
-put line 46.
-
-
-LaTeX Warning: Reference `sec:conceptualDesign' on page 13 undefined on input l
-ine 47.
-
-
-LaTeX Warning: Reference `sec:detailedDesign' on page 13 undefined on input lin
-e 48.
-
-
-LaTeX Warning: Reference `sec:softwareDesign' on page 13 undefined on input lin
-e 48.
-
-
-LaTeX Warning: Reference `sec:vehicleBuildAndManufacture' on page 13 undefined 
-on input line 49.
-
-
-LaTeX Warning: Reference `sec:softwareDevelopment' on page 13 undefined on inpu
-t line 49.
-
-
-LaTeX Warning: Reference `chap:roverPostDev' on page 13 undefined on input line
- 50.
-
-
-LaTeX Warning: Reference `chap:conclusions' on page 13 undefined on input line 
-51.
-
-
-LaTeX Warning: Reference `chap:recommendationsAndFutureWork' on page 13 undefin
-ed on input line 51.
-
-
-Overfull \hbox (1.3502pt too wide) in alignment at lines 42--54
- [] [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 54
- []
-
-[13]) [14] (body/lit_review.tex
+]) [11] (body/lit_review.tex
 Chapter 2.
 
-Overfull \hbox (48.08582pt too wide) in paragraph at lines 10--10
+Overfull \hbox (13.8504pt too wide) in paragraph at lines 4--5
+\OT1/cmr/m/n/12 This re-search project brings to-gether var-i-ous dis-ci-plines
+ of re-search. by com-bin-ing tech-niques
+ []
+
+
+Overfull \hbox (8.0484pt too wide) in paragraph at lines 19--19
+|[]\OT1/cmr/bx/n/14.4 Human Mo-tion Anal-y-sis Us-ing In-er-tial Mea-sure-ment 
+Units| 
+ []
+
+
+Overfull \hbox (48.08582pt too wide) in paragraph at lines 29--29
 |[]\OT1/cmr/bx/n/17.28 Observing Nat-u-ral So-lu-tions for Robotic Short-com-in
 gs| 
  []
 
-) [15
+[12
 
-] [16] (body/methodology.tex
+]) [13] (body/methodology.tex
 Chapter 3.
-<figures/GoProHero4Session.JPG, id=207, 1258.7025pt x 676.77844pt>
+<figures/GoProHero4Session.JPG, id=237, 1258.7025pt x 676.77844pt>
 File: figures/GoProHero4Session.JPG Graphic file (type jpg)
 
 <use figures/GoProHero4Session.JPG>
 Package pdftex.def Info: figures/GoProHero4Session.JPG used on input line 9.
 (pdftex.def)             Requested size: 452.9679pt x 243.5471pt.
-) (thesis.bbl [17
+) (thesis.bbl [14
 
-] [18 <./figures/GoProHero4Session.JPG>]) 
+] [15 <./figures/GoProHero4Session.JPG>]) 
 AED: lastpage setting LastPage
-[19
+[16
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
@@ -708,29 +682,25 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 40.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 40.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: E4B142DF3A0CCA9684776548D5AF31D3;1542.
-
-
-LaTeX Warning: There were undefined references.
-
+(rerunfilecheck)             Checksum: 8F10216A664C8C6036A6896F34299CC7;2328.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
  ) 
 Here is how much of TeX's memory you used:
- 9618 strings out of 493323
- 140743 string characters out of 3139067
- 257718 words of memory out of 3000000
- 12912 multiletter control sequences out of 15000+200000
+ 9613 strings out of 493323
+ 140677 string characters out of 3139067
+ 247443 words of memory out of 3000000
+ 12902 multiletter control sequences out of 15000+200000
  13525 words of font info for 49 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,9n,49p,686b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,6n,43p,683b,356s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (19 pages, 442658 bytes).
+Output written on thesis.pdf (16 pages, 444101 bytes).
 PDF statistics:
- 254 PDF objects out of 1000 (max. 8388607)
- 52 named destinations out of 1000 (max. 500000)
- 195 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 284 PDF objects out of 1000 (max. 8388607)
+ 57 named destinations out of 1000 (max. 500000)
+ 267 words of extra memory for PDF output out of 10000 (max. 10000000)
 

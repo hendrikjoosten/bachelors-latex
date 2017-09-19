@@ -1,0 +1,9 @@
+\pagestyle{plain}
+
+\addcontentsline{toc}{section}{Acknowledgements}
+
+{\Large Acknowledgements}
+\vskip 5mm
+\hrule
+\vskip 5mm
+I would like to thank some people...
