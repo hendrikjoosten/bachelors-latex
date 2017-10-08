@@ -113,6 +113,36 @@
 }
 
 
+%template for refrencing links.. goprosolidworks model from grabcad
+@misc{gph4smodel,
+  author = {Michael Christensen},
+  title = {GoPro Hero4 Session},
+  howpublished = "\url{https://grabcad.com/library/gopro-hero4-session-1}",
+  note = "[Online; accessed 6-October-2017]"
+}
+
+
+@misc{chestygpwebsite,
+  author = {GoPro, Inc.},
+  title = {GoPro Chesty (Chest Harness)},
+  howpublished = "\url{https://shop.gopro.com/EMEA/mounts/chesty-chest-harness/GCHM30-001.html}",
+  note = "[Online; accessed 6-October-2017]"
+}
+
+%patel paper
+@inproceedings{patel2014rapid,
+  title={Rapid acceleration and braking: Inspirations from the cheetah's tail},
+  author={Patel, Amir and Braae, M},
+  booktitle={Robotics and Automation (ICRA), 2014 IEEE International Conference on},
+  pages={793--799},
+  year={2014},
+  organization={IEEE}
+}
+
+
+
+
+
 
 
 

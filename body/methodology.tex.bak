@@ -1,33 +1,38 @@
 \chapter{Methodology}
 
-\section{Mechanical Design}
 
-\subsection{GoPro Session Bracket}
+To ensure the success of this project a basic plan of action was created. The following diagram shows the critical phases of the project and their dependence on each other. 
 
-%testing out figures
-\begin{figure}
-  \includegraphics[width=\linewidth]{figures/GoProHero4Session.JPG}
-  \caption{Solidworks model of the GoPros Hero 4 Session}
-  \label{fig:goproherosession4}
+\begin{figure}[!ht]
+  \includegraphics[width=\linewidth]{figures/planOfAction.png}
+  \caption{Diagram showing the progression and dependence of the major stages of this project}
+  \label{fig:planofaction}
 \end{figure}
 
-further designed bracket
+  
+\section{System Design}
+This section is dedicated to defining and understanding the specifications of the data capture system. The system will consist of 4 cameras and an IMU mounted to the torso of the subject. the cameras will record the legs of the subject while the IMU will log inertial data from the body of the subject.
 
 
 
 
-\section{Vision Calibration}
-matlab stereo camera calibration software
-1. calibrate the cameras
-2. get data from the recordings
 
-took some vids
+ 
 
-made matlab script to isolate frames in vids
 
-put frames into stereo video camera calibrator
 
-winning at life
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

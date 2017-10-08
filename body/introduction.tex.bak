@@ -1,9 +1,9 @@
 \chapter{Introduction}
 
 \section{Background to the study}
-Human motion capture systems are often very costly and confine the capture area to a certain space. This introduces difficulties when trying to understand the motion of humans in complex environments.
+Human motion capture systems are often very costly and confine the capture area to a certain confined space. These limitations prevent us from understanding bipedal motion in complex environments, knowledge that proves to be critical in the development of humanoid robotics.
 
-A recent methodology \cite{patel2017trackingieee} used by the Mechatronics Lab at the University of Cape Town showed data capture with subject-borne cameras and an IMU has shown the viability of these systems.
+Recent work \cite{patel2017trackingieee} completed by the Mechatronics Lab at the University of Cape Town showed data capture with subject-borne cameras and sensors can be used to better understand unconstrained movement in a natural environment. The presented work showed the successful kinematic modelling of a cheetah (Acinonyx jubatus) tail whilst running freely. This work was inspired by \cite{patel2014rapid} where the importance of a tail for manoeuvrability was demonstrated.
  
 
 The field of bio-inspired robotics aims to understand various natural phenomena and incorporate these techniques into the design of modern robotics. 
@@ -16,11 +16,13 @@ previous studies on the issue
 and relevant history on the issue
   
 \section{Objectives of this study}
-This research project aims to show that subject-borne sensors, primarily cameras and IMUs, can provide researchers in the field of biomechanics and bio-inspired robotics with extensive datasets to understand and model the seemingly magical natural world. 
+This research project aims to show that subject-borne sensors, primarily cameras and IMUs, can provide researchers in the field of biomechanics and bio-inspired robotics with extensive datasets to better understand and model the seemingly magical natural world. 
 
 
 
 \section{Scope and Limitations}
+The scope of this research is to model and estimate the human lower limbs during running.
+
 The research presented herein does not seek to push the boundaries of modern sensor technology, nor does it wish to re-imagine understood and accepted models of natural phenomena. Instead, a methodology is proposed that brings together systems from exciting disciplines of research such that richer datasets can be generated and studied.
 
 It should therefore be understood that the following work serves as a proof of concept and not as a final design of a motion capture system.  
@@ -29,9 +31,14 @@ It should therefore be understood that the following work serves as a proof of c
   
 \section{Plan of development}
 The following chapter contains an extensive literature review where various methods of modelling and verifying the human gait has been discussed. There are also sections dedicated to subject borne data capture, computer vision, inertial measurement units (motion sensors), humanoid robotics and mathematical modelling.
-  
+
+This is followed by a chapter titled methodology that presents the the planning and ideation of the thesis. It serves as a link between the theoretical work presented in the literature review and the engineering and application detailed in the  that follow it. 
+
+The final three chapters that make up the body of this report are titled "Designing the Data Capture System", "Processing the Captured Data" and "Data Fusion and State Estimation" in order of appearance.
+
+A chapter is then dedicated to presenting and discussing the results followed by the closing chapter that draws conclusions from the presented work and makes recommendations on future work. 
 
 
-\section{Report Outline}
+ 
 
 
