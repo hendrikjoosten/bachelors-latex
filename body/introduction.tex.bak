@@ -5,18 +5,15 @@ Human motion capture systems are often very costly and confine the capture area 
 
 Recent work \cite{patel2017trackingieee} completed by the Mechatronics Lab at the University of Cape Town showed data capture with subject-borne cameras and sensors can be used to better understand unconstrained movement in a natural environment. The presented work showed the successful kinematic modelling of a cheetah (Acinonyx jubatus) tail whilst running freely. This work was inspired by \cite{patel2014rapid} where the importance of a tail for manoeuvrability was demonstrated.
  
-
 The field of bio-inspired robotics aims to understand various natural phenomena and incorporate these techniques into the design of modern robotics. 
 
-current information surrounding the issue 
+
+This project seems to be somewhat novel as no research modelling the human gate with subject borne cameras was available at the time of writing. 
 
 
-This project seems to be somewhat novel as no research modelling the human gate with subject borne cameras was  at the time of writing. 
-
-and relevant history on the issue
   
 \section{Objectives of this study}
-Depth imagery in the field of human motion capture has been extensively reviewed in \cite{chen2013survey}, where the lack of data from complex movements in different environments is listed as a challenge. Solely relying on motion sensors to understand the gait has been reviewed by \cite{picerno201725}. Although this approach was found to be accurate for external environments it has limitation with respect to cost and sensor disturbance. From these reviews it is clear that a middle ground must exist that can combine the strengths of the approaches to provide a holistic solution.
+Depth imagery in the field of human motion capture has been extensively reviewed in \cite{chen2013survey}, where the lack of data from complex movements in different environments is listed as a challenge. This reaffirms the difficulty stated in the previous section.  Solely relying on motion sensors to understand the gait has been reviewed by \cite{picerno201725}. Although this approach was found to be accurate for external environments it has limitation with respect to cost and sensor disturbance. From these reviews it is clear that a middle ground must exist that can combine the strengths of the approaches to provide a holistic solution.
 
 This research project aims to show that subject-borne sensors, primarily a combination of cameras and IMUs, can provide researchers in the field of biomechanics and bio-inspired robotics with extensive datasets to better understand and model the bipedal motion of humans. 
 

@@ -2,19 +2,19 @@
 
 \begin{document}
 
-%\input{frontmatter/coverpage.tex}
+\input{frontmatter/coverpage.tex}
 
-%\newpage
-%\input{frontmatter/termsofreference.tex}
+\newpage
+\input{frontmatter/termsofreference.tex}
 
-%\newpage
-%\input{frontmatter/declaration.tex}
+\newpage
+\input{frontmatter/declaration.tex}
 
-%\newpage
-%\input{frontmatter/acknowledgements.tex}
+\newpage
+\input{frontmatter/acknowledgements.tex}
 
-%\newpage
-%\input{frontmatter/abstract.tex}
+\newpage
+\input{frontmatter/abstract.tex}
 
 \newpage
 \tableofcontents

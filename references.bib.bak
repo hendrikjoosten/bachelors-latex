@@ -140,6 +140,27 @@
 }
 
 
+%these are the table references for the main equipment used.
+@misc{sony,
+  author = {Sony},
+  title = {Xperia™ Z3 Compact},
+  howpublished = "\url{https://www.sonymobile.com/za/products/phones/xperia-z3-compact/}",
+  note = "[Online; accessed 10-October-2017]"
+}
+@misc{actionmounts,
+  author = {Action Mount},
+  title = {Chest Mount},
+  howpublished = "\url{http://action-mount.com/products/chest-mount/}",
+  note = "[Online; accessed 10-October-2017]"
+}
+@misc{gopro,
+  author = {GoPro, Inc.},
+  title = {Hero Session},
+  howpublished = "\url{https://shop.gopro.com/EMEA/cameras/hero-session/CHDHS-104-master.html}",
+  note = "[Online; accessed 10-October-2017]"
+}
+%end of these are the table references for the main equipment used.
+
 
 
 
