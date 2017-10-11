@@ -1,5 +1,32 @@
 \chapter{Data Fusion and State Estimation}
 
+\begin{table}[!ht]
+\centering
+\label{my-label}
+\begin{tabular}{ll}
+State & Description \\
+$x_{body}$  	    	&x Position of body w.r.t. the global frame\\
+$y_{body}$     	 	    &y Position of body w.r.t. the global frame\\
+$z_{body}$     		    &z Position of body w.r.t. the global frame\\
+
+$\theta_{body}$      	&Pitch of body w.r.t. the global frame\\
+$\phi_{body}$      	    &Roll of body w.r.t. the global frame\\
+$\psi_{body}$      	    &Yaw of body w.r.t. the global frame\\
+
+$\theta_{LH}$     	&Pitch of left thigh w.r.t. left hip\\
+$\psi_{LH}$      	&Yaw of left thigh w.r.t. left hip\\
+$\theta_{LK}$    	&Pitch of left calf w.r.t. left knee\\
+$\theta_{LA}$   	&Pitch of left foot w.r.t. left ankle\\
+
+$\theta_{RH}$    	&Pitch of right thigh w.r.t. right hip\\
+$\psi_{RH}$      	&Yaw of right thigh w.r.t. right hip\\
+$\theta_{RK}$   	&Pitch of the right calf w.r.t. right knee\\
+$\theta_{RA}$  		&Pitch of the right foot w.r.t. the right ankle\\
+
+\end{tabular}
+\caption{My caption}
+\end{table}
+
 
 
 

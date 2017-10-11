@@ -25,6 +25,8 @@
 \usepackage[bottom, perpage]{footmisc}
 \usepackage{longtable}
 
+\usepackage{notoccite}
+
 \usepackage[bookmarks         = true      ,%
             bookmarksnumbered = true      ,%
             setpagesize       = false     ,%
