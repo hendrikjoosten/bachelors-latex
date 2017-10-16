@@ -32,7 +32,8 @@ The specifications of this data capture system has been defined as:
 \begin{itemize}
 \item Stereo housing to hold the cameras.
 \item Chest mount to hold the cameras and IMU.
-\
+\item 
+\item 
 \end{itemize}
 
 \section{Modelling the Lower Limbs}
