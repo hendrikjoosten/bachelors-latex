@@ -25,6 +25,8 @@
 \usepackage[bottom, perpage]{footmisc}
 \usepackage{longtable}
 
+\usepackage{verbatim}
+
 \usepackage{notoccite}
 
 \usepackage[bookmarks         = true      ,%
