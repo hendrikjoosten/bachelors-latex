@@ -3,7 +3,7 @@
 
 \author{Hendrik Joosten}
 
-\usepackage[top = 1in, bottom = 1in, left = 1in, right = 1in]{geometry}
+
 
 \usepackage{titlesec}
 \usepackage{graphicx}
@@ -15,7 +15,6 @@
 \usepackage[none]{hyphenat}
 \usepackage{setspace}
 \usepackage{xcolor}
-\usepackage{float}
 \usepackage{bm}                                             
 \usepackage{enumitem}
 \usepackage{booktabs}
@@ -25,9 +24,21 @@
 \usepackage[bottom, perpage]{footmisc}
 \usepackage{longtable}
 
-\usepackage{verbatim}
+%this package sets up the page parameters
+\usepackage[top = 1in, bottom = 1in, left = 1in, right = 1in]{geometry}
 
+%package that doesnt mess up the numbering when images referenced
 \usepackage{notoccite}
+
+%making the captions look better
+\usepackage{caption}
+
+%important for centering all the images
+\usepackage{floatrow}
+
+
+
+
 
 \usepackage[bookmarks         = true      ,%
             bookmarksnumbered = true      ,%

@@ -21,6 +21,60 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{sandau2014markerless}
+M.~Sandau, H.~Koblauch, T.~B. Moeslund, H.~Aan{\ae}s, T.~Alkj{\ae}r, and E.~B.
+  Simonsen, ``Markerless motion capture can provide reliable 3d gait kinematics
+  in the sagittal and frontal plane,'' \emph{Medical engineering \& physics},
+  vol.~36, no.~9, pp. 1168--1175, 2014.
+
+\bibitem{pfister2014comparative}
+A.~Pfister, A.~M. West, S.~Bronner, and J.~A. Noah, ``Comparative abilities of
+  microsoft kinect and vicon 3d motion capture for gait analysis,''
+  \emph{Journal of medical engineering \& technology}, vol.~38, no.~5, pp.
+  274--280, 2014.
+
+\bibitem{roetenberg2009xsens}
+D.~Roetenberg, H.~Luinge, and P.~Slycke, ``Xsens mvn: full 6dof human motion
+  tracking using miniature inertial sensors,'' \emph{Xsens Motion Technologies
+  BV, Tech. Rep}, 2009.
+
+\bibitem{seel2014imu}
+T.~Seel, J.~Raisch, and T.~Schauer, ``Imu-based joint angle measurement for
+  gait analysis,'' \emph{Sensors}, vol.~14, no.~4, pp. 6891--6909, 2014.
+
+\bibitem{vicon}
+Vicon, ``Vicon motion capture system,''
+  \url{https://www.vicon.com/motion-capture/biomechanics-and-sport}, [Online;
+  accessed 16-October-2017].
+
+\bibitem{patel2017trackingieee}
+A.~Patel, B.~Stocks, C.~Fisher, F.~Nicolls, and E.~Boje, ``Tracking the cheetah
+  tail using animal-borne cameras, gps, and an imu,'' \emph{IEEE Sensors
+  Letters}, vol.~1, no.~4, pp. 1--4, 2017.
+
+\bibitem{bradstocks}
+B.~Stocks, ``Cheetah motion analysis,'' Master's thesis, University of Cape
+  TOwn, South Africa, 2016.
+
+\bibitem{patel2014rapid}
+A.~Patel and M.~Braae, ``Rapid acceleration and braking: Inspirations from the
+  cheetah's tail,'' in \emph{Robotics and Automation (ICRA), 2014 IEEE
+  International Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
+  2014, pp. 793--799.
+
+\bibitem{benyus2002biomimicry}
+J.~M. Benyus, ``Biomimicry: Innovation inspired by nature.''
+
+\bibitem{chen2013survey}
+L.~Chen, H.~Wei, and J.~Ferryman, ``A survey of human motion analysis using
+  depth imagery,'' \emph{Pattern Recognition Letters}, vol.~34, no.~15, pp.
+  1995--2006, 2013.
+
+\bibitem{picerno201725}
+P.~Picerno, ``25 years of lower limb joint kinematics by using inertial and
+  magnetic sensors: A review of methodological approaches,'' \emph{Gait \&
+  posture}, vol.~51, pp. 239--246, 2017.
+
 \bibitem{adolph2013road}
 K.~E. Adolph and S.~R. Robinson, ``The road to walking: What learning to walk
   tells us about development,'' \emph{Oxford handbook of developmental
@@ -34,11 +88,6 @@ S.~Hanson and A.~Jones, ``Is there evidence that walking groups have health
 \bibitem{fox1999influence}
 K.~R. Fox, ``The influence of physical activity on mental well-being,''
   \emph{Public health nutrition}, vol.~2, no.~3a, pp. 411--418, 1999.
-
-\bibitem{patel2017trackingieee}
-A.~Patel, B.~Stocks, C.~Fisher, F.~Nicolls, and E.~Boje, ``Tracking the cheetah
-  tail using animal-borne cameras, gps, and an imu,'' \emph{IEEE Sensors
-  Letters}, vol.~1, no.~4, pp. 1--4, 2017.
 
 \bibitem{kane2014falcons}
 S.~A. Kane and M.~Zamani, ``Falcons pursue prey using visual motion cues: new
@@ -68,7 +117,7 @@ A.~Patel and M.~Braae, ``Rapid turning at high-speed: Inspirations from the
   IEEE, 2013, pp. 5506--5511.
 
 \bibitem{gopro}
-I.~GoPro, ``Hero session,''
+GoPro, ``Hero session,''
   \url{https://shop.gopro.com/EMEA/cameras/hero-session/CHDHS-104-master.html},
   [Online; accessed 10-October-2017].
 
@@ -90,6 +139,11 @@ I.~GoPro, ``Gopro chesty (chest harness),''
 M.~Christensen, ``Gopro hero4 session,''
   \url{https://grabcad.com/library/gopro-hero4-session-1}, [Online; accessed
   6-October-2017].
+
+\bibitem{Hartley2004}
+R.~I. Hartley and A.~Zisserman, \emph{Multiple View Geometry in Computer
+  Vision}, 2nd~ed.\hskip 1em plus 0.5em minus 0.4em\relax Cambridge University
+  Press, ISBN: 0521540518, 2004.
 
 \bibitem{hedrick2008software}
 T.~L. Hedrick, ``Software techniques for two-and three-dimensional kinematic
