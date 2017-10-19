@@ -1,11 +1,13 @@
 \chapter{Methodology}
 To ensure the success of this project a basic plan of action was created. The following diagram shows the critical phases of the project.
 
-\begin{figure}[!ht]
-  \includegraphics[width=\linewidth]{figures/planOfAction.png}
+\begin{figure}[!ht] 
+\captionsetup{width=0.8\linewidth, font=small}  
+\includegraphics[width=0.8\linewidth]{figures/planOfAction.png}
   \caption{Diagram showing the progression and dependence of the major stages of this project}
-  \label{fig:planofaction}
+\label{fig:planOfAction}
 \end{figure}
+
 
 Due to the availability of equipment, financial limitations and time  
 

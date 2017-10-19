@@ -40,7 +40,7 @@ sdfgsdfgdsf
 
 \begin{figure}[!ht]
   \includegraphics[width=\linewidth]{figures/GoProHero4Session.JPG}
-  \caption{Solidworks model of the GPHS Action Camera from \cite{gph4smodel}}
+  \caption{Solidworks model of the GPHS Action Camera from \cite{gph4smodelgrabcad}}
   \label{fig:goproherosession4}
 \end{figure}
 

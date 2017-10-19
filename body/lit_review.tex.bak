@@ -1,28 +1,77 @@
 \chapter{Literature Review}
-This section reviews various academic sources related to the methodology proposed.
+This section reviews various academic sources related to the methodology proposed. It will look at the various fields of engineering as well as biomechanics to form a holistic understanding of the design space. Importantly the technologies discussed will also be related to the field of robotics as  
+
+
+
 
 \section{Introduction}
-This research project brings together various disciplines of research. By combining techniques from computer vision, sensors and data fusion we can design and develop new way of capturing human gait data. 
+This research project brings together various disciplines of research. By combining techniques from computer vision, sensors and data fusion we can design and develop new way of capturing human gait data. Whilst the fields of biomimicry and bio-inspired robotics are relatively new, recent advances in related fields such as artificial intellegence and computer vision have invigorated the persuit of functional humanoid robotics. 
+
+Humanoid robotics \cite{kaneko2002design}   ... talk about dynamics...
+
+
+
+
+
 
 \section{Human Motion and Gait}
 The human gait is well understood and has been studied in detail as it is a fundamental part of human mobility. It is one of the first skills developed in infancy and its importance for healthy develpoment, as outlined by Adolph et al. \cite{adolph2013road}, cannot be understated. Walking and running are also critical factors in transportation and geographical movement of people and goods in developing countries where public transport is underdeveloped and private transport not within the means of the populous. Finally walking and running as exercise has proven benefits as shown in \cite{hanson2015there} (general health) and \cite{fox1999influence} (mental health).     
 
 There is thus clear evidence that the human gait has earned its right as a field of study in academia.
 
+
+
+
+
+
+
 \section{Computer Vision}
-While the previous section answers "why" understanding the human gait is important, the following sections will explain fields that contribute to the question of "how" the gait is studied.
+While the previous section answers "why" understanding the human gait is important, the following sections will explain fields that contribute to the question of "how" the gait is studied. THe technologies used and the 
 
 Computer vision is a field borne from image processing and artificial intelligence that seeks to replicate the ability of the human visual system.   
 
 
+
+
+
+
+
 \subsection{Computer Vision in robotics}
 
-\subsection{New Perspectives from Animal Borne Cameras}
-In large this researched project was inspired by work done in the Mechatronics Lab at the University of Cape Town. In 2017, Patel et al.  \cite{patel2017trackingieee} showed that using animal borne cameras and motion sensors, the tail kinematics of the cheetah (Acinonyx Jubatus) could be tracked. Patel's work was partly inspired by Kane et al. \cite{kane2014falcons} where falcon (Falco Peregrinus) borne cameras were used to better understand airborne pursuit of prey.
 
-Further work completed by Pearson et al. \cite{pearson2017testing} showed that cameras mounted to dolphins (Lagenorhynchus obscurus) could provide insight into the their movement, social and foraging strategies. These examples show the promise that animal borne 
+
+
+
+
+
+
+
+
+\subsection{New Perspectives from Animal Borne Cameras}
+Patel et al. \cite{patel2017trackingieee} showed that using animal borne cameras and motion sensors, the tail kinematics of the cheetah (Acinonyx Jubatus) could be tracked. Patel's work was partly inspired by Kane et al. \cite{kane2014falcons} where falcon (Falco Peregrinus) borne cameras were used to better understand airborne pursuit of prey. Giving researchers a new perspective on the behaviour of animals in the natural world.
+
+Further work completed by Pearson et al. \cite{pearson2017testing} showed that cameras mounted to dolphins (Lagenorhynchus Obscurus) could provide insight into the their movement, social and foraging strategies. Using cameras to study ocean-life has become a popular methodology in recent time due to difficulties imposed by their environment. In essence We struggle to understand flying and swimming animals due to their complex environments.   
+
+
+
+
+
+
+
+
 
 \subsection{Human Motion Analysis Using Computer Vision}
+\cite{chen2013survey}
+
+
+
+
+
+
+
+
+
+
 
 
 \section{Inertial Measurement Units}
@@ -49,34 +98,114 @@ Generally IMUs contain the following subsystems:
 
 
 
+
+
 \subsection{Inertial Measurement Units in robotics}
 
+
+
+
+
+
+
+
 \subsection{Human Motion Analysis Using Inertial Measurement Units}
+\cite{picerno201725}
+
+
+
+
+
+
+
+
 
 
 \section{Mathematical Modelling}
-The binding element presented in this work is the underlying mathematics
-
-\subsection{math model of the human gait}
+The binding element presented in this work is the underlying mathematics.
 
 
-\subsection{linear kinematics}
 
-\subsection{rotational matrices}
 
-\subsection{KF and EKF}
+
+
+
+
+\subsection{Mathematical Models of the Gait}
+
+
+\subsection{Linear Kinematics}
+
+
+
+
+
+
+
+\subsection{Rotational Matrices}
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Kalman FIlter and Extended Kalman FIlter}
 The Kalman filter is a mathematical used to estimate
 
 
 
-\section{Observing Natural Solutions for Robotic Shortcomings}
-Naturally the question arises:  why would we want to better understand the dynamics of animals? A persistent problem in the field of modern robotics is that of mobility; robots struggle to navigate real world surfaces and obstacles. Work by Patel et al. \cite{patel2013rapid} shows how we can look towards nature for inspiration to solve this mobility problem.
 
-This follows the central philosophy of bio-inspired robotics as defined by 
+
+
+
+
+
+
+
+
+\section{Observing Natural Solutions for Robotic Shortcomings}
+Naturally the question arises:  why would we want to better understand the dynamics of animals? A persistent problem in the field of modern robotics is that of mobility; robots struggle to navigate real world surfaces and obstacles. Work by Patel et al. \cite{patel2013rapid} shows how we can look towards nature for inspiration to solve this mobility problem. 
 
 As demonstrated by various prototype robots built by Boston Dynamics bipedal robots are severely limited in manoeuvrability when compared to   
 
-\section{conclusion}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Conclusion}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

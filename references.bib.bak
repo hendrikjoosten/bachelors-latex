@@ -2,9 +2,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 MISC THAT IS USABLE MOVE TO SECTION LATER
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 
@@ -48,21 +46,7 @@ MISC THAT IS USABLE MOVE TO SECTION LATER
 }
 
 
-%template for refrencing links.. goprosolidworks model from grabcad
-@misc{gph4smodel,
-  author = {Michael Christensen},
-  title = {GoPro Hero4 Session},
-  howpublished = "\url{https://grabcad.com/library/gopro-hero4-session-1}",
-  note = "[Online; accessed 6-October-2017]"
-}
 
-
-@misc{chestygpwebsite,
-  author = {GoPro, Inc.},
-  title = {GoPro Chesty (Chest Harness)},
-  howpublished = "\url{https://shop.gopro.com/EMEA/mounts/chesty-chest-harness/GCHM30-001.html}",
-  note = "[Online; accessed 6-October-2017]"
-}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -206,6 +190,18 @@ year={2016},
 LIT REVIEW
 %==============================================================================
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+humanoid robotics open platform
+@inproceedings{kaneko2002design,
+  title={Design of prototype humanoid robotics platform for HRP},
+  author={Kaneko, Kenji and Kanehiro, Fumio and Kajita, Shuuji and Yokoyama, Kazuhiko and Akachi, Kazuhiko and Kawasaki, Toshikazu and Ota, Shigehiko and Isozumi, Takakatsu},
+  booktitle={Intelligent Robots and Systems, 2002. IEEE/RSJ International Conference on},
+  volume={3},
+  pages={2431--2436},
+  year={2002},
+  organization={IEEE}
+}
+
+
 %learning to walk
 @article{adolph2013road,
   title={The road to walking: What learning to walk tells us about development},
@@ -285,6 +281,51 @@ LIT REVIEW
   publisher={Springer}
 }
 
+
+%fundamental work complete by zajac et al in modelling the human gait +++ONE+++
+@article{zajac1990modeling,
+  title={Modeling musculoskeletal movement systems: joint and body segmental dynamics, musculoskeletal actuation, and neuromuscular control},
+  author={Zajac, Felix E and Winters, Jack M},
+  journal={Multiple muscle systems: Biomechanics and movement organization},
+  volume={8},
+  pages={121--148},
+  year={1990},
+  publisher={Chapter}
+}
+@article{zajac2002biomechanics,
+  title={Biomechanics and muscle coordination of human walking: Part I: Introduction to concepts, power transfer, dynamics and simulations},
+  author={Zajac, Felix E and Neptune, Richard R and Kautz, Steven A},
+  journal={Gait \& posture},
+  volume={16},
+  number={3},
+  pages={215--232},
+  year={2002},
+  publisher={Elsevier}
+}
+@article{zajac2003biomechanics,
+  title={Biomechanics and muscle coordination of human walking: part II: lessons from dynamical simulations and clinical implications},
+  author={Zajac, Felix E and Neptune, Richard R and Kautz, Steven A},
+  journal={Gait \& posture},
+  volume={17},
+  number={1},
+  pages={1--17},
+  year={2003},
+  publisher={Elsevier}
+}
+%followign on from zajacs work
+@article{ren2007predictive, 
+  title={Predictive modelling of human walking over a complete gait cycle},
+  author={Ren, Lei and Jones, Richard K and Howard, David},
+  journal={Journal of biomechanics},
+  volume={40},
+  number={7},
+  pages={1567--1574},
+  year={2007},
+  publisher={Elsevier}
+}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -311,7 +352,6 @@ POST LIT REVIEWWWWWW
 
 %book that tells us intrinsics and extrinsics of a camera
 %used in section 5 ...
- 
 @Book{Hartley2004, 
     author = "Hartley, R.~I. and Zisserman, A.",
     title = "Multiple View Geometry in Computer Vision",
@@ -319,7 +359,6 @@ POST LIT REVIEWWWWWW
     year = "2004",
     publisher = "Cambridge University Press, ISBN: 0521540518"
 }
-
 %article given at the start by patel....
 %used in the section that talks about marker tracking
 @article{hedrick2008software,
@@ -366,31 +405,49 @@ PICTURES FROM THE WEB
 %==============================================================================
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 @misc{sony,
-  author = {Sony},
+  author = {SONY},
   title = {Xperia™ Z3 Compact},
   howpublished = "\url{https://www.sonymobile.com/za/products/phones/xperia-z3-compact/}",
   note = "[Online; accessed 10-October-2017]"
 }
 @misc{actionmounts,
-  author = {Action Mount},
+  author = {ACTIONMOUNTS},
   title = {Chest Mount},
   howpublished = "\url{http://action-mount.com/products/chest-mount/}",
   note = "[Online; accessed 10-October-2017]"
 }
 @misc{gopro,
-  author = {GoPro},
+  author = {GOPRO},
   title = {Hero Session},
   howpublished = "\url{https://shop.gopro.com/EMEA/cameras/hero-session/CHDHS-104-master.html}",
   note = "[Online; accessed 10-October-2017]"
 }
 @misc{vicon,
-  author = {Vicon},
+  author = {VICON},
   title = {Vicon Motion Capture System},
   howpublished = "\url{https://www.vicon.com/motion-capture/biomechanics-and-sport}",
   note = "[Online; accessed 16-October-2017]"
 }
+@misc{gph4smodelgrabcad,
+  author = {Michael Christensen},
+  title = {GoPro Hero4 Session},
+  howpublished = "\url{https://grabcad.com/library/gopro-hero4-session-1}",
+  note = "[Online; accessed 6-October-2017]"
+}
+@misc{chestygpwebsite,
+  author = {GOPRO},
+  title = {GoPro Chesty (Chest Harness)},
+  howpublished = "\url{https://shop.gopro.com/EMEA/mounts/chesty-chest-harness/GCHM30-001.html}",
+  note = "[Online; accessed 6-October-2017]"
+}
+@misc{chestygpwebsite,
+  author = {TESLA},
+  title = {Tesla Autopilot},
+  howpublished = "\url{https://www.tesla.com/autopilot}",
+  note = "[Online; accessed 6-October-2017]"
+}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
