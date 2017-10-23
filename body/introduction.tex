@@ -18,15 +18,24 @@ Recent work \cite{patel2017trackingieee} completed by the Mechatronics Lab at th
 \section{Objectives of the Study}
 Depth imagery in the field of human motion capture has been extensively reviewed in \cite{chen2013survey}, where the lack of data from complex movements in different environments is listed as a challenge. This reaffirms the difficulty stated in the previous section.  Solely relying on motion sensors to understand the gait has been reviewed by \cite{picerno201725}. Although this approach was found to be accurate for external environments it has limitation with respect to cost and sensor disturbance. From these reviews it is clear that a middle ground must exist that can combine the strengths of the approaches to provide a holistic solution.
 
-This research project aims to show that subject-borne sensors, primarily a combination of cameras and IMUs, can provide researchers in the field of health sciences, biomechanics and biomimicry with extensive datasets to better understand and model the bipedal motion of humans. It builds on the foundational work presented by Stocks and Patel \cite{bradstocks} and envisions to implement a similar system to track data points on the lower limbs of a runner.
+This research project aims to show that subject-borne sensors, primarily a combination of cameras and IMUs, can provide researchers in the field of health sciences, biomechanics and biomimicry with extensive datasets to better understand and model the bipedal motion of humans. It builds on the foundational work presented by Stocks and Patel \cite{bradstocks} and envisions to implement a similar system to track data points on the lower limbs of a runner. The original prototype system is shown below.
 
+\begin{figure}[!ht] 
+\captionsetup{width=0.8\linewidth, font=small}  
+\includegraphics[width=0.8\linewidth]{figures/introcheetah.png}
+\caption{A cheetah wearing the wearable motion capture system designed by Stocks \cite{bradstocks}}
+\label{fig:introcheetah}
+\end{figure}
+
+Finally this thesis will pay close attention to similarities in understanding the human gait using technologies used to control the dynamics of bipedal humanoid robots. Since these robots attempt to imitate human motion many of they key principles in the field of robotics relates directly to to the bio-mechanics of humans.
 
 \section{Scope and Limitations}
-The scope of this research is to model and estimate the human lower limbs during a flat ground steady state run. The motion will be estimated by determining the different joint angles as well as the motion of the runner w.r.t. the inertial frame.Joint angles are a popular method of quantization and the availability of rich dataset allow comparative analysis on the final findings of this work. This is the first logical step in the iterative design process to eventually understand movement in complex environments using wearable motion capture systems.
+The scope of this research is to model and estimate the human lower limbs during a flat ground steady state run. The motion will be estimated by determining the different joint angles as well as the motion of the runner w.r.t. the inertial frame.Joint angles are a popular method of quantization and the availability of rich datasets allow comparative analysis on the final findings of this work. This is the first logical step in the iterative design process to eventually understand movement in complex environments using wearable motion capture systems.
+
+The availability of equipment also influenced the quality and accuracy of the system. Due to financial constraints the system was designed to use available hardware and minimize additional expenses. Although the the system designed cannot be classified as low cost, when compared to other methods of motion capture it becomes financially attractive. The components selected are also interchangeable and need not exactly match the specifications presented herein.
 
 It should be noted that the research presented herein does not seek to push the boundaries of modern sensor technology, nor does it wish to re-imagine understood and accepted models of natural phenomena. Instead, a methodology is proposed that brings together systems from exciting disciplines of research such that richer datasets can be generated and studied. This research therefore serves as a proof of concept for a novel wearable motion capture technology.
 
- 
 \section{Plan of Development}
 The following chapter contains an extensive literature review where various methods of modelling and verifying the human gait has been discussed. There are also sections dedicated to subject borne data capture, computer vision, inertial measurement units (motion sensors), humanoid robotics and mathematical modelling.
 

@@ -440,12 +440,14 @@ PICTURES FROM THE WEB
   howpublished = "\url{https://shop.gopro.com/EMEA/mounts/chesty-chest-harness/GCHM30-001.html}",
   note = "[Online; accessed 6-October-2017]"
 }
-@misc{chestygpwebsite,
+@misc{tesla,
   author = {TESLA},
   title = {Tesla Autopilot},
   howpublished = "\url{https://www.tesla.com/autopilot}",
   note = "[Online; accessed 6-October-2017]"
 }
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
