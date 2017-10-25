@@ -28,7 +28,7 @@ There is thus clear evidence that the human gait has earned its right as a field
 
 
 \section{Computer Vision}
-While the previous section answers "why" understanding the human gait is important, the following sections will explain fields that contribute to the question of "how" the gait is studied. THe technologies used and the 
+While the previous section answers "why" understanding the human gait is important, the following sections will explain fields that contribute to the question of "how" the gait is studied. The technologies used and the 
 
 Computer vision is a field borne from image processing and artificial intelligence that seeks to replicate the ability of the human visual system.   
 
@@ -157,17 +157,32 @@ interesting to note the how he compared modelling difficulties to that seen in r
 \cite{zajac2003biomechanics}
 
 
+collection of rigid beams
+
+
 \subsection{Linear Kinematics}
+By using kinematics we can quantify and understand the movement of the lower limbs. Kinematics is a branch of mechanics that fully defines the motion of a point with respect to position, velocity and acceleration (be it linear, rotational or a combination). Kinematics does not however describe the forces, torques or other variables that may affect that point. This is due to a fundamental assumption in kinematics that the point is massless.	 
 
+Kinematics can be broken up into 2 main branches: \textit{forward} and \textit{inverse}. To illustrate the matter the following diagram is that of a basic kinematic model.
 
+\begin{figure}[!ht] 
+\captionsetup{width=\linewidth, font=small}  
+\includegraphics[width=\linewidth]{figures/kinematics.png}
+\caption{Basic kinematic model to demonstrate}
+\label{fig:kinematics}
+\end{figure}
 
+In this figure the position of point P is defined by 2 lengths, L1 and L2 with different lengths and angles from a set of shared axis. In forward kinematics we can find P if we know the angles and lengths of the different links in the system. The motion of point P can then be described by looking at  how the angles and lengths of the links in the system change over time.
 
+Inverse kinematics uses knowledge of different points in the system, such as the origin and P and the lengths of the links in the system to determine the angular offsets of each length. Since these produce a set of linear equations, the more unknowns we are faced with the more possible solutions we can generate.
 
-
+As discussed in the previous section a common method of modeling the human lower limbs is to use a collection of rigid beams. 
 
 
 \subsection{Rotational Matrices}
-There is an underlying difficulty in mathematically fusing various data sources and models; the difficulty of finding common frames of reference. The importace of reference einsteins theory of relativity literally changes the game
+There is an underlying difficulty in mathematically fusing various data sources and models; that of finding a common frame of reference. With the intent of using Lagrangian mechanics good definitions for the different frames are critical. This thesis will primarily use 2 different frames of reference. The inertial frame and the body frame.
+
+The inertial frame (or world frame) can be defined in different ways as seen in \cite{soechting1992moving}, for the these NED (North East Down)	.
 
 Rotational marices are mathematical objects that rotate vectors.
 Since most engineering is constrained to the physical three dismensional world these matrices commonly rotate 3 dimensional vectors. 
@@ -234,6 +249,13 @@ As demonstrated by various prototype robots built by Boston Dynamics bipedal rob
 This chapter has shown the direct pararels of technologies related to gate capture to dynamic robotic systems. With these strong parllels in mind the transferability of these systems from humans to humanoid robots is clear.
 
 ust as we can see the relatoipn work on the human body has to that of robotics we can use engineering methods developed for mechanical systems to understand complex ystems such as the human body.
+
+
+
+
+
+
+
 
 
 

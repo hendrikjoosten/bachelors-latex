@@ -7,12 +7,12 @@ This chapter is dedicated the explaining the mathematical methods and models use
 \label{statesForEkf}
 \begin{tabular}{ll}
 State & Description \\
-$x_{body}$  	    	&x Position of body w.r.t. the global frame\\
-$y_{body}$     	 	    &y Position of body w.r.t. the global frame\\
-$z_{body}$     		    &z Position of body w.r.t. the global frame\\
-$\theta_{body}$      	&Pitch of body w.r.t. the global frame\\
-$\phi_{body}$      	    &Roll of body w.r.t. the global frame\\
-$\psi_{body}$      	    &Yaw of body w.r.t. the global frame\\
+$x_{body}$  	    	&x Position of body w.r.t. the inertial frame\\
+$y_{body}$     	 	    &y Position of body w.r.t. the inertial frame\\
+$z_{body}$     		    &z Position of body w.r.t. the inertial frame\\
+$\theta_{body}$      	&Pitch of body w.r.t. the inertial frame\\
+$\phi_{body}$      	    &Roll of body w.r.t. the inertial frame\\
+$\psi_{body}$      	    &Yaw of body w.r.t. the inertial frame\\
 $\theta_{LH}$     	&Pitch of left thigh w.r.t. left hip\\
 $\psi_{LH}$      	&Yaw of left thigh w.r.t. left hip\\
 $\theta_{LK}$    	&Pitch of left calf w.r.t. left knee\\
@@ -126,8 +126,38 @@ $$ p2xyz = bodyY + bodyZ + R1 * Thigh + R2 * Calf $$
 left heel
 $$ p2xyz = bodyY + bodyZ + R1 * Thigh + R2 * Calf $$
 
+\section{Understanding the Data Sources}
+
+It is important to understand the different parameters that mathematically quantify cameras. These parameters can be devided into \textit{extrinsic} and \textit{extrinsic}. Extrinsic camera variables related to the cameras position in the inertial frame and the direction the camera is facing. These can be summarized by the extrinsic camera matrix 
+
+$$[ R \, |\, \boldsymbol{t}] = 
+\left[ \begin{array}{ccc|c} 
+r_{1,1} & r_{1,2} & r_{1,3} & t_1 \\
+r_{2,1} & r_{2,2} & r_{2,3} & t_2 \\
+r_{3,1} & r_{3,2} & r_{3,3} & t_3 \\
+\end{array} \right]$$
 
 
+
+\section{State Estimation}
+This section will mathematically explain the Kalman filter and its implementation in this project.
+
+Process equation of the kalam filter.
+from states to emasurements
+$$ X_{k+1} = FX_{k} + w_{k}  $$
+
+our state, contained in the vector X can be estimated by applying the process matrix F to our current known state. the term w is the noise varaible that accounts for process noise.
+
+Measurement equations
+from measurements to states.
+$$ Y_k = H_{k}X_{k} + v_{k} $$
+
+w will be contained int he matrix Q
+
+while v will be contained in the matrix R1
+
+
+linearizing nonlinear system we get the EKF
 
 
 

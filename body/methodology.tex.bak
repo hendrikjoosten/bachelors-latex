@@ -8,12 +8,10 @@ To ensure the success of this project a basic plan of action was created. The fo
 \label{fig:planOfAction}
 \end{figure}
 
-
-Due to the availability of equipment, financial limitations and time  
-
+Due to the availability of equipment, financial limitations and time constraints various design parameters where predetermined. These known design elements are discussed in the following section.
   
 \section{System Design}
-This section is dedicated to defining and understanding the specifications of the data capture system. The system will consist of 4 cameras and an IMU mounted to the torso of the subject. the cameras will record the legs of the subject while the IMU will log inertial data from the body of the subject.
+This section is dedicated to defining and understanding the specifications of the data capture system. The system will consist of 4 cameras and an IMU mounted to the torso of the subject. The cameras will record the lower limbs of the subject while the IMU will log inertial data from the body of the subject. The video data from the cameras will provide information about the kinematics of the lower limbs with respect to the cameras while the IMU will provide motion data of the body with respect to the inertial frame. As discussed in the previous chapter the inertial frame and the world frame are equivalent in this project. 
 
 Due to the availability of equipment provided by the Mechatronics Lab the following equipment was chosen as the main components to use in the system:
 
@@ -21,34 +19,47 @@ Due to the availability of equipment provided by the Mechatronics Lab the follow
 \begin{table}[!ht]
 \label{equipment-table}
 \begin{tabular}{llll}
-Item		& Selected Equipment		   & From		  \\
-Camera      & 4 GoPro Hero Session Cameras & \cite{gopro} \\
-IMU         & 1 Sony Xperia Z3 Compact     & \cite{sony}  \\
-Chest Mount & 1 Action Mount Chest Mount   & \cite{actionmounts}   
+Item		 & Selected Equipment				& From		  			\\
+Camera      & 4 GoPro Hero Session Cameras  & \cite{gopro} 		\\
+IMU         & 1 Sony Xperia Z3 Compact      & \cite{sony}  		\\
+Chest Mount & 1 Action Mount Chest Mount    & \cite{actionmounts}   
 \end{tabular}
-\caption{The main components used}
+\caption{Known design elements of the project}
 \end{table}
 
 The specifications of this data capture system has been defined as:
 \begin{itemize}
-\item Stereo housing to hold the cameras.
-\item Chest mount to hold the cameras and IMU.
-\item 
-\item 
+\item 2 stereo housings to hold the cameras
+\item Chest mount to hold the cameras and IMU
+\item Connecting hardware to mount camera housing to the chest harness.
+\item Cameras must be stable during running
+\item IMU must be rigidly mounted to front cameras
+\item Cameras must capture full lower limb motion
+\item Harness must be comfortable during running.
+\item Harness must not impede natural gait of subject
+\item Harness must be as light as possible
+\item Harness must fit different size torsos and for different sexes
+\item system must be remote controlled as far as possible 
 \end{itemize}
 
+These specifications ensure a system that can be used by a large demographic of people.
+
 \section{Modelling the Lower Limbs}
-talk about the model here
+To interpret the data and the underlying mathematics a model of the human torso and lower limbs must be created. This model consist of the lower limbs being represented as rigid links. Each leg is comprised of three different links: thigh, calf and foot. The joints connecting the links have been limited degrees of freedom to simplify the model. The ankle is ass
 
 \section{Experimental Details}
-The data was captured during a short
+The data was captured during a short straight road run where the runner started from a standing position and accelerated to a steady state run
 
 \section{Sensor Fusion}
-asdfasdkfjasldfk
+Using a combination 
 
 \section{Limitations}
-system shortcomings
+The scope of this research does not include runs over rough terrain as this is the logical next step after flat ground steady state running is modelled and estimated. It is assumed that given robust Kalman Filter and complete image processing solution the system would work for running on various terrains.
+
+Various shortcoming have been identified.
+
 experimental shortcoming
+
 model shortcomings
 
 

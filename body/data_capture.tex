@@ -14,7 +14,7 @@ Due to the availability of GoPro Hero Session cameras the wearable motion captur
 The camera can capture videos at a variety of frame rates and a variety of resolutions. These settings are limited as the software that controls the camera is proprietary.
 
 These set frame rates and resolutions are presented in the table below.
-\begin{table}[]
+\begin{table}[!ht]
 \centering
 \caption{Possible frame rate and resolution combinations on the GPHS camera}
 \label{framesres}
@@ -55,17 +55,9 @@ This model was heavily modified using Dassault Systems SolidWorks software to en
 
 
 \section{Vision Calibration}
+In order to obtain accurate positional information from the video cameras calibration was performed. MATLAB has a built in stereo camera calibration application that can calibrate a set of cameras and create an object containing all the essential parameters, including the individual camera intrinsics.
 
-
-matlab stereo camera calibration software
-1. calibrate the cameras
-2. get data from the recordings
-
-took some vids
-
-made matlab script to isolate frames in vids
-
-put frames into stereo video camera calibrator
+To calibrate the cameras pictures of a white and black chequerboard is fed in to the calibration application that then mathematically determines the camera parameters. In order to make this process more efficient a video of the the moving chequerboard was taken and various frames of importance extracted using a simple MATLAB script. 
 
 
 
