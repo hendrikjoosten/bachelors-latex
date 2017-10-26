@@ -47,20 +47,28 @@ These specifications ensure a system that can be used by a large demographic of 
 \section{Modelling the Lower Limbs}
 To interpret the data and the underlying mathematics a model of the human torso and lower limbs must be created. This model consist of the lower limbs being represented as rigid links. Each leg is comprised of three different links: thigh, calf and foot. The joints connecting the links have been limited degrees of freedom to simplify the model. The ankle (serving as the joint between the foot and calf) is assumed to have a single rotational degree of freedom (pitch). The knee (serving as a joint between the calf and the thigh) has also been limited to only have a pitch element. Finally the hip (joining the thigh to the body) has been given 2 rotational degrees of freedom: pitch and yaw. This rigid model can be seen in the following figure.
 
+\begin{figure}[!ht] 
+\captionsetup{width=0.8\linewidth, font=small}  
+\includegraphics[width=0.8\linewidth]{figures/swmodel.png}
+\caption{Rigid beam model used in this thesis}
+\label{fig:swmodel}
+\end{figure}
+
+
+
+
 \section{Experimental Details}
 The data was captured during a short straight road run where the runner started from a standing position and accelerated to a steady state run
 
 \section{Sensor Fusion}
-Using a combination 
+
 
 \section{Limitations}
-The scope of this research does not include runs over rough terrain as this is the logical next step after flat ground steady state running is modelled and estimated. It is assumed that given robust Kalman Filter and complete image processing solution the system would work for running on various terrains.
+The scope of this research does not include runs over rough terrain as this is the logical next step after flat ground steady state running is modelled and estimated. It is assumed that given robust EKF and complete image processing solution the system would work for running on various terrains.
 
-Various shortcoming have been identified.
+Another source of limitations is the nature of the rigid beam model. This non elastic model does not take in to account the slight change in lengths of the limbs during running. The model also omits yaw and roll parameters about the knee and ankle as well as roll parameters about the hip. Finally the model assumes a rigid stationary chest that introduces some error relating the the camera data.
 
-experimental shortcoming
-
-model shortcomings
+Since the chest swings proportional to the gait period this could be modelled as a harmonic oscillator. It would also be possible to interpret the rotational rates of the chest from the IMU data.
 
 
 

@@ -2,12 +2,15 @@
 This chapter is dedicated to the complex process of extracting critical data from the video files. The following digram shows the process of converting a data heavy video file to a more lightweight .csv (Comma Separated Values) file.
 
 \section{Processing the IMU Data}
+
+\subsection{Capture IMU Data}
 To use the smartphone as an IMU a free application "AndroSensor" was installed. This application could log parameter from all the availible sensor s and could be configured in various ways
 
 \cite{androsensor}
 
 
 The IMU data logged by the smartphone was saved as a .CSV file with the first row containing the headings of various variables. These headings were
+
 \begin{table}
 \centering
 \caption{My caption}
@@ -63,6 +66,7 @@ All these variables have been recorded with respect the smartphone frame of refe
 
 
 \section{Processing the Video Data}
+The following flowcharts depicts the procedural processing of video data.
 \begin{figure}[!ht]
   \includegraphics[width=\linewidth]{figures/videoProcess.png}
   \caption{Diagram showing the progression and dependence of the major stages of video processing in the project}
@@ -70,11 +74,7 @@ All these variables have been recorded with respect the smartphone frame of refe
 \end{figure}
 
 \subsection{Obtaining Video Data}
-Using the chest mounted cameras detailed in the previous chapter we can generate raw video data. The GPHS cameras can be configured to record at different frame rates and resolutions.
-
-%we chose the high 100Hz framerate
-
-%720p by 
+Using the chest mounted cameras detailed in the previous chapter we can generate raw video data. The GPHS cameras can be configured to record at different frame rates and resolutions as discussed in the previous chapter. The video files where stored in an .MP4 format. This meant that during recording the video was compressed and the 
 
 
 \subsection{Synchronizing Video Sources}

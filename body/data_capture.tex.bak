@@ -28,7 +28,9 @@ Resolution  & Frame Rates                             \\
 \end{tabular}
 \end{table}
 
-The relative motion 
+The relative motion of the lower limbs appeared to move rapidly and therefore the highest possible framerate with the best resolution was chosen. The camera was therefore configured to record at 100Hz and a resolution of 1280 x 720 pixels. This was chosen as the quality of the 848 x 480 video was simply to low to analyse using computer algorithms.
+
+The camera also has the ability to record using a normal    
 
 
 

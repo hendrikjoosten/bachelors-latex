@@ -146,7 +146,7 @@ Process equation of the kalam filter.
 from states to emasurements
 $$ X_{k+1} = FX_{k} + w_{k}  $$
 
-our state, contained in the vector X can be estimated by applying the process matrix F to our current known state. the term w is the noise varaible that accounts for process noise.
+our state, contained in the vector X can be estimated by applying the process matrix F to our current known state. the term w is the noise variable that accounts for process noise.
 
 Measurement equations
 from measurements to states.
@@ -159,6 +159,9 @@ while v will be contained in the matrix R1
 
 linearizing nonlinear system we get the EKF
 
+
+\section{Q Matrix, R Matrix and Initialization}
+This section will discuss the final components of the EKF namely the Q matrix containing the various process noise variations, R matrix containing the various measurement noise variances and the initial state values.
 
 
 
