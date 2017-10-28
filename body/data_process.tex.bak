@@ -4,9 +4,14 @@ This chapter is dedicated to the complex process of extracting critical data fro
 \section{Processing the IMU Data}
 
 \subsection{Capture IMU Data}
-To use the smartphone as an IMU a free application "AndroSensor" was installed. This application could log parameter from all the availible sensor s and could be configured in various ways
+To use the smartphone as an IMU a free application "AndroSensor" \cite{androsensor} was installed. This application could log parameter from all the  sensor s and could be configured in various ways
 
-\cite{androsensor}
+\begin{figure}[!ht] 
+\captionsetup{width=\linewidth, font=small}  
+\includegraphics[width=\linewidth]{figures/as.png}
+\caption{Androsensor Screenshots from \cite{androsensor}}
+\label{fig:as}
+\end{figure}
 
 
 The IMU data logged by the smartphone was saved as a .CSV file with the first row containing the headings of various variables. These headings were
@@ -16,25 +21,13 @@ The IMU data logged by the smartphone was saved as a .CSV file with the first ro
 \caption{My caption}
 \label{my-label}
 \begin{tabular}{ll}
-Heading               &  \\
-ACCELEROMETER X       &  \\
-ACCELEROMETER Y       &  \\
-ACCELEROMETER Z       &  \\
-GRAVITY X             &  \\
-GRAVITY Y             &  \\
-GRAVITY Z             &  \\
-LINEAR ACCELERATION X &  \\
-LINEAR ACCELERATION Y &  \\
-LINEAR ACCELERATION Z &  \\
-GYROSCOPE X           &  \\
-GYROSCOPE Y           &  \\
-GYROSCOPE Z           &  \\
-MAGNETIC FIELD X      &  \\
-MAGNETIC FIELD Y      &  \\
-MAGNETIC FIELD Z      &  \\
-ORIENTATION Z         &  \\
-ORIENTATION X         &  \\
-ORIENTATION Y         &  \\
+Heading               & Fields  \\
+ACCELEROMETER       & X,Y,Z  \\
+GRAVITY              & X,Y,Z \\
+LINEAR ACCELERATION  & X,Y,Z\\
+GYROSCOPE            & X,Y,Z \\
+MAGNETIC FIELD       &  X,Y,Z\\
+ORIENTATION          &  X,Y,Z\\
 ATMOSPHERIC PRESSURE  &  \\
 LOCATION Latitude     &  \\
 LOCATION Longitude    &  \\
@@ -52,12 +45,7 @@ All these variables have been recorded with respect the smartphone frame of refe
 \end{figure}
 
 
-\begin{figure}[!ht] 
-\captionsetup{width=\linewidth, font=small}  
-\includegraphics[width=\linewidth]{figures/as.png}
-\caption{Androsensor Screenshots}
-\label{fig:as}
-\end{figure}
+
 
 
 
