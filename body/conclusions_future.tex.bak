@@ -2,6 +2,7 @@
 This chapter is dedicated to drawing conclusions based on results found and make recommendation on future iterations of this project. Since the underlying methodology is quite novel this system should serve as the foundational step to a fully automated motion capture system.
 
 \section{Conclusion}
+Due to the relatively small dataset used in this project it serves cannot serve  as more than a proof of concept.
 
 \section{Future work}
 The system was originally designed with four cameras due to the availability of equipment and the assumption that stereo vision would be implemented. From this a set of front and rear mounted cameras would be necessary. Originally there was an intention to reduce the total amount of cameras.
@@ -10,7 +11,7 @@ The iterative design would have followed the following mapping. Initially using 
 
 Due to the labour intensive approach taken to image processing a further avenue for improvement is the automation of feature detection. The progression would start from the current implementation of markers and use a semi-automatic toolbox to identify critical points on the image. Next computer algorithms should be created to automate the image processing with markers. This could allow for much longer runs and larger datasets to be studied, introducing elements such as fatigue and other running modifiers. THe next iterative step would be to remove the markers from the runner such that the setup time of the system is reduces. This is a difficult problem to solve using classical image processing as the variables relating to the runner and the environment are not constant. Perhaps a neural network can be trained to identify the different elements of the lower limbs.
 
-These improvements would decrease the overall cost of the system and optimize the the process substantially. This decrease in hardware does imply that the complexity of the underlying algorithms and models would increase. This trade-off can be considered for future   
+These improvements would decrease the overall cost of the system and optimize the the process substantially. This decrease in hardware does imply that the complexity of the underlying algorithms and models would increase. This trade-off can be considered for future work.
 
 \newpage
 \begin{figure}[!ht] 
@@ -19,6 +20,7 @@ These improvements would decrease the overall cost of the system and optimize th
 \caption{ethics clearance}
 \label{fig:ethics}
 \end{figure}
+
 
 
 

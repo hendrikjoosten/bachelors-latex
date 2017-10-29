@@ -1,9 +1,15 @@
 \chapter{Processing the Captured Data}
-This chapter is dedicated to the complex process of extracting critical data from the video files. The following digram shows the process of converting a data heavy video file to a more lightweight .csv (Comma Separated Values) file.
+This chapter is dedicated to the complex process of extracting critical data from the video files and IMU csv. 
 
 \section{Processing the IMU Data}
+The following flowcharts depicts the procedural processing of IMU data.
+\begin{figure}[!ht]
+  \includegraphics[width=\linewidth]{figures/imuflow.png}
+  \caption{Diagram showing the progression and dependence of the major stages of video processing in the project}
+  \label{fig:imuflow}
+\end{figure}
 
-\subsection{Capture IMU Data}
+\subsection{Obtaining IMU Data}
 To use the smartphone as an IMU a free application "AndroSensor" \cite{androsensor} was installed. This application could log parameter from all the  sensor s and could be configured in various ways
 
 \begin{figure}[!ht] 
@@ -13,13 +19,12 @@ To use the smartphone as an IMU a free application "AndroSensor" \cite{androsens
 \label{fig:as}
 \end{figure}
 
-
 The IMU data logged by the smartphone was saved as a .CSV file with the first row containing the headings of various variables. These headings were
 
 \begin{table}
 \centering
-\caption{My caption}
-\label{my-label}
+\caption{This table shows the different headings of the output IMU file}
+\label{IMU Headings}
 \begin{tabular}{ll}
 Heading               & Fields  \\
 ACCELEROMETER       & X,Y,Z  \\
@@ -44,17 +49,16 @@ All these variables have been recorded with respect the smartphone frame of refe
 \label{fig:phone}
 \end{figure}
 
+\subsection{Synchronizing IMU Data}
 
+\subsection{Preprocessing IMU Data}
+Before we can apply the IMU data directly to the EKF we need to make some minor modifications to the data. This is critical in removing any bias from the sensors. MEMS inherently have some 
 
-
-
-
-
-
+\subsection{Exporting IMU Data}
 
 
 \section{Processing the Video Data}
-The following flowcharts depicts the procedural processing of video data.
+The following digram shows the process of converting a data heavy video file to a more lightweight .csv (Comma Separated Values) file.
 \begin{figure}[!ht]
   \includegraphics[width=\linewidth]{figures/videoProcess.png}
   \caption{Diagram showing the progression and dependence of the major stages of video processing in the project}
@@ -82,7 +86,6 @@ The red track in the above figure shows the recorded audio stream while the corr
 This method was repeated for every video stream such that a common starting point was generated. 
 
 \subsection{Cutting Critical Video Data}
-
 With the video data synchronized the next step was to generate a subset of video demonstrating a transient period and steady state period of running. From accelerometer readings we can easily determine the gait cycle period of our subject; that is the amount of time take between the same foot impacting the ground. These impacts are visible as spikes as seen in the accelerometer data.  
 
 \subsection{Undistorting the Video Data}
@@ -90,11 +93,15 @@ To generate accurate distances using stereo vision the video frames need to be u
 
 Distortion of the frames is a result of the 
 
-\cite{Hartley2004} 
+To gain further understanding of undistorting video files \cite{Hartley2004} served as a reference. In this work Hartley describes various methods of undistorted images. These distortions are due to various lens effects.
 
 \subsection{Tracking and Exporting Marker Positions in the Frame}
 
-using work from \cite{hedrick2008software}
+This section discusses the different methods of feature detection subdividing them into two main methodologies: automated and semi-automated. Each of these approaches offer advantages and disadvantages.
+
+Feature detection is a methodology in image processing that allows critical markers 
+
+The final approach considered and used was to manually label critical point in the image using a toolbox created by Hedricket al. \cite{hedrick2008software}. This software allows for a semi automatic tracking of points of interest in the video frames.
 
 
 
