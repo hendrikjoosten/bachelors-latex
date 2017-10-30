@@ -163,6 +163,13 @@ linearizing nonlinear system we get the EKF
 \section{Q Matrix, R Matrix and Initialization}
 This section will discuss the final components of the EKF namely the Q matrix containing the various process noise variations, R matrix containing the various measurement noise variances and the initial state values.
 
+\subsection{Defining the Q Matrix}
+From the above equations we can see that the Q matrix must have dimensions of $n*n$, where $n$ in this equation is the total amount of states. As previously defined in this section our filter operates over 42 states, giving Q a size of $42*42$. All the variance parameters will be contained on the diagonal of the matrix with all other entries being zero.
+
+Finding the 
+
+\subsection{Defining the R Matrix}
+The R matrix relates to the measurement variables and must therefore have size of $m*m$, where $m$ is the amount of inputs the EKF. T
 
 
 

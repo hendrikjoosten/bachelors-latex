@@ -87,14 +87,18 @@ To calibrate the cameras pictures of a white and black chequerboard is fed in to
 Using the Smartphone IMU comes with several advantages and disadvantages. These disadvantages 
 
 \section{Critical Point Markers}
-To increase the accuracy of the image processing elements of this methodology various colourful markers were used to identify critical points on the subjects lower extremities. The following picture show the location of the markers.
+To increase the accuracy of the image processing elements of this methodology various colourful markers were used to identify critical points on the subjects lower extremities. The following picture shows the location of the markers.
 
 \begin{figure}[!ht] 
 \captionsetup{width=\linewidth, font=small}  
-\includegraphics[width=\linewidth]{figures/GoProHero4Session.JPG}
-\caption{Subject wearing Green and Pink }
-\label{fig:GoProHero4Session}
+\includegraphics[width=\linewidth]{figures/markers.JPG}
+\caption{Subject wearing Green and Pink Markers to identify critical points}
+\label{fig:markers}
 \end{figure}
+
+From the image we can see that green markers were used to identify  the toe edge of the runner in the front camera frame and pinks marker to identify the end of the thigh in the same frame. In the rear mounted camera frame pink markers were used to identify the heel of the subject and green markers to identify the centre of the calf. These markers in conjunction with the model is used to identify the lower limb orientation during the fusion dtage.
+
+These luminous green and pink markers were chosen because they are bright in most lighting conditions and offer a stark contrast to both the subjects clothing and skin colour. They also contrast a typical black tar road surface where the runs were performed. This contrast makes them easy to detect using feature detection as they  cause a spike in the color decomposition of the image.
 
 
 

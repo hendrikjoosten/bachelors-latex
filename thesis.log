@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.8)  29 OCT 2017 19:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.8)  30 OCT 2017 10:07
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -585,60 +585,306 @@ LaTeX Info: Redefining \nameref on input line 2.
 \@outlinefile=\write3
 \openout3 = `thesis.out'.
 
- (body/data_process.tex
+ (frontmatter/coverpage.tex
+<figures/uctLogo.png, id=261, 418.56375pt x 425.59pt>
+File: figures/uctLogo.png Graphic file (type png)
+
+<use figures/uctLogo.png>
+Package pdftex.def Info: figures/uctLogo.png used on input line 17.
+(pdftex.def)             Requested size: 209.28136pt x 212.79446pt.
+ [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./figures/uctLogo.png>]) 
+[2] (frontmatter/termsofreference.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Overfull \hbox (8.99814pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/n/12 cam-eras with min-i-mal vol-ume and ac-cu-rate sen-sors, data c
+ap-ture sys-tems can be trans-ferred
+ []
+
+
+Overfull \hbox (15.52585pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/n/12 mo-tion cap-ture and can greatly im-prove our un-der-stand-ing 
+of move-ment in the un-con-strained
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 19.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
+) [3] [4]
+(frontmatter/declaration.tex) [5] (frontmatter/acknowledgements.tex) [6]
+(frontmatter/abstract.tex
+Overfull \hbox (5.43013pt too wide) in paragraph at lines 9--10
+[]\OT1/cmr/m/n/12 This re-search aims to ex-tend the work com-pleted by the Mec
+ha-tron-ics Lab at the Uni-ver-sity
+ []
+
+) [7] (thesis.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 1.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 1.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [8
+
+] [9] [10])
+\tf@toc=\write4
+\openout4 = `thesis.toc'.
+
+
+[11] (thesis.lof
+Overfull \hbox (2.4969pt too wide) in paragraph at lines 8--8
+ [][] [][][]\OT1/cmr/m/n/12 Different bipedal and quadroped robots cre-ated by 
+Boston Dy-nam-ics, im-age 
+ []
+
+[12
+
+])
+\tf@lof=\write5
+\openout5 = `thesis.lof'.
+
+ [13] (thesis.lot)
+\tf@lot=\write6
+\openout6 = `thesis.lot'.
+
+ [14
+
+] (frontmatter/glos.tex) [15
+
+] (body/introduction.tex
 Chapter 1.
-<figures/imuflow.png, id=95, 651.18282pt x 103.88812pt>
+
+Overfull \hbox (3.31903pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/n/12 stated lim-i-ta-tions; they do so at in-creased com-plex-ity an
+d cost. They of-ten lack mod-u-lar-ity
+ []
+
+<figures/COMBO.png, id=473, 657.95813pt x 335.00156pt>
+File: figures/COMBO.png Graphic file (type png)
+ <use figures/COMBO.png>
+Package pdftex.def Info: figures/COMBO.png used on input line 10.
+(pdftex.def)             Requested size: 362.37569pt x 184.507pt.
+
+[16
+
+] <figures/introcheetah.png, id=495, 395.97937pt x 173.89969pt>
+File: figures/introcheetah.png Graphic file (type png)
+
+<use figures/introcheetah.png>
+Package pdftex.def Info: figures/introcheetah.png used on input line 25.
+(pdftex.def)             Requested size: 362.37569pt x 159.14583pt.
+ [17 <./figures/COMBO.png>] [18 <./figures/introcheetah.png>]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+ <figures/introflow.png, id=512, 676.77844pt x 209.28188pt>
+File: figures/introflow.png Graphic file (type png)
+
+<use figures/introflow.png>
+Package pdftex.def Info: figures/introflow.png used on input line 54.
+(pdftex.def)             Requested size: 452.9679pt x 140.0776pt.
+) [19] (body/lit_review.tex [20 <./figures/introflow.png>]
+Chapter 2.
+
+Overfull \hbox (0.57323pt too wide) in paragraph at lines 17--18
+\OT1/cmr/m/n/12 Walk-ing and run-ning are also crit-i-cal fac-tors in trans-por
+ta-tion and ge-o-graph-i-cal move-ment
+ []
+
+[21
+
+] <figures/teslaauto.jpg, id=535, 2569.6pt x 1334.9875pt>
+File: figures/teslaauto.jpg Graphic file (type jpg)
+
+<use figures/teslaauto.jpg>
+Package pdftex.def Info: figures/teslaauto.jpg used on input line 37.
+(pdftex.def)             Requested size: 362.37569pt x 188.26178pt.
+ [22]
+Overfull \hbox (1.25192pt too wide) in paragraph at lines 81--82
+\OT1/cmr/m/n/12 ori-en-ta-tion and ac-cel-er-a-tion of said sys-tem. These data
+ points are cre-ated by elec-tron-i-cally
+ []
+
+
+Overfull \hbox (35.5187pt too wide) in paragraph at lines 81--82
+\OT1/cmr/m/n/12 in-ter-pret-ing sig-nals gen-er-ated by micro-electromechanical
+ sys-tem (MEMS). Mod-ern smart-phones
+ []
+
+[23 <./figures/teslaauto.jpg>]
+Overfull \hbox (0.96701pt too wide) in paragraph at lines 98--99
+[]\OT1/cmr/bx/n/12 Barometers \OT1/cmr/m/n/12 are finely tuned at-mo-spheric pr
+es-sure sen-sors that can de-ter-mine the rel-a-tive
+ []
+
+[24]
+Overfull \hbox (8.0484pt too wide) in paragraph at lines 122--122
+|[]\OT1/cmr/bx/n/14.4 Human Mo-tion Anal-y-sis Us-ing In-er-tial Mea-sure-ment 
+Units| 
+ []
+
+[25] <figures/kinematics.png, id=574, 393.72093pt x 277.78781pt>
+File: figures/kinematics.png Graphic file (type png)
+
+<use figures/kinematics.png>
+Package pdftex.def Info: figures/kinematics.png used on input line 156.
+(pdftex.def)             Requested size: 452.9679pt x 319.58911pt.
+ [26 <./figures/kinematics.png>]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¡ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¡ in font cmr12!
+ [27]
+<figures/boston.jpg, id=588, 314.17375pt x 161.60374pt>
+File: figures/boston.jpg Graphic file (type jpg)
+
+<use figures/boston.jpg>
+Package pdftex.def Info: figures/boston.jpg used on input line 199.
+(pdftex.def)             Requested size: 339.72592pt x 174.7563pt.
+ [28 <./figures/boston.jpg>]) [29]
+(body/methodology.tex
+Chapter 3.
+<figures/planOfAction.png, id=604, 553.31718pt x 108.405pt>
+File: figures/planOfAction.png Graphic file (type png)
+
+<use figures/planOfAction.png>
+Package pdftex.def Info: figures/planOfAction.png used on input line 6.
+(pdftex.def)             Requested size: 362.37569pt x 70.99503pt.
+ [30
+
+ <./figures/planOfAction.png>] [31]
+<figures/swmodel.png, id=621, 533.74406pt x 591.71063pt>
+File: figures/swmodel.png Graphic file (type png)
+
+<use figures/swmodel.png>
+Package pdftex.def Info: figures/swmodel.png used on input line 52.
+(pdftex.def)             Requested size: 362.37569pt x 401.74394pt.
+ [32 <./figures/swmodel.png>]) [33]
+(body/data_capture.tex
+Chapter 4.
+<figures/GoProHero4Session.JPG, id=630, 1258.7025pt x 513.41812pt>
+File: figures/GoProHero4Session.JPG Graphic file (type jpg)
+
+<use figures/GoProHero4Session.JPG>
+Package pdftex.def Info: figures/GoProHero4Session.JPG used on input line 9.
+(pdftex.def)             Requested size: 452.9679pt x 184.75987pt.
+ [34
+
+ <./figures/GoProHero4Session.JPG>]
+Overfull \hbox (0.77011pt too wide) in paragraph at lines 36--37
+\OT1/cmr/m/n/12 been im-ple-mented to save mem-ory on the Go-Pro's mi-cro SD me
+m-ory card. De-com-press-ing
+ []
+
+
+Overfull \hbox (7.75371pt too wide) in paragraph at lines 40--41
+\OT1/cmr/m/n/12 Some ini-tial work on mod-elling a hous-ing for the cam-era was
+ com-pleted by the Mecha-tron-ics
+ []
+
+[35] <figures/sylvanexploded.JPG, id=641, 700.86844pt x 574.39594pt>
+File: figures/sylvanexploded.JPG Graphic file (type jpg)
+
+<use figures/sylvanexploded.JPG>
+Package pdftex.def Info: figures/sylvanexploded.JPG used on input line 44.
+(pdftex.def)             Requested size: 271.7835pt x 222.74265pt.
+
+<figures/stereoholder.JPG, id=642, 952.30782pt x 524.71031pt>
+File: figures/stereoholder.JPG Graphic file (type jpg)
+
+<use figures/stereoholder.JPG>
+Package pdftex.def Info: figures/stereoholder.JPG used on input line 53.
+(pdftex.def)             Requested size: 452.9679pt x 249.58426pt.
+
+<figures/chesty.png, id=643, 482.55281pt x 254.45062pt>
+File: figures/chesty.png Graphic file (type png)
+
+<use figures/chesty.png>
+Package pdftex.def Info: figures/chesty.png used on input line 62.
+(pdftex.def)             Requested size: 452.9679pt x 238.85747pt.
+
+Overfull \hbox (19.83414pt too wide) in paragraph at lines 67--68
+[]\OT1/cmr/m/n/12 The need to in-crease the sta-bil-ity with-out hin-der-ing we
+ar-a-bil-ity in-tro-duced a new spec-i-fi-ca-tion
+ []
+
+<figures/stabil.JPG, id=644, 877.77937pt x 368.87813pt>
+File: figures/stabil.JPG Graphic file (type jpg)
+
+<use figures/stabil.JPG>
+Package pdftex.def Info: figures/stabil.JPG used on input line 71.
+(pdftex.def)             Requested size: 452.9679pt x 190.35991pt.
+ [36 <./figures/sylvanexploded.JPG>] [37 <./figures/stereoholder.JPG> <./figure
+s/chesty.png>]
+<figures/markers.JPG, id=655, 4826.03pt x 2553.54pt>
+File: figures/markers.JPG Graphic file (type jpg)
+ <use figures/markers.JPG>
+Package pdftex.def Info: figures/markers.JPG used on input line 94.
+(pdftex.def)             Requested size: 452.9679pt x 239.66653pt.
+
+[38 <./figures/stabil.JPG>]) [39 <./figures/markers.JPG>]
+(body/data_process.tex
+Chapter 5.
+<figures/imuflow.png, id=664, 651.18282pt x 103.88812pt>
 File: figures/imuflow.png Graphic file (type png)
 
 <use figures/imuflow.png>
 Package pdftex.def Info: figures/imuflow.png used on input line 7.
 (pdftex.def)             Requested size: 452.9679pt x 72.2678pt.
- <figures/as.png, id=98, 690.32906pt x 573.64313pt>
+ <figures/as.png, id=666, 690.32906pt x 573.64313pt>
 File: figures/as.png Graphic file (type png)
 
 <use figures/as.png>
 Package pdftex.def Info: figures/as.png used on input line 17.
 (pdftex.def)             Requested size: 452.9679pt x 376.40862pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 28.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 28.
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-<figures/phone.jpg, id=101, 933.4875pt x 556.32843pt>
+ <figures/phone.jpg, id=669, 933.4875pt x 556.32843pt>
 File: figures/phone.jpg Graphic file (type jpg)
- <use figures/phone.jpg>
+
+<use figures/phone.jpg>
 Package pdftex.def Info: figures/phone.jpg used on input line 47.
 (pdftex.def)             Requested size: 452.9679pt x 269.95479pt.
+ [40
 
-[1
-
-
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./figures/imuflow.png>] <
-figures/videoProcess.png, id=112, 516.42938pt x 183.68625pt>
+ <./figures/imuflow.png>]
+<figures/videoProcess.png, id=675, 516.42938pt x 183.68625pt>
 File: figures/videoProcess.png Graphic file (type png)
 
 <use figures/videoProcess.png>
 Package pdftex.def Info: figures/videoProcess.png used on input line 63.
 (pdftex.def)             Requested size: 452.9679pt x 161.12024pt.
- [2 <./figures/as.png>] [3 <./figures/phone.jpg>]
+ [41 <./figures/as.png>] [42 <./figures/phone.jpg>]
 Overfull \hbox (14.67178pt too wide) in paragraph at lines 73--74
 \OT1/cmr/m/n/12 I typ-i-cal prob-lem faced when work-ing with dif-fer-ent sourc
 es of data is that of syn-chro-niza-tion.
  []
 
-<figures/svpframe.png, id=126, 348.55219pt x 201.00093pt>
+<figures/svpframe.png, id=685, 348.55219pt x 201.00093pt>
 File: figures/svpframe.png Graphic file (type png)
 
 <use figures/svpframe.png>
 Package pdftex.def Info: figures/svpframe.png used on input line 79.
 (pdftex.def)             Requested size: 226.48395pt x 130.60611pt.
- [4 <./figures/videoProcess.png>]) [5 <./figures/svpframe.png>] (body/fusion.te
-x
-Chapter 2.
-[6
+ [43 <./figures/videoProcess.png>]
+<figures/pat_run_quad.png, id=693, 1445.4pt x 811.53188pt>
+File: figures/pat_run_quad.png Graphic file (type png)
+
+<use figures/pat_run_quad.png>
+Package pdftex.def Info: figures/pat_run_quad.png used on input line 103.
+(pdftex.def)             Requested size: 452.9679pt x 254.32129pt.
+ [44 <./figures/svpframe.png>] [45 <./figures/pat_run_quad.png>]) [46] (body/fu
+sion.tex
+Chapter 6.
+[47
 
 ]
 Overfull \hbox (1.09961pt too wide) in paragraph at lines 65--68
@@ -656,59 +902,86 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--108
 
  []
 
-[7] [8]) [9] (body/results_discussion.tex
-Chapter 3.
-) [10
+[48] [49] [50]) [51] (body/results_discussion.tex
+Chapter 7.
+) [52
 
 ] (body/conclusions_future.tex
-Chapter 4.
+Chapter 8.
 
 Overfull \hbox (41.96307pt too wide) in paragraph at lines 2--3
 \OT1/cmr/m/n/12 This chap-ter is ded-i-cated to draw-ing con-clu-sions based on
  re-sults found and make rec-om-men-da-tion
  []
 
-[11
+[53
 
-] [12] <figures/ethics.png, id=180, 1644.1425pt x 2326.19063pt>
+] [54] <figures/ethics.png, id=746, 1644.1425pt x 2326.19063pt>
 File: figures/ethics.png Graphic file (type png)
 
 <use figures/ethics.png>
 Package pdftex.def Info: figures/ethics.png used on input line 19.
 (pdftex.def)             Requested size: 452.9679pt x 640.85799pt.
-) (thesis.bbl [13 <./figures/ethics.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 25--28
+) (thesis.bbl [55 <./figures/ethics.png>] [56
+
+]
+Underfull \hbox (badness 1859) in paragraph at lines 79--81
+[]\OT1/cmr/m/n/12 MATHWORKS, ``Mat-lab,'' [][]$https : / / www . mathworks . co
+m / products / matlab . html$[][],
+ []
+
+
+Underfull \hbox (badness 4981) in paragraph at lines 83--85
+[]\OT1/cmr/m/n/12 DASSAULTSYSTEMES, ``Solid-works,'' [][]$http : / / www . soli
+dworks . com/$[][], [On-line;
+ []
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 117--121
+[]\OT1/cmr/m/n/12 H. C. Pear-son, P. W. Jones, M. Srini-vasan, D. Lundquist, C.
+ J. Pear-son,
+ []
+
+[57]
+Underfull \hbox (badness 10000) in paragraph at lines 161--164
+\OT1/cmr/m/n/12 humanoids / next-[]generation-[]of-[]boston-[]dynamics-[]atlas-
+[]robot$[][], [On-line; ac-cessed
+ []
+
+Missing character: There is no â in font cmr12!
+Missing character: There is no „ in font cmr12!
+Missing character: There is no ¢ in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--189
+[]\OT1/cmr/m/n/12 ACTIONMOUNTS, ``Chest mount,'' [][]$http : / / action-[]mount
+ . com / products /
+ []
+
+
+Underfull \hbox (badness 6608) in paragraph at lines 191--194
 []\OT1/cmr/m/n/12 F. Asim, ``An-drosen-sor,'' [][]$https : / / play . google . 
 com / store / apps / details ? id = com .
  []
 
-
-Underfull \hbox (badness 1383) in paragraph at lines 35--38
-[]\OT1/cmr/m/n/12 T. L. Hedrick, ``Soft-ware tech-niques for two-and three-dime
-nsional kine-matic
- []
-
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 46.
- [14
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 46.
+[58])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 38.
+ [59]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 38.
  (thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 46.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 46.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 38.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 38.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A0630AC10375AF027D460DCC07E48715;1753.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 46.
+(rerunfilecheck)             Checksum: D1DF96D333344A8463D7977A02C94A72;4866.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 38.
  ) 
 Here is how much of TeX's memory you used:
- 9819 strings out of 493323
- 144259 string characters out of 3139067
- 250833 words of memory out of 3000000
- 13136 multiletter control sequences out of 15000+200000
- 13518 words of font info for 49 fonts, out of 3000000 for 9000
+ 10199 strings out of 493323
+ 150447 string characters out of 3139067
+ 255703 words of memory out of 3000000
+ 13317 multiletter control sequences out of 15000+200000
+ 13825 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,10n,42p,927b,477s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,10n,43p,927b,481s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKT
@@ -716,11 +989,12 @@ eX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (14 pages, 6828059 bytes).
+/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on thesis.pdf (59 pages, 13178183 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
- 50 named destinations out of 1000 (max. 500000)
- 215 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 864 PDF objects out of 1000 (max. 8388607)
+ 190 named destinations out of 1000 (max. 500000)
+ 631 words of extra memory for PDF output out of 10000 (max. 10000000)
 
