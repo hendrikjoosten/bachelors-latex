@@ -8,21 +8,22 @@
 
 \section*{Title}
 Lower-Limb Motion Estimation - Kinematic Modelling and Estimation of the Gait using Cameras and an IMU
-
+\vskip -3mm
 \section*{Description}
 Recent breakthroughs in the field of artificial intelligence has invigorated the pursuit of humanoid robots. Unfortunately, modern bipedal robots lack the elegance of motion and fluidity observed in nature. Perhaps then a modern take on the lower limb kinematics of humans could provide insight to the field of bio-inspired robotics. By using modern cameras with minimal volume and accurate sensors, data capture systems can be transferred onto the subjects in question. This methodology allows for a much larger spectrum of motion capture and can greatly improve our understanding of movement in the unconstrained real world.
 
 \section*{Deliverables}
 The following items have been identified as critical deliverables for the project:
-
-\begin{itemize}
-  \item Functional harness to hold data capture equipment 
-  \item	Estimation and fusion algorithm to process captured data 
-  \item Kinematic model of the human lower-limbs 
-\end{itemize}
+\vskip 2mm
+Functional harness to hold data capture equipment 
+\vskip 2mm
+Estimation and fusion algorithm to process captured data 
+\vskip 2mm
+Kinematic model of the human lower-limbs 
 
 \section*{Skills and Requirements}
-  Mechanical Design, Electrical Design, Programming and Modelling.
+Mechanical Design, Electrical Design, Programming and Modelling.
 
-\section*{Area}
-  Computer Vision, Sensors, Biomechanics and Bio-inspired Robotics.
+\section*{Area}  
+Computer Vision, Sensors, Biomechanics and Bio-inspired Robotics.
+

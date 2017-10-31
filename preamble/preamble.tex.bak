@@ -22,7 +22,6 @@
 \usepackage{setspace}
 \usepackage{xcolor}
 \usepackage{bm}                                             
-
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{multirow}
@@ -66,13 +65,13 @@
             
             
 %should make headers and footers
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\lhead{Chapter \thechapter}
-\rhead{Section \thesection}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-\setlength{\headheight}{15pt} 
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\lhead{Chapter \thechapter}
+%\rhead{Section \thesection}
+%\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{0pt}
+%\setlength{\headheight}{15pt} 
 
 %define paragraph skips and indents
 \parskip = 4mm
