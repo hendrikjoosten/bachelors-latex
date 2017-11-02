@@ -13,8 +13,8 @@ The following flowcharts depicts the procedural processing of IMU data.
 To use the smartphone as an IMU a free application "AndroSensor" \cite{androsensor} was installed. This application could log parameter from all the  sensor s and could be configured in various ways
 
 \begin{figure}[!ht] 
-\captionsetup{width=\linewidth, font=small}  
-\includegraphics[width=\linewidth]{figures/as.png}
+\captionsetup{width=0.5\linewidth, font=small}  
+\includegraphics[width=0.5\linewidth]{figures/as.png}
 \caption{Androsensor Screenshots from \cite{androsensor}}
 \label{fig:as}
 \end{figure}
@@ -43,8 +43,8 @@ LOCATION ORIENTATION  &
 
 All these variables have been recorded with respect the smartphone frame of reference as shown below
 \begin{figure}[!ht] 
-\captionsetup{width=\linewidth, font=small}  
-\includegraphics[width=\linewidth]{figures/phone.jpg}
+\captionsetup{width=0.5\linewidth, font=small}  
+\includegraphics[width=0.5\linewidth]{figures/phone.jpg}
 \caption{Figure demonstrating the frame of reference of the smartphone}
 \label{fig:phone}
 \end{figure}
@@ -111,16 +111,15 @@ Feature detection is a methodology in image processing that allows critical poin
 
 An initial approach of using automated detection was considered and three possible system were considered. Using a trained neural network, using an edge detection algoritm with a panning search algorithm and finally using a colour identifying algorithm paired with a local search algorithm.
 
-In theory a well trained \textbf{neural network} will provide the most robust and accurate system to identify features in varying lighting condition. It would also be the most accurate methodology for a system without the markers. This is due to the understanding developed by the neural network after  
+In theory a well trained \textbf{neural network} will provide the most robust and accurate system to identify features in varying lighting condition. It would also be the most accurate methodology for a system without the markers. This is due to the \textit{understanding} developed by the neural network after sufficient training data is processed.
 
-The final approach considered and used was to manually label critical point in the image using a toolbox created by Hedrick et al. \cite{hedrick2008software}. This software allows for a semi automatic tracking of points of interest in the video frames. While this method is labour intensive it is arguably more accurate than the previously investogated methodologies.
+This however presents a key difficulty in setting up and training a neural network. The most important element of a neural network is the training data used to teach the. This training data needs to have annotated images with metadata fields to
 
+A neural network therefore cannot generate training data and a method of generating training data needs to be considered in any case.
 
+The second approach taken was that of \textbf{edge detection}. This method 
 
-
-
-
-
+The final approach considered and used was to \textbf{semi automatically} label critical point in the image using a toolbox created by Hedrick et al. \cite{hedrick2008software}. This software allows for a semi automatic tracking of points of interest in the video frames. While this method is labour intensive it is arguably more accurate than the previously investigated methodologies.
 
 
 

@@ -48,8 +48,8 @@
 %set the line spacing to like 1.5 equavaent on word
 \linespread{1.25}
 
-
-
+%Putting MATLAB CODE IN THE DOCCY
+\usepackage{listings}
 
 
 \usepackage[bookmarks         = true      ,%
