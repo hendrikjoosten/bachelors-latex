@@ -60,17 +60,19 @@ $$ p_{k+1} = p_{k} + \dot{p}_{k}T + \sigma_{p}^{2} $$
 
 for the positional states and:
 
-$$ \ddot{\theta}_{k+1} = \ddot{\alpha}_{k} + \sigma_{\ddot{\alpha}}^{2} $$
+$$ \ddot{\alpha}_{k+1} = \ddot{\alpha}_{k} + \sigma_{\ddot{\alpha}}^{2} $$
 $$ \dot{\alpha}_{k+1} = \dot{\alpha}_{k} + \ddot{\alpha}_{k}T + \sigma_{\dot{\alpha}}^{2} $$
 $$ \alpha_{k+1} = \alpha_{k} + \dot{\alpha}_{k}T + \sigma_{\alpha}^{2} $$
 
 for the angular states.
 
-These prediction equations where created in MATLAB using symbolic functions.
+These prediction equations where created in MATLAB using symbolic functions. The sigma associated each equations takes into account the prediction uncertainties contained in the Q matrix. By adjusting these values we can increase the filter performance. This is discussed further in a later section.
 
 \section{Measurement Equations}
+The measurement equations for the lower limbs where generated using inverse kinematics. This requires a model
 
 \subsection{Euler Matrices}
+The following matrices are the rotational matrices for rotating a point in 3D space along a certain axis. 
 
 $$
 Roll(\phi) = 
@@ -105,20 +107,11 @@ $$
 \subsection{Direct Cosine Matrix}
 
 
+\subsection{Inverse kinematics}
 
-\section{Measurement equations}
 
-\textbf{front cameras}\\
-point 1 right knee\\
-point 2 left knee\\
-point 3 right foot\\
-point 4 left foot\\
 
-\textbf{back cameras}\\
-point 1 right calf\\
-point 2 left calf\\
-point 3 right heel\\
-point 4 left heel\\
+
 
 \textbf{front}\\
 right knee
@@ -158,12 +151,14 @@ This section will mathematically explain the Kalman filter and its implementatio
 
 Process equation of the kalam filter.
 from states to emasurements
+
 $$ X_{k+1} = FX_{k} + w_{k}  $$
 
 our state, contained in the vector X can be estimated by applying the process matrix F to our current known state. the term w is the noise variable that accounts for process noise.
 
 Measurement equations
 from measurements to states.
+
 $$ Y_k = H_{k}X_{k} + v_{k} $$
 
 w will be contained int he matrix Q
@@ -180,18 +175,17 @@ This section will discuss the final components of the EKF namely the Q matrix co
 \subsection{Defining the Q Matrix}
 From the above equations we can see that the Q matrix must have dimensions of $n*n$, where $n$ in this equation is the total amount of states. As previously defined in this section our filter operates over 42 states, giving Q a size of $42*42$. All the variance parameters will be contained on the diagonal of the matrix with all other entries being zero.
 
-Finding the 
+To find the initial values for these uncertainties the the derivative of the various accelerations where taken. The maximum element from that set was selected as the uncertainty parameter.
 
 \subsection{Defining the R Matrix}
-The R matrix relates to the measurement variables and must therefore have size of $m*m$, where $m$ is the amount of inputs the EKF.
+The R matrix relates to the measurement variables and must therefore have size of $m*m$, where $m$ is the amount of inputs the EKF. These are elements of the sensors themselves and can be found by researching the relative data sheets for the smartphone IMU. As for the cameras a relatively large uncertainty of about 5 pixels was assumed.
 
 \subsection{Choosing Initial States}
-The subject was stationary during the initial stages of the run. This allows us to initialize our state vector as a
+The subject was stationary during the initial stages of the run. This allows us to initialize our state vector with all states initially zero. The filter will therefore track the transience and steady state estimation of a running subject, giving insight into the filters performance under different conditions. 
 
 
 \subsection{Initializing the Covariance Matrix P}
-
-The initial covariance was initiales with relatively small values
+following on from the previous section zeroing the initial states of the system allows us to have a relatively small initial covariance matrix due to the relative certainty we have that the states are truly zero. 
 
 
  
