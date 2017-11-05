@@ -1,13 +1,16 @@
 \chapter{Processing the Captured Data}
-This chapter is dedicated to the complex process of extracting critical data from the video files and IMU csv. 
+This chapter is dedicated to the process of extracting critical data from the video files and IMU .csv file. This process will take the raw captured data and transform it to 
 
 \section{Processing the IMU Data}
-The following flowcharts depicts the procedural processing of IMU data.
+The following flowcharts depicts the procedural processing of IMU data gathered from the chest mounted smartphone running the AndroSensor application.
+
 \begin{figure}[!ht]
-  \includegraphics[width=\linewidth]{figures/imuflow.png}
-  \caption{Diagram showing the progression and dependence of the major stages of video processing in the project}
-  \label{fig:imuflow}
+\includegraphics[width=\linewidth]{figures/imuflow.png}
+\caption{Diagram showing the progression and dependence of the major stages of video processing in the project}
+\label{fig:imuflow}
 \end{figure}
+
+
 
 \subsection{Obtaining IMU Data}
 To use the smartphone as an IMU a free application "AndroSensor" \cite{androsensor} was installed. This application could log parameter from all the  sensor s and could be configured in various ways
@@ -51,12 +54,13 @@ All these variables have been recorded with respect the smartphone frame of refe
 \end{figure}
 
 \subsection{Synchronizing IMU Data}
+The Androsense application can record the the magnitude of sound that the microphone is experiencing. Using this magnitude we can see at what sample the spike from the clap was recorded. This sample will be a common point between the IMU and the cameras.
 
 \subsection{Preprocessing IMU Data}
 Before we can apply the IMU data directly to the EKF we need to make some minor modifications to the data. This is critical in removing any bias from the sensors. MEMS inherently have some 
 
 \subsection{Exporting IMU Data}
-
+The IMU data was finally exported as a csv final and imported into MATLAB as different vectors. This allows for faster processing and better data processing in matlab.
 
 \section{Processing the Video Data}
 The following digram shows the process of converting a data heavy video file to a more lightweight .csv (Comma Separated Values) file.

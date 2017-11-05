@@ -3,21 +3,21 @@
 {\Huge \begin{center}
 
 % Title
-Lower-Limb Motion Estimation 
-\vskip 5mm
+Lower Limb Motion Estimation 
+\vskip 3mm
 \hrule 
 
 % Subtitle
-\vskip 5mm
+\vskip 3mm
 {\Large Kinematic Modelling and Estimation of the Gait using Cameras and an IMU}
 \end{center}}
 
-\vskip 5mm
+\vskip 3mm
 \begin{center}
-\includegraphics[scale = 0.5]{figures/uctLogo.png}
+\includegraphics[scale = 0.35]{figures/uctLogo.png}
 \end{center}
 
-\vskip 5mm
+\vskip 3mm
 \begin{center}
 {\large
 \textbf{Prepared by:}
@@ -28,7 +28,7 @@ Department of Electrical and Electronics Engineering\\University of Cape Town
 }
 \end{center}
 
-\vskip 7mm
+\vskip 3mm
 \begin{center}
 {\large
 \textbf{Prepared for:}
@@ -40,15 +40,11 @@ Department of Electrical and Electronics Engineering\\University of Cape Town
 \end{center}
 
 
-\vskip 8mm
+\vskip 5mm
 \begin{center}
-Submitted to the Department of Electrical Engineering at the University of Cape Town in partial
-fulfilment of the academic requirements for a Bachelor of Science degree in Mechatronics.
-
+Submitted to the Department of Electrical and Electronics Engineering at the University of Cape Town in partial
+fulfilment of the academic requirements for a Bachelor of Science degree in Mechatronics.\\
+{\bf \today}
 \end{center}
 
-
-\vskip 3mm
-\begin{center}{\bf \today}
-\end{center}
 

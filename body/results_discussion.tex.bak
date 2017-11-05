@@ -2,11 +2,56 @@
 This chapter is dedicated to discussing the results generated and their verification. 
 
 \section{Results}
+The project had various critical phases that were completed.
+
+\subsection{System Design Results}
+The data capture 
+
+\begin{figure}[!ht] 
+\captionsetup{width=0.5\linewidth, font=small}  
+\includegraphics[width=0.5\linewidth]{figures/pat_harness.png}
+\caption{subject wearing the motion capture system }
+\label{fig:pat_harness}
+\end{figure}
 
 
+\subsection{Captured and Processed Data}
+
+\begin{figure}[!ht] 
+\captionsetup{width=\linewidth, font=small}  
+\includegraphics[width=\linewidth]{figures/accel.png}
+\caption{}
+\label{fig:accel}
+\end{figure}
+
+\begin{figure}[!ht] 
+\captionsetup{width=\linewidth, font=small}  
+\includegraphics[width=\linewidth]{figures/gyroz.png}
+\caption{}
+\label{fig:gyroz}
+\end{figure}
+
+after image processing
+
+\begin{figure}[!ht] 
+\captionsetup{width=\linewidth, font=small}  
+\includegraphics[width=\linewidth]{figures/ipdatapattern.png}
+\caption{iamge processing things}
+\label{fig:ipdatapattern}
+\end{figure}
+
+
+
+\subsection{EFK Resutls}
 
 
 \section{Discussion}
+
+link to lit review
+
+
+
+
 
 
 
