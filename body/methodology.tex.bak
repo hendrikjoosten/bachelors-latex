@@ -4,7 +4,7 @@ To ensure the success of this project a basic plan of action was created. The fo
 \begin{figure}[!ht] 
 \captionsetup{width=0.8\linewidth, font=small}  
 \includegraphics[width=0.8\linewidth]{figures/planOfAction.png}
-  \caption{Diagram showing the progression and dependence of the major stages of this project}
+\caption{Diagram showing the progression and dependence of the major stages of this project}
 \label{fig:planOfAction}
 \end{figure}
 
@@ -58,8 +58,10 @@ To interpret the data and the underlying mathematics a model of the human torso 
 \label{fig:swmodel}
 \end{figure}
 
+A very important benefit to using such a model it the transferability to a robotic implementation of the lower limbs. Often robot joints are implemented using a variety of DC machines or servomotors. by limiting the freedom of various joints we simplify the joints and reduce the amount of servomotors required to mimic the model. This allows for both cheaper and less complex bipedal robotic limbs to be constructed.
+
 \section{Experimental Details}
-The data was captured during a short straight road run where the runner started from a standing position and accelerated to a steady state running pace. This allowed us to capture some transients (accelerations) from the run that can be used to initialize the proposed EKF.
+The data was captured during a short straight road run where the runner started from a standing position and accelerated to a steady state running pace. This allowed us to capture some transients (accelerations) from the run that can be used to initialize the proposed EKF. The run lasted about 18 seconds providing us with 1800 datapoints. Test was performed 3 times and a final dataset was chosen after examining the data gathered.
 
 \section{Limitations}
 The scope of this research does not include runs over rough terrain as this is the logical next step after flat ground steady state running is modelled and estimated correctly. It is assumed that given robust EKF and complete image processing solution the system would be transferable for running on various terrains.

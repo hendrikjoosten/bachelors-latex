@@ -1,8 +1,8 @@
 \chapter{Processing the Captured Data}
-This chapter is dedicated to the process of extracting critical data from the video files and IMU .csv file. This process will take the raw captured data and transform it to 
+This chapter is dedicated to the process of extracting critical data from the video files and IMU .csv file. This process will take the raw captured data and transform it to quantified values that we can feed the Extended Kalman Filter.
 
 \section{Processing the IMU Data}
-The following flowcharts depicts the procedural processing of IMU data gathered from the chest mounted smartphone running the AndroSensor application.
+The following flowcharts depicts the procedural processing of IMU data gathered from the chest mounted smartphone running the AndroSensor application. The following flow diagram shows the different steps in preprocessing.
 
 \begin{figure}[!ht]
 \includegraphics[width=\linewidth]{figures/imuflow.png}
@@ -10,10 +10,14 @@ The following flowcharts depicts the procedural processing of IMU data gathered 
 \label{fig:imuflow}
 \end{figure}
 
-
+From the diagram we can see that our input is a large unprocessed dataset captured by the Smartphnone and logged at 100Hz. From this critical data must be extracted and synchronized with the rest of the system. The data must also undergo pre processing to simplify the implementation of the EKF. 
 
 \subsection{Obtaining IMU Data}
-To use the smartphone as an IMU a free application "AndroSensor" \cite{androsensor} was installed. This application could log parameter from all the  sensor s and could be configured in various ways
+To use the smartphone as an IMU a free application "AndroSensor" \cite{androsensor} was installed. This application could log different parameters from all the different sensors that the smartphone contains. The application also gives the user the ability to change the output data file, log rate and what sensors are logged.
+
+The sampling rate and logging rate of the application was configured to 100Hz as this was the maximum.
+
+THe following image is a screen shot taken from within the AndroSensor application. It shows the main screen of the application and the ability to see live plots of the active sensors.
 
 \begin{figure}[!ht] 
 \captionsetup{width=0.5\linewidth, font=small}  
@@ -22,7 +26,7 @@ To use the smartphone as an IMU a free application "AndroSensor" \cite{androsens
 \label{fig:as}
 \end{figure}
 
-The IMU data logged by the smartphone was saved as a .CSV file with the first row containing the headings of various variables. These headings were
+The IMU data logged by the smartphone was saved as a .csv file with the first row containing the headings of various variables. These headings are summarized in the table below.
 
 \begin{table}
 \centering
@@ -36,11 +40,12 @@ LINEAR ACCELERATION  & X,Y,Z\\
 GYROSCOPE            & X,Y,Z \\
 MAGNETIC FIELD       &  X,Y,Z\\
 ORIENTATION          &  X,Y,Z\\
-ATMOSPHERIC PRESSURE  &  \\
-LOCATION Latitude     &  \\
-LOCATION Longitude    &  \\
-LOCATION Speed        &  \\
-LOCATION ORIENTATION  & 
+ATMOSPHERIC PRESSURE  &      \\
+LOCATION Latitude     &       \\
+LOCATION Longitude    &       \\
+LOCATION Speed        &       \\
+LOCATION ORIENTATION  &       \\
+VOLUME
 \end{tabular}
 \end{table}
 
@@ -54,16 +59,23 @@ All these variables have been recorded with respect the smartphone frame of refe
 \end{figure}
 
 \subsection{Synchronizing IMU Data}
-The Androsense application can record the the magnitude of sound that the microphone is experiencing. Using this magnitude we can see at what sample the spike from the clap was recorded. This sample will be a common point between the IMU and the cameras.
+The AndroSense application can record the the magnitude of sound that the microphone is experiencing. Using this magnitude we can see at what sample the spike from the clap was recorded. This sample will be a common point between the IMU and the cameras and can thus be used to synchronize the different hardware elements.
 
 \subsection{Preprocessing IMU Data}
-Before we can apply the IMU data directly to the EKF we need to make some minor modifications to the data. This is critical in removing any bias from the sensors. MEMS inherently have some 
+Before we can apply the IMU data directly to the EKF we need to make some minor modifications to the data. This is critical in removing any bias from the sensors. as discussed in the Sensor calibration section.
+
+in order to extract the linear acceleration from the data we can simply take the measure acceleration and subtract the gravitational acceleration vector
 
 \subsection{Exporting IMU Data}
 The IMU data was finally exported as a csv final and imported into MATLAB as different vectors. This allows for faster processing and better data processing in matlab.
 
+
+
+
+
 \section{Processing the Video Data}
-The following digram shows the process of converting a data heavy video file to a more lightweight .csv (Comma Separated Values) file.
+To once again simplify the design and implementation of the EKF it is important to pre-process teh video data to a leess data heavy format. The following digram shows the process of converting a data heavy video file to a more lightweight .csv (Comma Separated Values) file whilst amintaining all critical information.
+
 \begin{figure}[!ht]
   \includegraphics[width=\linewidth]{figures/videoProcess.png}
   \caption{Diagram showing the progression and dependence of the major stages of video processing in the project}
@@ -152,6 +164,21 @@ Point 3       & Right Heel \\
 Point 4       & Left Heel 
 \end{tabular}
 \end{table} 
+
+
+\section{On units}
+In order to assure consistency between the different sources of data considering a general set of units is of critical importance. It was decided to implement the system using SI units such that all lengths was given in meters and all angles in radians.
+
+gyroscope was logged as radians per second,
+
+accelerometer was logged as meters per second .
+
+imgae data was recorded as m
+
+\section{On Frames of Reference}
+we need to developed some commonalities among the various sensors and their individual frames of reference. The body frame
+
+
 
 
 

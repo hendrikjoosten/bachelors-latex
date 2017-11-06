@@ -19,9 +19,9 @@ If we observe some of the worlds foremost attempts at bipedal robotics such as B
 The human gait is well understood and has been studied in detail as it is a fundamental part of human mobility. It is one of the first skills developed in infancy and its importance for healthy develpoment, as outlined by Adolph et al. \cite{adolph2013road}, cannot be understated. Walking and running are also critical factors in transportation and geographical movement of people and goods in developing countries where public transport is underdeveloped and private transport not within the means of the populous. Finally walking and running as exercise has proven benefits as shown in \cite{hanson2015there} (general health) and \cite{fox1999influence} (mental health). There is thus clear evidence that the human gait has earned its right as a field of study in academia.
 
 \section{Computer Vision}
-While the previous section answers "why" understanding the human gait is important, the following sections will explain fields that contribute to the question of "how" the gait is studied. The technologies and methods used to quantify it. This section titles computer vision should be interpreted within the context of this document. It will be used interchangeable with image processing as the underlying philosophies of both methodologies are algorithmic interpretation of images.
+While the previous section answers "why" understanding the human gait is important, the following sections will explain fields that contribute to the question of "how" the gait is studied. The technologies and methods used to quantify it. This section titled computer vision should be interpreted within the context of this document. It will be used interchangeable with image processing as the underlying philosophies of both methodologies are algorithmic interpretation of images.
 
-Image processing as a field was born from digital signal processing as it relates to the extraction of critical data from noisy data streams. Computer vision is the use of computational methods to achieve the same end goal. The image processing used in this thesis is basic feature detection and therefore advanced image identification task and   
+Image processing as a field was born from digital signal processing as it relates to the extraction of critical data from noisy data streams. Computer vision is the use of computational methods to achieve the same end goal; ultimately trying to emulate human vision. Image Processing has many different approaches and methodologies. These include but are not limited to feature detection, pattern recognition and classification. Modern works such as \cite{chen2016deeplab} and \cite{shi2016real} have shown how neural networks perform previously mentioned tasks with unprecedented accuracy.
 
 \subsection{Computer Vision in Robotics}
 Recent improvements to real time image processing has allowed amazing technological breakthroughs in fields closely related to robotics. One such breakthrough is the rapid improvement of self-driving cars developed by Tesla. These vehicles use vision based technologies and real time image processing to navigate complex and changing road networks. The figure below shows how a Tesla identifies different roadside artefacts.
@@ -29,21 +29,40 @@ Recent improvements to real time image processing has allowed amazing technologi
 \begin{figure}[!ht] 
 \captionsetup{width=0.8\linewidth, font=small}  
 \includegraphics[width=0.8\linewidth]{figures/teslaauto.jpg}
-\caption{Insight into object classification by Tesla, image from 	\cite{tesla}}
+\caption{Insight into object classification by Tesla, image from \cite{tesla}}
 \label{fig:teslaauto}
 \end{figure}
+
+Another interesting use for computer vision in robotics is the ability to identify and classify real world objects. This allows for robotics to perform menial household tasks. Finally work completed by Taylor et al. \cite{taylor2016medical} shows the importance in computer vision in robotics assisted surgery. Computer vision is an important step in automatizing robotics and due to the rapid progression in artificial intelligence, it i a field with a large potential for growth.
 
 \subsection{New Perspectives from Animal Borne Cameras}
 Patel et al. \cite{patel2017trackingieee} showed that using animal borne cameras and motion sensors, the tail kinematics of the cheetah (Acinonyx Jubatus) could be tracked. Patel's work was partly inspired by Kane et al. \cite{kane2014falcons} where falcon (Falco Peregrinus) borne cameras were used to better understand airborne pursuit of prey. Giving researchers a new perspective on the behaviour of animals in the natural world.
 
-Further work completed by Pearson et al. \cite{pearson2017testing} showed that cameras mounted to dolphins (Lagenorhynchus Obscurus) could provide insight into the their movement, social and foraging strategies. Using cameras to study ocean-life has become a popular methodology in recent time due to difficulties imposed by their environment. In essence We struggle to understand flying and swimming animals due to their complex environments.
+Further work completed by Pearson et al. \cite{pearson2017testing} showed that cameras mounted to dolphins (Lagenorhynchus Obscurus) could provide insight into the their movement, social and foraging strategies. Using cameras to study ocean-life has become a popular methodology in recent time due to difficulties imposed by their environment. In essence We struggle to understand flying and swimming animals due to their complex environments. THe folowing image shows how these devices are carried by various dolphins.
 
-The above research has shown the unique benefits of having cameras and sensors mounted to the subject in question. 
+\begin{figure}[!ht] 
+\captionsetup{width=\linewidth, font=small}  
+\includegraphics[width=\linewidth]{figures/dol.png}
+\caption{Dollphins wearing dorsal mounted cameras, image from \cite{pearson2017testing}}
+\label{fig:dol}
+\end{figure}
+
+The above research has shown the unique benefits of having cameras and sensors mounted to the subject in question.
 
 \subsection{Human Motion Analysis Using Computer Vision}
-From Chen et al.\cite{chen2013survey} using depth imagery to understand human motion we can see that this is a popular technique. Imagery has been a popular approach to interpreting human movement and gesture. Naturally this has formed a foundation of using cameras to capture human movement.
+From Chen et al.\cite{chen2013survey} using depth imagery to understand human motion we can see that this is a popular technique. Because imaging is a popular method in medical research imaging various human movements has a large set of well established methodologies. Naturally this has formed a foundation of using cameras to capture human movement. Companies like Vicon, Optitrack and Motion Analysis have created multiple consumer products for quantifying motion using cameras. The following image shows a typical motion capture setup using multiple cameras.
 
-One system often used for motion capture is the Microsoft developed Kinect. \cite{gabel2012full} \cite{stone2013unobtrusive} \cite{clark2013concurrent} have shown positive results in modelling and quantifying the human gait using this technology. Interestingly all these works require controlled environments due to the nature of the technology. 
+\begin{figure}[!ht] 
+\captionsetup{width=\linewidth, font=small}  
+\includegraphics[width=\linewidth]{figures/mc.jpeg}
+\caption{Dollphins wearing dorsal mounted cameras, image from \cite{vicon}}
+\label{fig:mc}
+\end{figure}
+
+One system often used for motion capture is the Microsoft developed Kinect. \cite{gabel2012full} \cite{stone2013unobtrusive} \cite{clark2013concurrent} have shown positive results in modelling and quantifying the human gait using this technology. Open source software like OpenKinect allows for easy implementation and configuration. A drawback to this methodology is that all of these works require controlled environments due to the nature of the technology. 
+
+A thorough search for wearable system using cameras to identify critical points  on the lower limbs was done, but no pre-existing research was found. It was concluded that this thesis is novel and exploring a new approach to understanding lower limb kinematics.
+
 
 \section{Inertial Measurement Units and Sensors}
 IMU's are a staple of electrical engineering as applied to dynamic systems. These sensors give us insight as to how an object is moving in space by providing data relating to orientation and acceleration of said system. These data points are created by electronically interpreting signals generated by micro-electromechanical system (MEMS). Modern smartphones have built in IMU's that are not only accurate \cite{gikas2016rigorous}, but also easy to interface with due to the open source nature of the Android operating system \cite{androidSensorLib}.  
@@ -71,11 +90,13 @@ These sensors can be used together to better model the position, velocity and ac
 
 
 \subsection{Global Position System}
-GPS (Global Position System) is a space based navigational system that uses satellites to determine a receivers absolute position on earth. This system was developed by the United States Air Force ion 1973 and made available for public use in the 1980s. It has since been inproved by the addition of satellites and 
+GPS (Global Position System) is a space based navigational system that uses satellites to determine a receivers absolute position on earth. This system was developed by the United States Air Force ion 1973 and made available for public use in the 1980s. It has since been inproved by the addition of satellites.
 
 
 \subsection{Inertial Measurement Units in Robotics}
 IMUs are integral in the functioning of robotics. Up until very recently intelligent robotic systems had no sense of vision to provide feedback for their internal control systems. Instead this feedback was generated by various sensors providing information about the dynamics of these systems. \cite{kaneko2002legs} showed the importance of feedback to control bipedal robotic lower limbs. This feedback is achieved with different electronics components including gyroscopes and accelerometers; they are preferred above potentiometers since they do not mechanically intrude on the system.
+
+Another common application for sensors in robots is for th use of navigation. By using accurate IMU's mounted to the body of drones etc pose estimation can be used to control movement. 
 
 \subsection{Human Motion Analysis Using Sensors}
 Picerno completed and extensive review of motion sensor based data capture for human motion in \cite{picerno201725}. 

@@ -176,6 +176,7 @@ year={2016},
 }
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -429,6 +430,27 @@ humanoid robotics open platform
   pages={126--131},
   year={2017},
   organization={IEEE}
+}
+@incollection{taylor2016medical,
+  title={Medical robotics and computer-integrated surgery},
+  author={Taylor, Russell H and Menciassi, Arianna and Fichtinger, Gabor and Fiorini, Paolo and Dario, Paolo},
+  booktitle={Springer handbook of robotics},
+  pages={1657--1684},
+  year={2016},
+  publisher={Springer}
+}
+@article{chen2016deeplab,
+  title={Deeplab: Semantic image segmentation with deep convolutional nets, atrous convolution, and fully connected crfs},
+  author={Chen, Liang-Chieh and Papandreou, George and Kokkinos, Iasonas and Murphy, Kevin and Yuille, Alan L},
+  journal={arXiv preprint arXiv:1606.00915},
+  year={2016}
+}
+@inproceedings{shi2016real,
+  title={Real-time single image and video super-resolution using an efficient sub-pixel convolutional neural network},
+  author={Shi, Wenzhe and Caballero, Jose and Husz{\'a}r, Ferenc and Totz, Johannes and Aitken, Andrew P and Bishop, Rob and Rueckert, Daniel and Wang, Zehan},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={1874--1883},
+  year={2016}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
