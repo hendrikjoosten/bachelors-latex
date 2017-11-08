@@ -17,14 +17,6 @@ These improvements would decrease the overall cost of the system and optimize th
 
 Finally the results obtained have not been verified. An experiment to verify these results was designed, where external cameras would generate three dimensional position data of the markers. This can be compared to the data generated from the EKF as applied to the wearable motion capture system.
 
-\newpage
-\begin{figure}[!ht] 
-\captionsetup{width=1\linewidth, font=small}  
-\includegraphics[width=1\linewidth]{figures/ethics.png}
-\caption{ethics clearance}
-\label{fig:ethics}
-\end{figure}
-
 
 
 

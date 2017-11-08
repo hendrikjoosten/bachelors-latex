@@ -1,12 +1,12 @@
 \chapter{Designing the Data Capture System}
-To obtain data for the Extended Kalman Filter, a data-capture system needed to be designed. Since the data sources have been identified as multiple video streams and a 9 Degrees of freedom IMU (accelerometer, gyroscope and magnetometer) the design was centred around the following equipment. The following specifications are highly modular as any camera source and any IMU with sufficient data capture rate would suffice. 
+To obtain data for the Extended Kalman Filter, a data-capture system needed to be designed. Since the data sources have been identified as multiple video streams and a 9 Degrees of freedom IMU (accelerometer, gyroscope and magnetometer) The following specifications are highly modular as any camera source and any IMU with sufficient data capture rate would suffice. 
 
 \section{GoPro Hero Session Camera}
 Due to the availability of GoPro Hero Session cameras the wearable motion capture system was designed with these in mind. These cameras only take up a volume of $250cm^3$ and have a square housing measuring $6.3cm$ on all sides. The following figure presents a 3D rendered model of the camera.
 
 \begin{figure}[!ht] 
-\captionsetup{width=\linewidth, font=small}  
-\includegraphics[width=\linewidth]{figures/GoProHero4Session.JPG}
+\captionsetup{width=0.8\linewidth, font=small}  
+\includegraphics[width=0.8\linewidth]{figures/GoProHero4Session.JPG}
 \caption{3D CAD rendering of the GoPro Hero Session action camera}
 \label{fig:GoProHero4Session}
 \end{figure}
@@ -49,8 +49,8 @@ Some initial work on modelling a housing for the camera was completed by the Mec
 This model was heavily modified using Dassault Systems SOLIDWORKS software to enclose 2 cameras mounted side by side. The bracket also needed a mounting point to join to the chest mount. Finally the bracket needed to be lightweight, provide access to the camera controls and not obscure the built in status screen of the cameras. The following figure shows the final dual camera bracket that was 3D printed. This bracket can be found on the accompanying CD.
 
 \begin{figure}[!ht] 
-\captionsetup{width=\linewidth, font=small}  
-\includegraphics[width=\linewidth]{figures/stereoholder.JPG}
+\captionsetup{width=0.8\linewidth, font=small}  
+\includegraphics[width=0.8\linewidth]{figures/stereoholder.JPG}
 \caption{Final dual camera enclosure designed by the author}
 \label{fig:stereoholder}
 \end{figure}
@@ -58,44 +58,38 @@ This model was heavily modified using Dassault Systems SOLIDWORKS software to en
 This bracket was mounted to the Action Mounts Chest mount. One bracket was mounted to the front of the chest mount and using the included GoPro mounting pads the chest harness was modified to carry a bracket on the back plate as well. The back plate of the Chest Harness was relatively small and when examining the footage taken during test runs the rear camera pair was found to be very unstable. The following diagram shows the chest harness.
 
 \begin{figure}[!ht] 
-\captionsetup{width=\linewidth, font=small}  
-\includegraphics[width=\linewidth]{figures/chesty.png}
-\caption{Action Mounts chest mount showing the fron mounting plate}
+\captionsetup{width=0.6\linewidth, font=small}  
+\includegraphics[width=0.6\linewidth]{figures/chesty.png}
+\caption{Action Mounts chest mount showing the front mounting plate}
 \label{fig:chesty}
 \end{figure}
 
 The need to increase the stability without hindering wearability introduced a new specification to be incorporated into the design process. The part had to comfortably fit to the back of a runner while providing a larger surface area for the camera to mount too. The part shown in the following figure was created and tested to fulfil this specification.
 
 \begin{figure}[!ht] 
-\captionsetup{width=\linewidth, font=small}  
-\includegraphics[width=\linewidth]{figures/stabil.JPG}
+\captionsetup{width=0.5\linewidth, font=small}  
+\includegraphics[width=0.8\linewidth]{figures/stabil.JPG}
 \caption{stabilizer}
 \label{fig:stabil}
 \end{figure}
 
+\section{Sony Xperia Z3 Compact Smartphone}
+The Sony Xperia Z3 Compact has a complex sensor system that includes an accelerometer, gyrsoscope, magnetometer, light sensor, pressure sensor, and proximity sensor. These sensors are combined locally to also create and artificial sensor for orientation, gravity, linear acceleration, and rotation vector
+
+The smartphone also has a built in GPS module.
+
+
 
 \section{Smartphone Mount Design}
-The final design specification was to rigidly mount the smart phone to the chest of the subject
+The design specification was to rigidly mount the smart phone to the chest of the subject. To complete this objective a rubber smartphone housing for the Z3 compact was fastened to the ActionMounts chest mount above the front duel camera. The following image illustrates the smartphone as connected to the harness.
 
+\begin{figure}[!ht] 
+\captionsetup{width=\linewidth, font=small}  
+\includegraphics[width=\linewidth]{figures/pm.JPG}
+\caption{phone mount}
+\label{fig:pm}
+\end{figure}
 
-\section{Vision Calibration}
-Before calibrating the stereo cameras and their singular quantifications it is important to take a step back and determine the camera matrix for each individual camera. This allows us to model the cameras mathematically and individually. This will allow us to accurately model elements such as lens distortion, principal ray offset and uncertainties accurately. The pinhole camera model is used to quantify camera parameters. In this model each point of 
-
-In order to obtain accurate positional information from the video cameras calibration was performed. MATLAB has a built in stereo camera calibration application that can calibrate a set of cameras and create an object containing all the essential parameters, including the individual camera intrinsics.
-
-To calibrate the cameras pictures of a white and black chequerboard is fed in to the calibration application that then mathematically determines the camera parameters. In order to make this process more efficient a video of the the moving chequerboard was taken and various frames of importance extracted using a simple MATLAB script. 
-
-\section{Smartphone Calibration}
-
-\subsection{Accelerometer}
-Using the Smartphone IMU comes with several advantages and disadvantages. The phone sensors are calibrated inhouse during production of most smart phones, but as with all accelerometers the the element of sensor drift is inescapable. Due to the physical nature of smartphone accelerometers there will be a drifting bias. This is usually influenced by the temperature of the of the smartphone.
-
-An easy way to quantify and eliminate this drift is to use a stationary logging test. With the smartphone body being stationary data we would expect the only acceleration to be measured that of gravity, yet when the experiment is performed we can see non zero acceleration artefacts after the gravitational acceleration has been accounted for.
-
-\subsection{Gyroscope}
-Although the above mentioned inaccuracies are also present in the gyroscope, they are treated differently. This is mainly due to the fact that a gyroscope measure a rate of change whereas an accelerometer measure the rate of change of the rate of change. 
-
-Naturally... 
 
 \section{Critical Point Markers}
 To increase the accuracy of the image processing elements of this methodology various colourful markers were used to identify critical points on the subjects lower extremities. The following picture shows the location of the markers.

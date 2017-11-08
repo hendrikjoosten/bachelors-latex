@@ -11,13 +11,22 @@ To ensure the success of this project a basic plan of action was created. The fo
 Due to the availability of equipment, financial limitations and time constraints various design parameters where predetermined. These known elements were central to the design process.
   
 \section{System Design}
-This section is dedicated to defining and understanding the specifications of the data capture system. The system itself is novel as no existing literature could be found relating to wearable motion capture systems (using cameras) for bipeds at the time of writing.
+This section is dedicated to defining and understanding the specifications of the data capture system. Due to the lack of existing literature on wearable motion capture systems a starting point had to be determined. This point would serve as the first iteration of an iterative design process to fufill all defined requirements.
 
-Work completed by Stocks \cite{bradstocks} was therefore used as a starting point for the design process. The system was adapted to use 4 cameras and an IMU mounted to the torso of the subject. 
+Work completed by Stocks \cite{bradstocks} was used as this starting point. The original system comprised of 2 GoPro Hero Session cameras rigidly connected to a Sony smartphone acting as the main sensor. This was all mounted to a GoPro Fetch harness \cite{fetch} such that it could be carried by various quadrupeds. The original system is pictured below.
 
-The cameras will record the lower limbs of the subject while the IMU will log inertial data from the body of the subject. The video data from the cameras will provide information about the kinematics of the lower limbs with respect to the cameras while the IMU will provide motion data of the body with respect to the inertial frame. As discussed in the previous chapter the inertial frame and the world frame are equivalent in this project. 
+\begin{figure}[!ht] 
+\captionsetup{width=0.8\linewidth, font=small}  
+\includegraphics[width=0.8\linewidth]{figures/p1.png}
+\caption{Original wearable motion capture system designed by Stocks, image from \cite{bradstocks}}
+\label{fig:p1}
+\end{figure}
 
-The following equipment was provided by the Mechatronics Lab and was chosen as the main components to use in the system:
+The system was adapted to use 4 GoPro Hero Session cameras and an IMU mounted to the torso of the subject. Two of the four cameras mounted to the chest of the subject and the other two mounted to the middle-back of the subject. 
+
+The cameras will record the lower limbs of the subject while the IMU will log inertial data from the body of the subject. By having cameras on both the chest and back of the subject, the front and rear elements of the gait can be captured. The video data from the cameras will provide information about the kinematics of the lower limbs with respect to the cameras while the IMU will provide motion data of the body with respect to the inertial frame. 
+
+The following equipment was provided by the Mechatronics Research Lab and was chosen as the main components to use in the system
 
 \begin{table}[!ht]
 \label{equipment-table}
@@ -30,7 +39,8 @@ Chest Mount & 1 Action Mount Chest Mount    & \cite{actionmounts}
 \caption{Known design elements of the project}
 \end{table}
 
-The specifications of this data capture system has been defined as:
+
+The problem space and concept design of the system has been outlined above, but to further the design process real specifications need to be defined. By looking at the various limitations of existing systems and the availible components the following specifications have been defined.
 
 \begin{itemize}
 \item 2 stereo housings to hold the cameras
