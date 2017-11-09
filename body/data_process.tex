@@ -1,64 +1,25 @@
 \chapter{Processing the Captured Data}
-This chapter is dedicated to the process of extracting critical data from the video files and IMU .csv file. This process will take the raw captured data and transform it to quantified values that we can feed the Extended Kalman Filter.
-
-
+This chapter is dedicated to the process of extracting critical data from the video files and IMU csv file. This process will take the raw captured data and transform it to quantified values that we can input into the Extended Kalman Filter. It is referred to in this work as preprocessing.  
 
 \section{Processing the IMU Data}
 The following flowcharts depicts the procedural processing of IMU data gathered from the chest mounted smartphone running the AndroSensor application. The following flow diagram shows the different steps in preprocessing.
 
 \begin{figure}[!ht]
+\captionsetup{width=0.8\linewidth, font=small}  
 \includegraphics[width=\linewidth]{figures/imuflow.png}
-\caption{Diagram showing the progression and dependence of the major stages of video processing in the project}
+\caption{Diagram showing the progression and dependence of the major stages of IMU data processing in this project}
 \label{fig:imuflow}
 \end{figure}
 
-From the diagram we can see that our input is a large unprocessed dataset captured by the Smartphnone and logged at 100Hz. From this critical data must be extracted and synchronized with the rest of the system. The data must also undergo pre processing to simplify the implementation of the EKF. 
+From the diagram we can see that our input is a large unprocessed dataset captured by the smartphone with a logging rate of 100Hz. From this critical data must be extracted and synchronized with the rest of the system. The data must also be manipulated to keep units constant and unify various frames of reference. By correctly preprocessing the data, the implementation of the EKF is simplified.
 
 \subsection{Obtaining IMU Data}
-To use the smartphone as an IMU a free application "AndroSensor" \cite{androsensor} was installed. This application could log different parameters from all the different sensors that the smartphone contains. The application also gives the user the ability to change the output data file, log rate and what sensors are logged.
+Obtaining the raw sensor data was discussed in the 
 
-The sampling rate and logging rate of the application was configured to 100Hz as this was the maximum.
-
-THe following image is a screen shot taken from within the AndroSensor application. It shows the main screen of the application and the ability to see live plots of the active sensors.
-
-\begin{figure}[!ht] 
-\captionsetup{width=0.5\linewidth, font=small}  
-\includegraphics[width=0.5\linewidth]{figures/as.png}
-\caption{Androsensor Screenshots from \cite{androsensor}}
-\label{fig:as}
-\end{figure}
-
-The IMU data logged by the smartphone was saved as a .csv file with the first row containing the headings of various variables. These headings are summarized in the table below.
-
-\begin{table}
-\centering
-\caption{This table shows the different headings of the output IMU file}
-\label{IMU Headings}
-\begin{tabular}{ll}
-Heading               & Fields  \\
-ACCELEROMETER       & X,Y,Z  \\
-GRAVITY              & X,Y,Z \\
-LINEAR ACCELERATION  & X,Y,Z\\
-GYROSCOPE            & X,Y,Z \\
-MAGNETIC FIELD       &  X,Y,Z\\
-ORIENTATION          &  X,Y,Z\\
-ATMOSPHERIC PRESSURE  &      \\
-LOCATION Latitude     &       \\
-LOCATION Longitude    &       \\
-LOCATION Speed        &       \\
-LOCATION ORIENTATION  &       \\
-VOLUME
-\end{tabular}
-\end{table}
 
 All these variables have been recorded with respect the smartphone frame of reference as shown below
 
-\begin{figure}[!ht] 
-\captionsetup{width=0.5\linewidth, font=small}  
-\includegraphics[width=0.5\linewidth]{figures/phone.jpg}
-\caption{Figure demonstrating the frame of reference of the smartphone}
-\label{fig:phone}
-\end{figure}
+
 
 \subsection{Synchronizing IMU Data}
 The AndroSense application can record the the magnitude of sound that the microphone is experiencing. Using this magnitude we can see at what sample the spike from the clap was recorded. This sample will be a common point between the IMU and the cameras and can thus be used to synchronize the different hardware elements.
@@ -76,16 +37,20 @@ The IMU data was finally exported as a csv final and imported into MATLAB as dif
 
 
 \section{Processing the Video Data}
-To once again simplify the design and implementation of the EKF it is important to pre-process teh video data to a leess data heavy format. The following digram shows the process of converting a data heavy video file to a more lightweight .csv (Comma Separated Values) file whilst amintaining all critical information.
+To once again simplify the design and implementation of the EKF it is important to pre-process the video data to a less data heavy format suc as MP4. The following digram shows the process of converting a large video file to a more lightweight csv file without losing any critical information.
 
 \begin{figure}[!ht]
-  \includegraphics[width=\linewidth]{figures/videoProcess.png}
-  \caption{Diagram showing the progression and dependence of the major stages of video processing in the project}
-  \label{fig:videoProcess}
+\captionsetup{width=0.8\linewidth, font=small}  
+\includegraphics[width=\linewidth]{figures/videoProcess.png}
+\caption{Diagram showing the progression and dependence of the major stages of video processing in the project}
+\label{fig:videoProcess}
 \end{figure}
 
+All raw video data streams must be synchronized and the important sections of the streams extracted. Correcting the various distortions introduced by the lens properties of the GoPro  and decompressing the video files are necessary before image processing is attempted. Finally each marker position in every frame of all the individual cameras must be quantified. These pixel coordinates will serve as inputs to the EKF. 
+
 \subsection{Obtaining Video Data}
-Using the chest mounted cameras detailed in the previous chapter we can generate raw video data. The GPHS cameras can be configured to record at different frame rates and resolutions as discussed in the previous chapter. The video files where stored in an .MP4 format. This meant that during recording the video was compressed and the 
+The cameras were configured as outlined in the previous chapter. go pro remote start them all recording video at the same time
+
 
 
 \subsection{Synchronizing Video Sources}
@@ -94,10 +59,10 @@ I typical problem faced when working with different sources of data is that of s
 The problem of synchronization was overcome by using a audio cue to align the video data post capturing. With all systems recording, a simple hand clap can serve as a spiking audio input easily identified in the audio track of the video streams. The frame associated with this audio spike can be identified using SVP (Sony Vegas Pro) video editing software as shown in the figure below. 
 
 \begin{figure}[!ht]
-\centering
-  \includegraphics[width=0.5\linewidth]{figures/svpframe.png}
-  \caption{Figure showing the user interface of SVP video editing software}
-  \label{fig:svpframe}
+\captionsetup{width=0.8\linewidth, font=small} 
+\includegraphics[width=0.5\linewidth]{figures/svpframe.png}
+\caption{Figure showing the user interface of SVP video editing software}
+\label{fig:svpframe}
 \end{figure}
 
 The red track in the above figure shows the recorded audio stream while the corresponding frames are displayed in the blue track above that. The cursor is aligned with the audio spike caused by the clap with the corresponding frame number displayed below the playback controls.
@@ -119,9 +84,10 @@ To gain further understanding of undistorting video files \cite{Hartley2004} ser
 This section discusses the different methods of feature detection subdividing them into two main methodologies: automated and semi-automated. Each of these approaches offer advantages and disadvantages. To understand the approaches considered for this work it is important to visualize the input image data to the system. The following picture shows the various frames from all the cameras.
 
 \begin{figure}[!ht]
-  \includegraphics[width=\linewidth]{figures/pat_run_quad.png}
-  \caption{4 Frames from the different cameras combined}
-  \label{fig:pat_run_quad}
+\captionsetup{width=0.8\linewidth, font=small} 
+\includegraphics[width=\linewidth]{figures/pat_run_quad.png}
+\caption{4 Frames from the different cameras combined}
+\label{fig:pat_run_quad}
 \end{figure}
 
 The top row of images have been generated by the front mounted cameras and the bottom row by the rear mounted cameras. The left images were produced by the left cameras and the right images by the right cameras. From this image we can get a visual idea of the data our image processing system needs to manipulate.
@@ -179,6 +145,16 @@ imgae data was recorded as m
 
 \section{On Frames of Reference}
 we need to developed some commonalities among the various sensors and their individual frames of reference. The body frame
+
+\begin{figure}[!ht] 
+\captionsetup{width=0.5\linewidth, font=small}  
+\includegraphics[width=0.5\linewidth]{figures/phone.jpg}
+\caption{Figure demonstrating the frame of reference of the smartphone}
+\label{fig:phone}
+\end{figure}
+
+
+
 
 
 

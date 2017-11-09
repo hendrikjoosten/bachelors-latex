@@ -1,0 +1,41 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Left: Vicon motion capture system tracking the human gait (from \cite {roetenberg2009xsens}) Right: The Xsens MVN motion capture suit (from \cite {vicon})\relax }}{13}{figure.caption.4}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces A cheetah wearing the wearable motion capture system designed by Stocks \cite {bradstocks}\relax }}{14}{figure.caption.5}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Flow chart outlining the report structure\relax }}{17}{figure.caption.6}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Pictures of modern bipedal robots Atlas (left) and Cassie (right) from \cite {bdpic} and \cite {arpic} respectively\relax }}{21}{figure.caption.9}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Insight into object classification by Tesla, image from \cite {tesla}\relax }}{22}{figure.caption.10}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Dollphins wearing dorsal mounted cameras, image from \cite {pearson2017testing}\relax }}{23}{figure.caption.11}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Dollphins wearing dorsal mounted cameras, image from \cite {vicon}\relax }}{24}{figure.caption.12}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Basic kinematic model to demonstrate\relax }}{28}{figure.caption.13}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Different bipedal and quadroped robots created by Boston Dynamics, image from \cite {bostondynamics}\relax }}{30}{figure.caption.14}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram showing the progression and dependence of the major stages of this project\relax }}{32}{figure.caption.15}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Original wearable motion capture system designed by Stocks, image from \cite {bradstocks}\relax }}{33}{figure.caption.16}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Rigid beam model used to model the lower limbs of a biped\relax }}{35}{figure.caption.18}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 3D CAD rendering of the GoPro Hero Session action camera from \cite {gph4smodelgrabcad}\relax }}{37}{figure.caption.19}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Initial camera enclosure designed by the mechatronics lab\relax }}{39}{figure.caption.21}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Final dual camera enclosure designed by the author\relax }}{39}{figure.caption.22}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Action Mounts chest mount showing the front mounting plate\relax }}{40}{figure.caption.23}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Stabilizer mounted to the rear camera\relax }}{40}{figure.caption.24}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Stabilizer mounted to the rear camera\relax }}{41}{figure.caption.25}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Stabilizer mounted to the rear camera\relax }}{42}{figure.caption.26}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Stabilizer mounted to the rear camera\relax }}{43}{figure.caption.27}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Stabilizer mounted to the rear camera\relax }}{43}{figure.caption.28}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces phone mount\relax }}{44}{figure.caption.30}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Subject wearing Green and Pink Markers to identify critical points\relax }}{45}{figure.caption.31}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagram showing the progression and dependence of the major stages of video processing in the project\relax }}{46}{figure.caption.32}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Diagram showing the progression and dependence of the major stages of video processing in the project\relax }}{48}{figure.caption.33}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Figure showing the user interface of SVP video editing software\relax }}{49}{figure.caption.34}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces 4 Frames from the different cameras combined\relax }}{50}{figure.caption.35}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Using the dltdv toolbox in MATLAB to export marker coordinates\relax }}{52}{figure.caption.36}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Figure demonstrating the frame of reference of the smartphone\relax }}{53}{figure.caption.38}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces subject wearing the motion capture system \relax }}{61}{figure.caption.40}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces \relax }}{61}{figure.caption.41}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces \relax }}{62}{figure.caption.42}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces iamge processing things\relax }}{62}{figure.caption.43}
+\addvspace {10\p@ }

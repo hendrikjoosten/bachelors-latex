@@ -1,0 +1,37 @@
+\BOOKMARK [0][-]{chapter.1}{1 Designing the Data Capture System}{}% 1
+\BOOKMARK [1][-]{section.1.1}{1.1 GoPro Hero Session Camera}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{1.2 Camera Mount Design}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{1.3 Sony Xperia Z3 Compact Smartphone}{chapter.1}% 4
+\BOOKMARK [2][-]{subsection.1.3.1}{1.3.1 AndroSensor}{section.1.3}% 5
+\BOOKMARK [2][-]{subsection.1.3.2}{1.3.2 SensorLab}{section.1.3}% 6
+\BOOKMARK [2][-]{subsection.1.3.3}{1.3.3 Custom Software}{section.1.3}% 7
+\BOOKMARK [2][-]{subsection.1.3.4}{1.3.4 Final Selection}{section.1.3}% 8
+\BOOKMARK [1][-]{section.1.4}{1.4 Smartphone Mount Design}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.5}{1.5 Critical Point Markers}{chapter.1}% 10
+\BOOKMARK [0][-]{chapter.2}{2 Processing the Captured Data}{}% 11
+\BOOKMARK [1][-]{section.2.1}{2.1 Processing the IMU Data}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.1.1}{2.1.1 Obtaining IMU Data}{section.2.1}% 13
+\BOOKMARK [2][-]{subsection.2.1.2}{2.1.2 Synchronizing IMU Data}{section.2.1}% 14
+\BOOKMARK [2][-]{subsection.2.1.3}{2.1.3 Preprocessing IMU Data}{section.2.1}% 15
+\BOOKMARK [2][-]{subsection.2.1.4}{2.1.4 Exporting IMU Data}{section.2.1}% 16
+\BOOKMARK [1][-]{section.2.2}{2.2 Processing the Video Data}{chapter.2}% 17
+\BOOKMARK [2][-]{subsection.2.2.1}{2.2.1 Obtaining Video Data}{section.2.2}% 18
+\BOOKMARK [2][-]{subsection.2.2.2}{2.2.2 Synchronizing Video Sources}{section.2.2}% 19
+\BOOKMARK [2][-]{subsection.2.2.3}{2.2.3 Cutting Critical Video Data}{section.2.2}% 20
+\BOOKMARK [2][-]{subsection.2.2.4}{2.2.4 Undistorting the Video Data}{section.2.2}% 21
+\BOOKMARK [2][-]{subsection.2.2.5}{2.2.5 Tracking and Exporting Marker Positions in the Frame}{section.2.2}% 22
+\BOOKMARK [1][-]{section.2.3}{2.3 On units}{chapter.2}% 23
+\BOOKMARK [1][-]{section.2.4}{2.4 On Frames of Reference}{chapter.2}% 24
+\BOOKMARK [0][-]{chapter.3}{3 Data Fusion and State Estimation}{}% 25
+\BOOKMARK [1][-]{section.3.1}{3.1 Prediction Equations}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.2}{3.2 Measurement Equations}{chapter.3}% 27
+\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Euler Matrices}{section.3.2}% 28
+\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 Direct Cosine Matrix}{section.3.2}% 29
+\BOOKMARK [2][-]{subsection.3.2.3}{3.2.3 Inverse kinematics}{section.3.2}% 30
+\BOOKMARK [1][-]{section.3.3}{3.3 Understanding the Data Sources}{chapter.3}% 31
+\BOOKMARK [1][-]{section.3.4}{3.4 State Estimation}{chapter.3}% 32
+\BOOKMARK [1][-]{section.3.5}{3.5 Q Matrix, R Matrix and Initialization}{chapter.3}% 33
+\BOOKMARK [2][-]{subsection.3.5.1}{3.5.1 Defining the Q Matrix}{section.3.5}% 34
+\BOOKMARK [2][-]{subsection.3.5.2}{3.5.2 Defining the R Matrix}{section.3.5}% 35
+\BOOKMARK [2][-]{subsection.3.5.3}{3.5.3 Choosing Initial States}{section.3.5}% 36
+\BOOKMARK [2][-]{subsection.3.5.4}{3.5.4 Initializing the Covariance Matrix P}{section.3.5}% 37

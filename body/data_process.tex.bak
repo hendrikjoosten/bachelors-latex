@@ -1,82 +1,25 @@
 \chapter{Processing the Captured Data}
-This chapter is dedicated to the process of extracting critical data from the video files and IMU .csv file. This process will take the raw captured data and transform it to quantified values that we can feed the Extended Kalman Filter.
-
-\section{Vision Calibration}
-Before calibrating the stereo cameras and their singular quantifications it is important to take a step back and determine the camera matrix for each individual camera. This allows us to model the cameras mathematically and individually. This will allow us to accurately model elements such as lens distortion, principal ray offset and uncertainties accurately. The pinhole camera model is used to quantify camera parameters. In this model each point of 
-
-In order to obtain accurate positional information from the video cameras calibration was performed. MATLAB has a built in stereo camera calibration application that can calibrate a set of cameras and create an object containing all the essential parameters, including the individual camera intrinsics.
-
-To calibrate the cameras pictures of a white and black chequerboard is fed in to the calibration application that then mathematically determines the camera parameters. In order to make this process more efficient a video of the the moving chequerboard was taken and various frames of importance extracted using a simple MATLAB script. 
-
-\section{Smartphone Calibration}
-calibrated out of the factory
-
-\subsection{Accelerometer}
-Using the Smartphone IMU comes with several advantages and disadvantages. The phone sensors are calibrated inhouse during production of most smart phones, but as with all accelerometers the the element of sensor drift is inescapable. Due to the physical nature of smartphone accelerometers there will be a drifting bias. This is usually influenced by the temperature of the of the smartphone.
-
-An easy way to quantify and eliminate this drift is to use a stationary logging test. With the smartphone body being stationary data we would expect the only acceleration to be measured that of gravity, yet when the experiment is performed we can see non zero acceleration artefacts after the gravitational acceleration has been accounted for.
-
-\subsection{Gyroscope}
-Although the above mentioned inaccuracies are also present in the gyroscope, they are treated differently. This is mainly due to the fact that a gyroscope measure a rate of change whereas an accelerometer measure the rate of change of the rate of change. 
-
-Naturally... 
+This chapter is dedicated to the process of extracting critical data from the video files and IMU csv file. This process will take the raw captured data and transform it to quantified values that we can input into the Extended Kalman Filter. It is referred to in this work as preprocessing.  
 
 \section{Processing the IMU Data}
 The following flowcharts depicts the procedural processing of IMU data gathered from the chest mounted smartphone running the AndroSensor application. The following flow diagram shows the different steps in preprocessing.
 
 \begin{figure}[!ht]
+\captionsetup{width=0.8\linewidth, font=small}  
 \includegraphics[width=\linewidth]{figures/imuflow.png}
-\caption{Diagram showing the progression and dependence of the major stages of video processing in the project}
+\caption{Diagram showing the progression and dependence of the major stages of IMU data processing in this project}
 \label{fig:imuflow}
 \end{figure}
 
-From the diagram we can see that our input is a large unprocessed dataset captured by the Smartphnone and logged at 100Hz. From this critical data must be extracted and synchronized with the rest of the system. The data must also undergo pre processing to simplify the implementation of the EKF. 
+From the diagram we can see that our input is a large unprocessed dataset captured by the smartphone with a logging rate of 100Hz. From this critical data must be extracted and synchronized with the rest of the system. The data must also be manipulated to keep units constant and unify various frames of reference. By correctly preprocessing the data, the implementation of the EKF is simplified.
 
 \subsection{Obtaining IMU Data}
-To use the smartphone as an IMU a free application "AndroSensor" \cite{androsensor} was installed. This application could log different parameters from all the different sensors that the smartphone contains. The application also gives the user the ability to change the output data file, log rate and what sensors are logged.
+Obtaining the raw sensor data was discussed in the 
 
-The sampling rate and logging rate of the application was configured to 100Hz as this was the maximum.
-
-THe following image is a screen shot taken from within the AndroSensor application. It shows the main screen of the application and the ability to see live plots of the active sensors.
-
-\begin{figure}[!ht] 
-\captionsetup{width=0.5\linewidth, font=small}  
-\includegraphics[width=0.5\linewidth]{figures/as.png}
-\caption{Androsensor Screenshots from \cite{androsensor}}
-\label{fig:as}
-\end{figure}
-
-The IMU data logged by the smartphone was saved as a .csv file with the first row containing the headings of various variables. These headings are summarized in the table below.
-
-\begin{table}
-\centering
-\caption{This table shows the different headings of the output IMU file}
-\label{IMU Headings}
-\begin{tabular}{ll}
-Heading               & Fields  \\
-ACCELEROMETER       & X,Y,Z  \\
-GRAVITY              & X,Y,Z \\
-LINEAR ACCELERATION  & X,Y,Z\\
-GYROSCOPE            & X,Y,Z \\
-MAGNETIC FIELD       &  X,Y,Z\\
-ORIENTATION          &  X,Y,Z\\
-ATMOSPHERIC PRESSURE  &      \\
-LOCATION Latitude     &       \\
-LOCATION Longitude    &       \\
-LOCATION Speed        &       \\
-LOCATION ORIENTATION  &       \\
-VOLUME
-\end{tabular}
-\end{table}
 
 All these variables have been recorded with respect the smartphone frame of reference as shown below
 
-\begin{figure}[!ht] 
-\captionsetup{width=0.5\linewidth, font=small}  
-\includegraphics[width=0.5\linewidth]{figures/phone.jpg}
-\caption{Figure demonstrating the frame of reference of the smartphone}
-\label{fig:phone}
-\end{figure}
+
 
 \subsection{Synchronizing IMU Data}
 The AndroSense application can record the the magnitude of sound that the microphone is experiencing. Using this magnitude we can see at what sample the spike from the clap was recorded. This sample will be a common point between the IMU and the cameras and can thus be used to synchronize the different hardware elements.
@@ -94,13 +37,15 @@ The IMU data was finally exported as a csv final and imported into MATLAB as dif
 
 
 \section{Processing the Video Data}
-To once again simplify the design and implementation of the EKF it is important to pre-process teh video data to a leess data heavy format. The following digram shows the process of converting a data heavy video file to a more lightweight .csv (Comma Separated Values) file whilst amintaining all critical information.
+To once again simplify the design and implementation of the EKF it is important to pre-process the video data to a less data heavy format suc as MP4. The following digram shows the process of converting a large video file to a more lightweight csv file without losing any critical information.
 
 \begin{figure}[!ht]
   \includegraphics[width=\linewidth]{figures/videoProcess.png}
   \caption{Diagram showing the progression and dependence of the major stages of video processing in the project}
   \label{fig:videoProcess}
 \end{figure}
+
+All raw video data streams must be synchronized and the important sections of the streams extracted. 
 
 \subsection{Obtaining Video Data}
 Using the chest mounted cameras detailed in the previous chapter we can generate raw video data. The GPHS cameras can be configured to record at different frame rates and resolutions as discussed in the previous chapter. The video files where stored in an .MP4 format. This meant that during recording the video was compressed and the 
@@ -197,6 +142,16 @@ imgae data was recorded as m
 
 \section{On Frames of Reference}
 we need to developed some commonalities among the various sensors and their individual frames of reference. The body frame
+
+\begin{figure}[!ht] 
+\captionsetup{width=0.5\linewidth, font=small}  
+\includegraphics[width=0.5\linewidth]{figures/phone.jpg}
+\caption{Figure demonstrating the frame of reference of the smartphone}
+\label{fig:phone}
+\end{figure}
+
+
+
 
 
 
