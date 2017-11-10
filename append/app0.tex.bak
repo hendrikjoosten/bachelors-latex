@@ -1,0 +1,31 @@
+\pagestyle{plain}
+
+\addcontentsline{toc}{section}{Appendix A: Calibration}
+
+{\Large Appendix A: Calibration}
+\vskip 5mm
+\hrule
+\vskip 5mm
+
+
+calibration of cameras and smartphone
+
+\section*{Vision Calibration}
+Before calibrating the stereo cameras and their singular quantifications it is important to take a step back and determine the camera matrix for each individual camera. This allows us to model the cameras mathematically and individually. This will allow us to accurately model elements such as lens distortion, principal ray offset and uncertainties accurately. The pinhole camera model is used to quantify camera parameters. In this model each point of 
+
+In order to obtain accurate positional information from the video cameras calibration was performed. MATLAB has a built in stereo camera calibration application that can calibrate a set of cameras and create an object containing all the essential parameters, including the individual camera intrinsics.
+
+To calibrate the cameras pictures of a white and black chequerboard is fed in to the calibration application that then mathematically determines the camera parameters. In order to make this process more efficient a video of the the moving chequerboard was taken and various frames of importance extracted using a simple MATLAB script. 
+
+\section*{Smartphone Calibration}
+calibrated out of the factory
+
+\subsection*{Accelerometer}
+Using the Smartphone IMU comes with several advantages and disadvantages. The phone sensors are calibrated inhouse during production of most smart phones, but as with all accelerometers the the element of sensor drift is inescapable. Due to the physical nature of smartphone accelerometers there will be a drifting bias. This is usually influenced by the temperature of the of the smartphone.
+
+An easy way to quantify and eliminate this drift is to use a stationary logging test. With the smartphone body being stationary data we would expect the only acceleration to be measured that of gravity, yet when the experiment is performed we can see non zero acceleration artefacts after the gravitational acceleration has been accounted for.
+
+\subsection*{Gyroscope}
+Although the above mentioned inaccuracies are also present in the gyroscope, they are treated differently. This is mainly due to the fact that a gyroscope measure a rate of change whereas an accelerometer measure the rate of change of the rate of change. 
+
+Naturally... 

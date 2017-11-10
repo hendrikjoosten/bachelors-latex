@@ -1,11 +1,68 @@
 \pagestyle{plain}
 
-\addcontentsline{toc}{section}{Appendix A}
+\addcontentsline{toc}{section}{Appendix B: Results Graphs}
 
-{\Large Appendix A}
+{\Large Appendix B: Results Graphs}
 \vskip 5mm
 \hrule
 \vskip 5mm
 
 
-More filter results
+More filter results seen here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%AVAIL
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{figure}[H]\captionsetup{width=0.5\linewidth, font=small}  
+\includegraphics[height=0.5\textheight, angle=90]{figures/sav.JPG}
+\label{fig:sav}
+\end{figure}
+\newpage
+\begin{figure}[H]\captionsetup{width=0.5\linewidth, font=small}  
+\includegraphics[height=0.5\textheight, angle=90]{figures/flav.JPG}
+\label{fig:flav}
+\end{figure}
+\newpage
+\begin{figure}[H]\captionsetup{width=0.5\linewidth, font=small}  
+\includegraphics[height=0.5\textheight, angle=90]{figures/frav.JPG}
+\label{fig:frav}
+\end{figure}
+\newpage
+\begin{figure}[H]\captionsetup{width=0.5\linewidth, font=small}  
+\includegraphics[height=0.5\textheight, angle=90]{figures/blav.JPG}
+\label{fig:blav}
+\end{figure}
+\newpage
+\begin{figure}[H]\captionsetup{width=0.5\linewidth, font=small}  
+\includegraphics[height=0.5\textheight, angle=90]{figures/brav.JPG}
+\label{fig:brav}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%scattter of markers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{figure}[H]\captionsetup{width=0.5\linewidth, font=small}  
+\includegraphics[width=0.8\linewidth]{figures/fl.JPG}
+\caption{Front Left Camera}
+\label{fig:fl}
+\end{figure}
+\begin{figure}[H]\captionsetup{width=0.5\linewidth, font=small}  
+\includegraphics[width=0.8\linewidth]{figures/fr.JPG}
+\caption{Front Right Camera}
+\label{fig:fr}
+\end{figure}
+\newpage
+\begin{figure}[H]\captionsetup{width=0.5\linewidth, font=small}  
+\includegraphics[width=0.8\linewidth]{figures/bl.JPG}
+\caption{Back Left Camera}
+\label{fig:bl}
+\end{figure}
+\begin{figure}[H]\captionsetup{width=0.5\linewidth, font=small}  
+\includegraphics[width=0.8\linewidth]{figures/br.JPG}
+\caption{Back Right Camera}
+\label{fig:br}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%IMU
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

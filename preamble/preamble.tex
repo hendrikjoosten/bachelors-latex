@@ -13,21 +13,22 @@
 %so that i may use some math symbols and equations and stuff.
 \usepackage{amsmath, amsthm, amssymb}
 
-
-\usepackage[subrefformat=parens,labelformat=parens]{subfig}
-
-
-\usepackage{lscape}
+%so that it doesnt hyphenate everything
 \usepackage[none]{hyphenat}
-\usepackage{setspace}
-\usepackage{xcolor}
-\usepackage{bm}                                             
-\usepackage{booktabs}
+
+%sets spacing between lines
+\usepackage{setspace}      
+
+%to use array functions when making matrices
 \usepackage{array}
+
+%make multirow tables
 \usepackage{multirow}
+
+%so that i may cite
 \usepackage{cite}
 
-
+%making tables look nice
 \usepackage{longtable}
 
 %using normal bullet lists
@@ -48,9 +49,6 @@
 %set the line spacing to like 1.5 equavaent on word
 \linespread{1.25}
 
-%Putting MATLAB CODE IN THE DOCCY
-\usepackage{listings}
-
 
 \usepackage[bookmarks         = true      ,%
             bookmarksnumbered = true      ,%
@@ -65,13 +63,14 @@
             
             
 %should make headers and footers
-%\usepackage{fancyhdr}
-%\pagestyle{fancy}
-%\lhead{Chapter \thechapter}
-%\rhead{Section \thesection}
-%\renewcommand{\headrulewidth}{0pt}
-%\renewcommand{\footrulewidth}{0pt}
-%\setlength{\headheight}{15pt} 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Chapter \thechapter}
+\rhead{Section \thesection}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{15pt} 
 
 %define paragraph skips and indents
 \parskip = 4mm

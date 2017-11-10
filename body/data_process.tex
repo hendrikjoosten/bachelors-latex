@@ -11,27 +11,49 @@ The following flowcharts depicts the procedural processing of IMU data gathered 
 \label{fig:imuflow}
 \end{figure}
 
-From the diagram we can see that our input is a large unprocessed dataset captured by the smartphone with a logging rate of 100Hz. From this critical data must be extracted and synchronized with the rest of the system. The data must also be manipulated to keep units constant and unify various frames of reference. By correctly preprocessing the data, the implementation of the EKF is simplified.
+From the diagram our raw input log file is a large unprocessed dataset captured by the smartphone with a logging rate of 100Hz. From this the critical data must be extracted and synchronized with the rest of the system. The data must also be manipulated to keep units constant and unify various frames of reference. By correctly preprocessing the data, the implementation of the EKF is simplified.
 
 \subsection{Obtaining IMU Data}
-Obtaining the raw sensor data was discussed in the 
+Obtaining the raw sensor data was discussed in the previous chapter. The AndroSensor application was configured and the units of each sensor was selected as per the table below.
 
+\begin{table}
+\centering
+\captionsetup{width=0.8\linewidth, font=small}  
+\caption{This table shows the different units of the output AndroSensor file}
+\label{Smartphone Data Units}
+\begin{tabular}{ll}
+Heading               & Units  \\
+ACCELEROMETER       & $ m/s^2 $  \\
+GRAVITY              & $ m/s^2 $ \\
+LINEAR ACCELERATION  & $ m/s^2 $\\
+GYROSCOPE            & $ rad/s $ \\
+MAGNETIC FIELD       &  $  microTesla$\\
+ATMOSPHERIC PRESSURE  &     $ Pascal$ \\
+LOCATION Latitude     &    $ degrees $   \\
+LOCATION Longitude    &    $ degrees $   \\
+LOCATION Speed        &     $ m/s $  \\
+LOCATION ORIENTATION  &     $ degrees $  \\
+VOLUME				&		$ dB $
+\end{tabular}
+\end{table}
 
-All these variables have been recorded with respect the smartphone frame of reference as shown below
-
-
+The importance of having uniform units is discussed later in this chapter. 
 
 \subsection{Synchronizing IMU Data}
-The AndroSense application can record the the magnitude of sound that the microphone is experiencing. Using this magnitude we can see at what sample the spike from the clap was recorded. This sample will be a common point between the IMU and the cameras and can thus be used to synchronize the different hardware elements.
+Previously the application used by \cite{bradstocks} created a beep tone whe the logging process was started. This beep tone was recorded by the cameras and was used as a common point of synchronization. Some drawbacks were identified by using this method. The smartphone would start logging only after the beep had completed. this meant that the smartphone data had to resynchronized to the camera data by further testing. Another shortcoming was that the beep tone was not loud enough to comfortably be detected by the rear cameras. 
+
+The AndroSensor application can record the the magnitude of sound that the microphone is experiencing. Using this magnitude we can see at what time instance a spike in volume (caused by a simple clap of the hands) was logged. This sample can be a common point between the IMU and the cameras and can thus be used to synchronize the different hardware elements.
 
 \subsection{Preprocessing IMU Data}
+All these variables have been recorded with respect the smartphone frame of reference. Since the smartphone was rigidly mounted to the body, a simple axis transformation could be completed to move
+
+
 Before we can apply the IMU data directly to the EKF we need to make some minor modifications to the data. This is critical in removing any bias from the sensors. as discussed in the Sensor calibration section.
 
 in order to extract the linear acceleration from the data we can simply take the measure acceleration and subtract the gravitational acceleration vector
 
 \subsection{Exporting IMU Data}
-The IMU data was finally exported as a csv final and imported into MATLAB as different vectors. This allows for faster processing and better data processing in matlab.
-
+The IMU data was finally exported as a csv final and imported into MATLAB as a set of vectors. Each vector containing the samples of a specific data field. This allows for faster processing and better data processing in MATLAB.
 
 
 
@@ -107,7 +129,7 @@ The second approach taken was that of \textbf{edge detection}. This method
 The final approach considered and used was to \textbf{semi automatically} label critical point in the image using a toolbox created by Hedrick et al. \cite{hedrick2008software}. This software allows for a semi automatic tracking of points of interest in the video frames. While this method is labour intensive it is arguably more accurate than the previously investigated methodologies. The following figure shows the functionality of the toolbox within MATLAB.
 
 \begin{figure}[!ht] 
-\captionsetup{width=1\linewidth, font=small}  
+\captionsetup{width=0.8\linewidth, font=small}  
 \includegraphics[width=1\linewidth]{figures/toolbox.png}
 \caption{Using the dltdv toolbox in MATLAB to export marker coordinates}
 \label{fig:toolbox}
@@ -144,14 +166,34 @@ accelerometer was logged as meters per second .
 imgae data was recorded as m
 
 \section{On Frames of Reference}
-we need to developed some commonalities among the various sensors and their individual frames of reference. The body frame
+we need to developed some commonalities among the various sensors and their individual frames of reference. THe 
 
 \begin{figure}[!ht] 
-\captionsetup{width=0.5\linewidth, font=small}  
+\captionsetup{width=0.8\linewidth, font=small}  
 \includegraphics[width=0.5\linewidth]{figures/phone.jpg}
 \caption{Figure demonstrating the frame of reference of the smartphone}
 \label{fig:phone}
 \end{figure}
+
+
+\begin{figure}[!ht] 
+\captionsetup{width=0.8\linewidth, font=small}  
+\includegraphics[width=0.5\linewidth]{figures/patbf.jpg}
+\caption{Figure demonstrating the body frame of reference}
+\label{fig:patbf}
+\end{figure}
+
+
+\begin{figure}[!ht] 
+\captionsetup{width=0.8\linewidth, font=small}  
+\includegraphics[width=0.5\linewidth]{figures/forrr.jpg}
+\caption{Figure demonstrating the body frame of reference}
+\label{fig:forrr}
+\end{figure}
+
+
+
+
 
 
 
