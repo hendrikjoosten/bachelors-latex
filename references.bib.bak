@@ -639,7 +639,12 @@ PICTURES FROM THE WEB
   howpublished = "\url{https://commons.wikimedia.org/wiki/File:Basic_concept_of_Kalman_filtering.svg}",
   note = "[Online; accessed 2-November-2017]"
 }
-
+@misc{gps,
+  author = {},
+  title = {Maritime Safety Information},
+  howpublished = "\url{http://msi.nga.mil/MSISiteContent/StaticFiles/Calculators/degree.html}",
+  note = "[Online; accessed 10-November-2017]"
+}
 
 
 
