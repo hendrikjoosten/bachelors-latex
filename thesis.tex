@@ -1,7 +1,20 @@
-\input{preamble/preamble.tex}
-\begin{document}
+\input{preamble/preamble.tex} 
 
+
+\begin{document} 
+
+
+\newpage
 \input{frontmatter/coverpage.tex}
+\newpage
+\thispagestyle{plain}
+\hrule height 0pt
+\vskip 4.5in
+\begin{center}
+THIS PAGE INTENTIONALLY LEFT BLANK
+\end{center}
+
+
 \newpage
 \input{frontmatter/termsofreference.tex}
 \newpage
@@ -10,6 +23,8 @@
 \input{frontmatter/acknowledgements.tex}
 \newpage
 \input{frontmatter/abstract.tex}
+
+\pagestyle{plain}
 \newpage
 \tableofcontents
 \newpage
@@ -18,20 +33,24 @@
 \listoftables
 \newpage
 \input{frontmatter/glos.tex}
+
+\pagestyle{fancy}
+
 \newpage
 \input{body/introduction.tex}
+
 \newpage
 \input{body/lit_review.tex}
+
 \newpage
 \input{body/methodology.tex}
+
 \newpage
 \input{body/data_capture.tex}
 
-%%very nearly done DONE
 \newpage
 \input{body/data_process.tex}
 
-%%NOT DONE
 \newpage
 \input{body/fusion.tex}
 
@@ -41,18 +60,20 @@
 \newpage
 \input{body/conclusions_future.tex}
 
+\pagestyle{plain}
+
+
 \bibliographystyle{ieeetran}
 \bibliography{references}
 
-\newpage
-\input{append/app0.tex}		%calibration
 
 \newpage
+\input{append/app0.tex}		%calibration 
+
+\newpage	
 \input{append/app1.tex}		%filter results
-
 \newpage
 \input{append/app2.tex}		%cd stuff
-
 \newpage
 \input{append/app3.tex}		%uct doccies
 

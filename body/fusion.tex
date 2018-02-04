@@ -3,7 +3,7 @@ This chapter is dedicated to explaining the mathematical methods and models used
 
 A good starting point for this chapter would be to define the states of interest of our system. We choose our states to be various parameters relating to the human gait and the bodies pose and position in the inertial frame. The model used in this work has various constants (the lengths of the rigid beams making up the limbs), but many changing parameters (the angles these rigid beams make with each other). These angles quantify the position of the various joints during steady state running and have therefore been chosen as states.
 
-We cannot directly measure these angles since we have no sensors directly connected to them. All the system states are predicted by the EKF using various measurements relating directly and indirectly to them. The following table specifies the parameters used to symbolize the states of the system.
+We cannot directly measure these angles since we have no sensors directly connected to these points. All the system states are predicted by the EKF using various measurements relating directly and indirectly to the system states. The following table specifies the parameters used to symbolize the states of the system.
    
 \begin{table}[!ht]
 \captionsetup{width=0.8\linewidth, font=small}  
@@ -48,7 +48,8 @@ The key purpose of the Kalman Filter is the ability to estimate the various stat
 \label{fig:kf}
 \end{figure}
 
-The critical elements of the KF as seen in the diagram are: the states themselves, a prediction model, an update model, measurements, initialization values, and various uncertainty models. 
+\newpage
+The critical elements of the KF, as seen in the diagram, are: the states themselves, a prediction model, an update model, measurements, initialization values, and various uncertainty models. 
 
 The underlying equation of the KF is the \textit{process equations}, where the state value at the next time instance $ X_{k+1} $ is predicted by applying the transition matrix $ F_{k+1} $ to the state values at the current time instance $ X_{k} $ and adding a zero mean Gaussian noise term $ w_{k} $. The $ w $ element of this equation is collected in the process noise matrix $ Q $. 
 
@@ -62,7 +63,6 @@ $$ Y_k = H_{k}X_{k} + v_{k} $$
 As discussed in the literature review, the KF can only be applied to linear systems. The EKF is the extension of the filter so that it may be applied to nonlinear systems. To introduce the workings of the EKF we start by defining a classic nonlinear system defined by the state space model
 
 $$ X_{k+1} = f(k,X_{k}) + w_{k}  $$
-
 $$ Y_k = h(k,X_{k}) + v_{k} $$
 
 In this representation $ w_{k} $ and $ v_{k} $ are consistent with definitions given for the KF and are contained in matrices $ Q $ and $ R $ respectively. From the state space equations one can see that we now predict states using a nonlinear transition matrix function $ f $ and $ h $.
@@ -73,9 +73,9 @@ $$ F_{k+1,k} = \frac{\delta f(k,X_{k})}{\delta x} $$
 
 $$ H_{k} = \frac{\delta h(k,X_{k})}{\delta x} $$
 
-These are the fundamental equations of the KF and EKF. We can now 
+Now that we have defined the fundamental equations of the KF and EKF we can discus in more detail the implementations of the various components required by the filter.
 
-\section{Process Equations}
+\section{Prediction Equations}
 The fundamental assumption made when deriving the prediction equations for our states was that the acceleration (both linear and angular) was constant between sampling intervals. It would therefore stand that the positional states of the filter $[x_{body} \; y_{body} \; z_{body}]$ and the angular states of the filter $[\theta_{body} \; ... \; \theta_{RA}]$ could be predicted using: 
 
 $$ \ddot{p}_{k+1} = \ddot{p}_{k} + \sigma_{\ddot{p}}^{2} $$
@@ -90,13 +90,18 @@ $$ \alpha_{k+1} = \alpha_{k} + \dot{\alpha}_{k}T + \sigma_{\alpha}^{2} $$
 
 for the angular states.
 
-These prediction equations where created in MATLAB using symbolic functions. The sigma associated each equations takes into account the prediction uncertainties contained in the Q matrix. By adjusting these values we can increase the filter performance. This is discussed further in a later section.
+These prediction equations where created in MATLAB using symbolic functions. The sigma associated each equations takes into account the prediction uncertainties contained in the Q matrix. By adjusting these values we can increase the filter performance. 
 
-\section{Measurement Equations}
-The measurement equations for the lower limbs where generated using inverse kinematics. This requires a model
+\section{Measurement Equations - Body}
+These equations relate the various states relating to the body with respect to the inertial frame. Since the measurements from the smartphone are related to this frame of reference the measurement equations were very simple.
+
+The accelerometer gave us the linear acceleration of the body and therefore the measurement, transformed by rotational matrix gave us the body states with respect to the inertial frame. The gyroscope also transformed by a rotational matrix gives us the rotational states of the body. The magnetometer can be used to estimate the pose of the body states by solving the rotational parameters. The barometer value can be converted to a height value of the body with respect to the surface of the earth. Finally the GPS data gives us the absolute positional location of the body with respect to the inertial frame.
+
+\section{Measurement Equations - Lower Limbs}
+The measurement equations for the lower limbs where generated using forward kinematics. 
 
 \subsection{Euler Matrices}
-The following matrices are the rotational matrices for rotating a point in 3D space along a certain axis. 
+The following matrices are the rotational matrices for rotating a point in 3D space along a certain axis. These matrices are used in conjunction with forward kinematics to solve for different points along the rigid beam model. 
 
 $$
 Roll(\phi) = 
@@ -128,34 +133,39 @@ Yaw(\psi) =
 $$
 
 
-\subsection{Direct Cosine Matrix}
-
-
 \subsection{Forward Kinematics}
+By using forward kinematics we can determine the position of each marker by applying our states as elements of the rotational matrices.
 
-\textbf{front}\\
-right knee
-$$ p1xyz = bodyY + bodyZ + R1 * Thigh $$
-left knee
-$$ p2xyz = bodyY + bodyZ + R1 * Thigh $$
-right foot
-$$ p3xyz = bodyY + bodyZ + R1 * Thigh + R2 * Calf + R3 * Foot $$
-left foot
-$$ p4xyz = bodyY + bodyZ + R1 * Thigh + R2 * Calf + R3 * Foot $$
+In the \textbf{front} camera frame we have:\\
 
-\textbf{back}\\
-right calf
-$$ p1xyz = bodyY + bodyZ + R1 * Thigh + R2 * 0.5 * Calf $$
-left calf
-$$ p2xyz = bodyY + bodyZ + R1 * Thigh + R2 * 0.5 * Calf $$
-right heel
-$$ p2xyz = bodyY + bodyZ + R1 * Thigh + R2 * Calf $$
-left heel
-$$ p2xyz = bodyY + bodyZ + R1 * Thigh + R2 * Calf $$
+Knee Markers
+$$ KneeXYZ = bodyY + bodyZ + R1^T \times Thigh $$
+
+$$ R1 = Pitch(Hip) \times  Yaw(Hip) $$
+
+Toe Markers
+$$ ToeXYZ = bodyY+bodyZ+ R1^T \times Thigh + R2^T \times Calf + R3^T \times Foot $$
+
+$$ R2 = Pitch(Knee)  $$ 
+
+$$ R3 = Pitch(Ankle)  $$ 
+
+In the \textbf{rear} camera frame we have:\\
+
+Calf Midpoints Markers
+$$ CalfXYZ = bodyY + bodyZ + R1^T \times Thigh + R2^T \times 0.5 \times Calf $$
+
+$$ R1 = Pitch(Hip) \times  Yaw(Hip) $$
+
+$$ R2 = Pitch(Knee) $$
+
+Heel Markers
+$$ HeelXYZ = bodyY + bodyZ + R1^T \times Thigh + R2^T  Calf $$
+
+
 
 \section{Camera Matrix}
-
-It is important to understand the different parameters that mathematically quantify cameras. These parameters can be devided into \textit{extrinsic} and \textit{extrinsic}. Extrinsic camera variables related to the cameras position in the inertial frame and the direction the camera is facing. These can be summarized by the extrinsic camera matrix 
+It is important to understand the different parameters that mathematically quantify cameras. These parameters can be divided into \textit{intrinsic} and \textit{extrinsic} camera matrices. Extrinsic camera variables related to the cameras position in the inertial frame and the direction the camera is facing. These can be summarized by the extrinsic camera matrix:
 
 $$[ R \, |\, \boldsymbol{t}] = 
 \left[ \begin{array}{ccc|c} 
@@ -164,6 +174,17 @@ r_{2,1} & r_{2,2} & r_{2,3} & t_2 \\
 r_{3,1} & r_{3,2} & r_{3,3} & t_3 \\
 \end{array} \right]$$
 
+The intrinsic camera matrix describes the geometric properties of the camera. 
+
+$$K = \left ( 
+                \begin{array}{ c c c}
+                f_x & s   & x_0 \\
+                 0  & f_y & y_0 \\
+                 0  & 0   & 1 \\
+                \end{array}
+            \right )$$
+
+The XYZ points generated by the forward kinematics are then transferred from the body frame to the camera frame by using the camera matrix. This takes us from our initial angular state values to expected pixel coordinates.
 
 \section{Q Matrix, R Matrix and Initialization}
 This section will discuss the final components of the EKF namely the Q matrix containing the various process noise variations, R matrix containing the various measurement noise variances and the initial state values.
@@ -179,9 +200,12 @@ The R matrix relates to the measurement variables and must therefore have size o
 \subsection{Choosing Initial States}
 The subject was stationary during the initial stages of the run. This allows us to initialize our state vector with all states initially zero. The filter will therefore track the transience and steady state estimation of a running subject, giving insight into the filters performance under different conditions. 
 
-
 \subsection{Initializing the Covariance Matrix P}
-following on from the previous section zeroing the initial states of the system allows us to have a relatively small initial covariance matrix due to the relative certainty we have that the states are truly zero. 
+Following on from the previous section zeroing the initial states of the system allows us to have a relatively small initial covariance matrix due to the relative certainty we have that the states are truly zero. 
+
+\section{MATLAB Implementation}
+All the above equations and variables have been implemented in MATLAB and has been included on the accompanying CD. The prediction and measurement equations were implemented in MATLAB and then exported to individual functions to be used in the KF. The Jacobians of these functions were also generated by using the symbolic math toolbox within MATLAB.
+
 
 
  

@@ -4,15 +4,17 @@
 %made by
 \author{Hendrik Joosten}
 
-%headers
+%headers got this working yay
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
+\fancyfoot[C]{\thepage}
 \lhead{Chapter \thechapter}
 \rhead{Section \thesection}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 \setlength{\headheight}{15pt} 
+
 
 %very inportant basic commands in latex
 \usepackage{titlesec}
@@ -59,7 +61,7 @@
 %set the line spacing to like 1.5 equavaent on word
 \linespread{1.25}
 
-
+%hyperlinks in the document
 \usepackage[bookmarks         = true      ,%
             bookmarksnumbered = true      ,%
             setpagesize       = false     ,%
@@ -72,8 +74,6 @@
             driverfallback    = dvipdfm]{hyperref}
             
             
-
-
 %define paragraph skips and indents
 \parskip = 4mm
 \parindent = 0mm

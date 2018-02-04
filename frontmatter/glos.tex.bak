@@ -1,10 +1,8 @@
+\thispagestyle{plain}
 \addcontentsline{toc}{section}{Glossary}
 \chapter*{Glossary}
-
 Abbreviations listed here are used throughout the document.
-
 \begin{itemize}
-
 \item DOF - Degrees Of Freedom
 \item GPHS - GoPro Hero Session
 \item MEMS - Micro Electromechanical System
@@ -15,25 +13,29 @@ Abbreviations listed here are used throughout the document.
 \item EKF - Extended Kalman Filter
 \item CAD - Computer Aided Design
 \item SVP - Sony Vegas Pro
+\item CD - Compact Disc
+\item MP4 - MPEG-4 Part 14 Media Container
+\item AVI - Audio Video Interleaved Media Container
+\item RGB - Red Green Blue
 
 \end{itemize}
-
 \newpage
+\thispagestyle{plain}
 \addcontentsline{toc}{section}{Symbols}
 \chapter*{Symbols}
-
 Mathematical Symbols listed here are used throughout the document.
-
 \begin{itemize}
-
 \item $\phi$ - Roll
 \item $\theta$ - Pitch
 \item $\psi$ - Yaw 
-\item $X$ - States of the System
-\item $Q$ - Process Noise Matrix
-\item $X$ - States of the System
+\item $x$ - positional coordinate of the x-axis in the inertial frame
+\item $y$ - positional coordinate of the y-axis in the inertial frame
+\item $z$ - positional coordinate of the z-axis in the inertial frame
+\item $X$ - State Vector of the System
 \item $Q$ - Process Noise Matrix
 \item $R$ - Measurement Noise Matrix
-
-
+\item $F$ - State Transition Matrix
+\item $H$ - Observation Matrix
+\item $P$ - Covariance Matrix
+\item $K$ - Kalman Gain
 \end{itemize}

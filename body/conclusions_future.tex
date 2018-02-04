@@ -4,9 +4,9 @@ This chapter is dedicated to drawing conclusions based on results found and make
 \section{Conclusion}
 The aim of this project was threefold: design a novel wearable data capture system using cameras and sensors to record various parameters of a running bipedal subject, develop a kinematic model to interpret the gathered data points, and design an estimation algorithm to process the captured data. These goals were achieved within certain constraints as discussed in the results section.
 
-The system proved less accurate than modern wearable sensor suits, 
+Due to the relatively small dataset used in this project it serves as a proof of concept and a foundational work that can be iteratively improved. This system serves as an initial design and understanding the shortcomings are the most critical elements of such a project.
 
-Due to the relatively small dataset used in this project it serves as a proof of concept and a foundational work that can be iteratively improved.
+All milestones were successfully implemented and provided mostly positive results bar the results produced by the EKF. This was due to the model shortcomings and camera pose assumptions made as discussed in the previous chapter. These limitations could be eliminated by modelling the chest as a rotating oscillator. The camera pose can be estimated from this new model or sensors can be used to estimate the camera pose. 
 
 \section{Future work}
 The system was originally designed with four cameras due to the availability of equipment and the assumption that stereo vision would be implemented. For this a set of front and rear mounted cameras would be necessary. Originally there was an intention to reduce the total amount of cameras.

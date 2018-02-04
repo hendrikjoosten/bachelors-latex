@@ -1,7 +1,7 @@
 \chapter{Results and Discussion}
 
 \section{Results}
-The project had various critical phases that were completed. This section will present all the results generated relating to the major concepts of the project. This includes results relating to: system design, image processing, captured and processed data, modelling, and the EKF. All results are generated from an 18 second run completed with the designed system. This run generated 1800 data points, including a transient period from samples 0 to 200. Samples 400 to 1800 demonstrates steady state running.
+The project had various critical phases that were completed. This section will present all the results generated relating to the major concepts of the project. This includes results relating to: system design, image processing, captured and processed data, and the EKF. All results are generated from an 18 second run completed with the designed system. This run generated 1800 data points, including a transient period from samples 0 to 200. Samples 400 to 1800 demonstrates steady state running.
 
 \subsection{System Design Results}
 The data capture system was designed to meet the specifications outlined in the methodology chapter. The device was comfortable, light weight and adjustable such that it could easily be used by a large variety of people. The device was also sturdy and well constructed allowing for long term usage. Pictured below is a subject wearing the data capture system.
@@ -13,23 +13,23 @@ The data capture system was designed to meet the specifications outlined in the 
 \label{fig:pat_harness}
 \end{figure}
 
-The stereo housings were fully functional and offered a good fit for both the cameras and the mounting hardware. Although the cameras moved during running they captured all the critical points in every single frame. The device in no way affected the gait of the subject as the system had a minimal footprint.
+The device in no way affected the gait of the subject as the system had a minimal footprint. The stereo camera housings were fully functional and offered a good fit for both the cameras and the mounting hardware. Although the cameras moved during running they captured all the critical points in every single frame. This can be seen in the scatter plots presented in Appendix B.
 
 \subsection{Image Processing Results}
 The video streams were successfully processed to extract all the critical data points from each frame. By using the DigitizingTools MATLAB package created by Hedrick et al. \cite{hedrick2008software} it was possible to accurately quantify the marker positions on the different video frames. 
 
 \begin{figure}[!ht] 
 \captionsetup{width=0.8\linewidth, font=small}  
-\includegraphics[width=0.8\linewidth]{figures/ipdatapattern.png}
+\includegraphics[width=\linewidth]{figures/ipdatapattern.png}
 \caption{iamge processing things}
 \label{fig:ipdatapattern}
 \end{figure}
 
-The figure above shows the quantization of various points identified in the image frames of a single video stream. The frame number is displayed on the x-axis while the y-axis shows tracks the change in position of the $ (x,y) $ pixel values.
+The figure above shows the quantization of various points identified in the image frames of a single video stream. The frame number is displayed on the x-axis while the y-axis shows tracks the change in position of the $ (x,y) $ pixel values. Four points were tracked in each video stream. since there were 4 cameras each tracking 4 points a total of 16 datasets were successfully created. From the scatter plots presented in appendix B we can see that the markers did not exit the frame of the camera. 
 
-Four points were tracked in each video stream. since there were 4 cameras each tracking 4 points a total of 16 datasets were successfully created. 
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%accel
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \subsection{Captured and Processed Data}
 The following figure shows the pre EKF accelerometer data in the body frame. The x-axis represents the sample and the y-axis linear acceleration in $ m/s^2 $.
@@ -41,11 +41,13 @@ The following figure shows the pre EKF accelerometer data in the body frame. The
 \label{fig:accelerometer}
 \end{figure}
 
-This figure shows the linear acceleration of the runner's body. The accelerometer data has been pre processed to remove the sensor bias. When looking at the Z axis accelerometer data we can clearly see a periodic motion correlating with the gait period of the subject. Some clear points of local minimum indicate when the runner made contact with the ground. These values were in the expected range of 3 to4 times the gravitational acceleration 
+The accelerometer data has been pre processed to remove the sensor bias. When looking at the Z axis accelerometer data we can clearly see a periodic motion correlating with the gait period of the subject. Some clear points of local minimum indicate when the runner made contact with the ground. These values were in the expected range of 3 to 4 times the gravitational acceleration. The different local maxima around $ 10m/s^2 $ indicated the runner reaching his highest point during the gait, where he is not in contact with the ground and experiencing only gravitational acceleration.
 
-easily within the bounds of the sensors
+After testing it was determined that the smartphone accelerometer has a range of $ 80m/s^2 $ functioning between $ -40m/s^2 $ and $ 40m/s^2 $. It is thus clear that the readings on all the accelerometer axis stayed within these bounds.
 
-The system was fully capable of capturing all the data necessary to quantify the gait of a runner. The following is a graph of the accelerometer in the z-body frame against time. From this graph it it the rhythmic motion of running is easy to see. a spike of close to 4g seen at the moment of impact and a maximum acceleration of around 1 g as the subject reaches maximum height.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%gyroscope
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \newpage
@@ -58,36 +60,19 @@ The following figure shows the pre EKF gyroscope data in the body frame. The x-a
 \label{fig:gyroscope}
 \end{figure}
 
-data bias removed
+The bias has been removed from the above gyroscope data. By looking at the Z axis we can clearly see a periodic swinging of the chest. This chest rotation is a natural gait element to balance the angular moment generated by the hips.
+
+All the readings were comfortably within the bounds of the gyroscope that has a range of $ 60 rad/s $ allowing readings from $-30 rad/s $ to $ 30 rad/s $. 
 
 
-\newpage
-The following figure shows the pre EKF magnetometer data in the body frame. The x-axis represents the sample and the y-axis magnetic flux density in $ microTesla $.
-
-\begin{figure}[!ht] 
-\captionsetup{width=0.8\linewidth, font=small}  
-\includegraphics[width=1\linewidth]{figures/magnetometer.jpg}
-\caption{Pre filter magnetometer data}
-\label{fig:magnetometer}
-\end{figure}
-
-cannot have bias removed.
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%gps
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
-The x-axis of the GPS Position graph represents position in the x direction and the y-axis the position in the y direction of the body with respect to the inertial frame.
+The x-axis of the GPS Position graph represents position in the x direction and the y-axis the position in the y direction of the body with respect to the inertial frame. The y-axis of the GPS Velocity graph represents velocity and the x-axis represents the sample number. Velocity in the x direction is shown in blue and velocity in the y direction is shown as red.
 
-The x-axis of the GPS Velocity graph 
-
-represents velocity in the x direction as blue and  
-
-the velocity in the y direction in red 
-
-of the body with respect to the inertial frame.
-
-The barometer  plots the sample on the 
-
-
+The barometer graph plots the pressure on the y-axis against the sample number on the x-axis. The barometer is shown to be quite sensitive picking up the vertical motion of the runner as changes in pressure. A clear pattern is visible directly correlating with the gait period of the runner. The above details are shown in the figure below.
 
 \begin{figure}[!ht] 
 \captionsetup{width=0.8\linewidth, font=small}  
@@ -96,63 +81,69 @@ The barometer  plots the sample on the
 \label{fig:gps}
 \end{figure}
 
-The GPS data shows the initial position (0,0) and the final position around (20,50)
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%measuremnt avail
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
-
+Since this thesis is to serve as a proof of concept, it was important to quantify how often the system actually captured valuable data. The following figure shows how often a measurement is available as a percentage. This includes how often each camera sees the different markers and how often the smartphone sensors are available.
 
 \begin{figure}[!ht] 
 \captionsetup{width=0.8\linewidth, font=small}  
 \includegraphics[width=0.75\linewidth]{figures/hist.jpg}
-\caption{iamge processing things}
+\caption{Bar graph showing the availability of various measurements as a percentage}
 \label{fig:hist}
 \end{figure}
 
-\newpage
-concluding remarks
-
-
-\subsection{Model Results}
-
+The y-axis of this bar chart represents the percentage that the marker is available during the test, while the x-axis are the different measurements. Another set of figures included in appendix B shows in more depth the availability of the various data sources.
 
 
 \subsection{EFK Results}
+3 Different configurations of the final EKF was run and the results are presented in appendix B. The initial version of the filter was unmodified and with all tuning parameters as derived in previous chapters. The results of this filter were unstable, with the base states growing exponentially.
 
+The second version of the filter had reduced the prediction uncertainties and increased the measurement uncertainties, this version of the filter was more stable but did still not produce realistic values for the 14 base states. From this we can conclude that the measurement equations were generating larger errors than expected.
 
+The final version of the filter decreased the measurement uncertainties and increased the values process uncertainties. This filter performed the worst and the states grew exponentially at the fastest rate. From this we can confirm that our assumption of constant acceleration does not accurately predict the motion of the system and requires more concrete measurements to unify.
+
+The filter itself functions, but all attempted configurations produced divergent estimates. This can be rectified by tuning the filter more accurately or adapting the measurement equations to take into account the camera pose so that the camera frame and the body frame can be unified more accurately. This will be discussed further in the following section.
 
 \section{Discussion}
 
-
 \subsection{System Design}
-
-
-
-
+The system was successfully designed and constructed using available equipment, and 3D printable parts. The system is functional and can be used for future experiments. 
 
 \subsection{Image Processing}
-The techniques of image processing considered in this thesis shows the difficulty in implementing an automated image processing system.
-
+The techniques of image processing considered in this thesis shows the difficulty in implementing an automated image processing system. For this system the use of a semi-automatic image processing solution was the most efficient and viable. 
 
 \subsection{Captured Data}
+The captured data provided insight into various elements of the problem space as a whole. The gyroscope readings conclusively showed the oscillating motion of the chest that was not included in the model. The accelerometer readings gave us a method of quantifying the gait period by measuring the samples between foot impacts. The sensor data captured from the smartphone proved accurate and the ease of makes smartphones viable tools as modern sensors.
 
+Furthermore the availability vectors showed that as a proof of concept the system is often capturing data that can be quantified as various gait parameters. This shows the importance of having both front and rear mounted cameras as well as the ability of these cameras to capture critical lower limb data. With the high availability percentages and the gait being captured both in the forward and rear frame the system captures enough data to quantify the gait, given a method of fusion.
 
 \subsection{System Modelling}
-model was usable and back up by literature review.
+By using the proposed rigid beam model it was possible to correctly implement measurement equations quantifying the lower limb states. To this extent, the model was successfully. The model was also born from existing literature and has been shown to be viable.
 
-The system model had 2 major shortcomings. Firstly the assumption of a rigid chest and secondly the assumption that the cameras stay aligned with the body frame.
+The system model had 2 major shortcomings. Firstly the assumption of a rigid chest that stays aligned with the hips and secondly the assumption that the cameras stay aligned with the body frame.
 
-It is clear from the Gyroscope data that the chest of a runner oscillates. Since the cameras protrude from the chest they move in an arc pattern in space. 
+It is clear from the Gyroscope data that the chest of a runner oscillates. Since the cameras protrude from the chest they move in a related arc pattern in space. This was not taken into account by the model and introduced large errors when projecting marker point from the model in the body frame to the image in the camera frame.
 
-The model proved sufficient
+The camera frame also changes relative to the body frame. This can be rectified by more accurately determining the pose of the camera and incorporating such parameters into the forward kinematics of the model. This will however require a sensor directly mounted to the camera to determine the pose, or a well constructed model of how the camera moves during a run.
 
-talk about how the model would also allow the sensor to be used for subjects with prosthesis and allow for better understanding of disabled persons.
-
+The assumption were made to ease the initial implementation of the work. Since this project is novel the first step was to test a system and find shortcomings. These shortcomings have clearly been identified and can be rectified in the second implementation of this system.
 
 \subsection{Extended Kalman Filter}
-The filter had limited results
-\cite{gps}
+The filter was fully implemented in MATLAB. The final results produced by the filter were divergent and could therefore not correctly estimate the lower limb angles. The previous section explains shortcoming relating to the model of the system that caused erroneous variables as inputs to the EKF.
+
+The filter itself however robust and modular and the various parameters and models of the filter can easily be changed to incorporate various model limitations. From this it may be possible to get positive results from the filter after slight modification.
+
+Unfortunately no truth data was generated during this research to compare to the data generated from the wearable motion capture system. This could have improved the various uncertainty models of the EKF.
+
+
+
+
+ 
 
 
 

@@ -1,25 +1,20 @@
-\pagestyle{plain}
-
+\thispagestyle{plain}
 \addcontentsline{toc}{section}{Appendix D: Ethics and ELO Documents}
-
 {\Large Appendix D: Ethics and ELO Documents}
 \vskip 5mm
 \hrule
-\vskip 5mm
 
-
-uct official doccys
-
-\newpage
 \begin{figure}[!ht] 
-\captionsetup{width=1\linewidth, font=small}  
-\includegraphics[width=1\linewidth]{figures/ethics.png}
+\captionsetup{width=0.8\linewidth, font=small}  
+\includegraphics[width=0.9\linewidth]{figures/ethics.png}
+\caption{Ethics clearance}
 \label{fig:ethics}
 \end{figure}
 
 \newpage
 \begin{figure}[!ht] 
-\captionsetup{width=1\linewidth, font=small}  
+\captionsetup{width=0.8\linewidth, font=small}  
 \includegraphics[width=1\linewidth]{figures/elo.png}
+\caption{ELO clearance}
 \label{fig:elo}
 \end{figure}

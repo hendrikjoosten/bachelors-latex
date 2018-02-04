@@ -217,10 +217,10 @@ Each video stream was processed and a total of 16 different coordinate sets was 
 Finally availability vectors were created for each of the 16 points. 
 From these vectors we can also calculate the percentages of each camera seeing each marker. This can give us an idea as to how often the cameras are contributing data and how much of the total gait is captured. These percentages are discussed in a following chapter.
 
-\section{On units}
+\section*{On units}
 In order to assure consistency between the different sources of data considering a general set of units is of critical importance. It was decided to implement the system using SI units such that all lengths was given in meters and all angles in radians.
 
-\section{On Frames of Reference}
+\section*{On Frames of Reference}
 we need to developed some commonalities among the various sensors and their individual frames of reference. This thesis considers 4 different frames of reference, namely: the body frame, the smartphone frame, the camera frame and the inertial frame.
 
 The body frame has been defined as shown in the image below.
@@ -233,6 +233,7 @@ The body frame has been defined as shown in the image below.
 \end{figure}
 
 The smartphone frame is shown in this image below.
+
 \begin{figure}[!ht] 
 \captionsetup{width=0.8\linewidth, font=small}  
 \includegraphics[width=0.5\linewidth]{figures/phone.jpg}
@@ -240,7 +241,7 @@ The smartphone frame is shown in this image below.
 \label{fig:phone}
 \end{figure}
 
-Since the smartphone is rigidly mounted to the body a simple axis transformation is required to transform the sensor data to the body frame. The following equations show the transformation.
+Since the smartphone is rigidly mounted to the body a simple axis transformation is required to transform the sensor data to the body frame. The following equations shows the transformation.
 
 $$ bodyX = smartphoneZ  $$
 $$ bodyY = -smartphoneY  $$
@@ -255,21 +256,8 @@ There is however another frame of reference that is important to understand, tha
 \label{fig:cf}
 \end{figure}
 
-Since the cameras are pointing down when the subject is standing still the Z axis of the camera aligns with the Z axis of the body. 
+Since the cameras are pointing down when the subject is standing still the Z axis of the camera aligns with the Z axis of the body. The X and Y axis are transformed during fusion.
 
-
-The following video shows the orientation of the various cameras with repects to the runner.
-
-
-\begin{figure}[!ht] 
-\captionsetup{width=0.8\linewidth, font=small}  
-\includegraphics[width=0.5\linewidth]{figures/forrr.jpg}
-\caption{Figure demonstrating the body frame of reference}
-\label{fig:forrr}
-\end{figure}
-
-
-from this .....
 
 
 
